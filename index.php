@@ -28,10 +28,10 @@
                 <div>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="#home-section">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="#about-section">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Projects</a>
@@ -46,11 +46,37 @@
     </header>
 
     <main>
-        <div id="home">
+        <div>
             <section id="home-section">
                 <div class="container">
                     <canvas id="canvas"></canvas>
                     <h1>welcome to my portfolio</h1>
+                </div>
+            </section>
+        </div>
+        <div>
+            <section id="about-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h1>Who am I?</h1>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./img/IMG_1650.JPG" alt="picture">
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
