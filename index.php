@@ -46,7 +46,14 @@
     </header>
 
     <main>
-
+        <div id="home">
+            <section id="home-section">
+                <div class="container">
+                    <canvas id="canvas"></canvas>
+                    <h1>welcome to my portfolio</h1>
+                </div>
+            </section>
+        </div>
     </main>
 
 
