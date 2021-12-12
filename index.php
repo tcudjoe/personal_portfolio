@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>tcudjoe.com</title>
 </head>
@@ -91,12 +92,44 @@
                 <div class="container">
                     <div class="row">
                         <h1>Projects</h1>
-                        <div class="col-3">
+                        <div class="col-4">
                             <a href="#">
-                                <img id="ira" src="./img/Screenshot AI_IRA.png" alt="">
+                                <img id="ira"
+                                    src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+                                    alt="">
+                                <p> AI assistant IRA</p>
                             </a>
                         </div>
-                        <div class="col-3"></div>
+                        <div class="col-4">
+                            <a href="#">
+                                <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+                                    alt="">
+                                test
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="#">
+                                <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+                                    alt="">
+                                test 2
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div>
+            <section id="contact-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-">
+                            <a href="#" class="fa fa-twitter"></a>
+                        </div>
+                        <div class="col-"></div>
+                        <div class="col-"></div>
+                        <div class="col-"></div>
+                        <div class="col-"></div>
+                        <div class="col-"></div>
                     </div>
                 </div>
             </section>
