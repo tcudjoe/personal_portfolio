@@ -34,7 +34,7 @@
                             <a class="nav-link" href="#about-section">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
+                            <a class="nav-link" href="#projects-section">Projects</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
@@ -76,6 +76,27 @@
                         <div class="col-4">
                             <img src="./img/IMG_1650.JPG" alt="picture">
                         </div>
+                    </div>
+                    <div id="skills" class="row">
+                        <div class="col-"></div>
+                        <div class="col-"></div>
+                        <div class="col-"></div>
+                        <div class="col-"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div>
+            <section id="projects-section">
+                <div class="container">
+                    <div class="row">
+                        <h1>Projects</h1>
+                        <div class="col-3">
+                            <a href="#">
+                                <img id="ira" src="./img/Screenshot AI_IRA.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-3"></div>
                     </div>
                 </div>
             </section>
