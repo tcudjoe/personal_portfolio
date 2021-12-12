@@ -122,18 +122,32 @@
             <section id="contact-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-">
-                            <a href="#" class="fa fa-twitter"></a>
-                        </div>
-                        <div class="col-"></div>
-                        <div class="col-"></div>
-                        <div class="col-"></div>
-                        <div class="col-"></div>
-                        <div class="col-"></div>
+
                     </div>
                 </div>
             </section>
         </div>
+
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="#" class="fa fa-twitter"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-youtube"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-github"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-discord"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </main>
 
 
