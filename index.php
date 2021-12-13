@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>tcudjoe.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -59,7 +62,7 @@
             <section id="about-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-7">
                             <h1>Who am I?</h1>
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
@@ -74,7 +77,7 @@
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-5">
                             <img src="./img/IMG_1650.JPG" alt="picture">
                         </div>
                     </div>
@@ -97,21 +100,21 @@
                                 <img id="ira"
                                     src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
-                                <p> AI assistant IRA</p>
+                                <div class="centered"> AI assistant IRA</div>
                             </a>
                         </div>
                         <div class="col-4">
                             <a href="#">
                                 <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
-                                test
+                                <div class="centered">test</div>
                             </a>
                         </div>
                         <div class="col-4">
                             <a href="#">
                                 <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
-                                test 2
+                                <div class="centered">test 2</div>
                             </a>
                         </div>
                     </div>
@@ -124,6 +127,10 @@
                     <div class="row">
                         <h1>Contact</h1>
                         <div class="col-6">
+                            <img src="./img//placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+                                alt="">
+                        </div>
+                        <div class="col-6">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
                                 <input type="email" class="form-control" id="exampleFormControlInput1"
@@ -135,28 +142,25 @@
                             </div>
                             <button type="button" class="btn btn-secondary">Submit</button>
                         </div>
-                        <div class="col-6">
-
-                        </div>
                     </div>
                 </div>
             </section>
         </div>
 
-        <footer>
+        <footer class="navbar navbar-expand">
             <div class="container">
                 <div class="row justify-content-center">
-                    <ul>
-                        <li>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
                             <a href="#" class="fa fa-twitter"></a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#" class="fa fa-youtube"></a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#" class="fa fa-github"></a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#" class="fa fa-discord"></a>
                         </li>
                     </ul>

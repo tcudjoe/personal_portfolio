@@ -56,7 +56,6 @@ main>div>section>div>h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 main>div>#about-section>div>div>div>img {
@@ -65,16 +64,42 @@ main>div>#about-section>div>div>div>img {
     /* height: 60%; */
 }
 
+#about-section>div>div>div>h1 {
+    font-family: 'Sarabun', sans-serif;
+
+}
+
 #projects-section>div>div>div>a>img {
     width: 100%;
+    position: relative;
     border-radius: 10px;
     margin-top: 20px;
 }
 
 #projects-section>div>div>h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    font-family: 'Sarabun', sans-serif;
 
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+
+}
+
+.centered:hover+projects-section>div>div>div {
+    visibility: visible;
+}
+
+#contact-section>div>div>h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Sarabun', sans-serif;
 }
 
 .fa {
