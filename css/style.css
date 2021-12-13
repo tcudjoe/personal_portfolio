@@ -16,19 +16,19 @@ body {
 }
 
 #about-section {
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(14, 14, 14);
     color: aliceblue;
     padding: 100px;
 }
 
 #projects-section {
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(24, 24, 24);
     color: aliceblue;
     padding: 100px;
 }
 
 #contact-section {
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(14, 14, 14);
     color: aliceblue;
     padding: 75px;
 }

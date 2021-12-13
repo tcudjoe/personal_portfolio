@@ -122,6 +122,7 @@
             <section id="contact-section">
                 <div class="container">
                     <div class="row">
+                        <h1>Contact</h1>
                         <div class="col-6">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -132,13 +133,17 @@
                                 <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
+                            <button type="button" class="btn btn-secondary">Submit</button>
+                        </div>
+                        <div class="col-6">
+
                         </div>
                     </div>
                 </div>
             </section>
         </div>
 
-        <!-- <footer>
+        <footer>
             <div class="container">
                 <div class="row justify-content-center">
                     <ul>
@@ -157,7 +162,7 @@
                     </ul>
                 </div>
             </div>
-        </footer> -->
+        </footer>
     </main>
 
 
