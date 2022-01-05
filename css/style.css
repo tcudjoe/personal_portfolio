@@ -17,6 +17,7 @@ body {
 a {
     text-decoration: none;
     color: rgb(179, 175, 175);
+    font-family: 'Oswald', sans-serif;
 }
 
 @media only screen and (max-width: 600px) {
