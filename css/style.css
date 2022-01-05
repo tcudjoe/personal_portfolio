@@ -4,118 +4,22 @@ body {
     height: 100%;
     width: 100%;
     padding: 0;
-}
-
-#home-section {
     background-color: black;
-    display: block;
-    height: 100%;
-    width: 100%;
-    padding: 100px;
-    /* padding-left: 120px; */
 }
 
-#about-section {
-    background-color: rgb(14, 14, 14);
-    color: aliceblue;
-    padding: 100px;
-}
-
-#projects-section {
-    background-color: rgb(24, 24, 24);
-    color: aliceblue;
-    padding: 100px;
-}
-
-#contact-section {
-    background-color: rgb(14, 14, 14);
-    color: aliceblue;
-    padding: 75px;
-}
-
-footer {
-    background-color: black;
-    padding: 100px;
-}
-
-canvas {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 116px;
-    margin-top: 116px;
-    /* margin-top: 51.25; */
-}
-
-main>div>#home-section>div {
-    text-align: center;
-    position: relative;
-}
-
-main>div>section>div>h1 {
+.bottomright {
+    color: rgb(179, 175, 175);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 20px;
+    right: 16px;
 }
 
-main>div>#about-section>div>div>div>img {
-    width: 150%;
-    border-radius: 10px;
-    /* height: 60%; */
-}
-
-#about-section>div>div>div>h1 {
-    font-family: 'Sarabun', sans-serif;
-
-}
-
-#projects-section>div>div>div>a>img {
-    width: 100%;
-    position: relative;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-#projects-section>div>div>h1 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-family: 'Sarabun', sans-serif;
-
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    visibility: hidden;
-    transform: translate(-50%, -50%);
-
-}
-
-.centered:hover+projects-section>div>div>div {
-    visibility: visible;
-}
-
-#contact-section>div>div>h1 {
-    margin-bottom: 50px;
-    text-align: center;
-    font-family: 'Sarabun', sans-serif;
-}
-
-.fa {
-    padding: 1 0px;
-    font-size: 30px;
-    width: 50%;
-    border-radius: 30px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-twitter {
-    /* background: #55ACEE; */
-    color: white;
+@media only screen and (max-width: 600px) {
+    .bottomright {
+        color: rgb(179, 175, 175);
+        position: absolute;
+        bottom: 70px;
+        /* padding-top: -20px; */
+        text-align: center;
+    }
 }
