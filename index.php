@@ -2617,14 +2617,18 @@
             }, {}, [8, 9]);
     </script>
     <div class="bottomright">
+        <h1>
 
-        <h1>This site is under construction...</h1>
+            <a href="" class="typewrite" data-period="2000" data-type='["This site is under construction...", "Working on loads of projects...", "Coming soon...", "You&#39;re still here?", "You should get a job...", "Just kidding, go on..."]'>
+                <span class="wrap"></span>
+            </a>
+            <!-- <h1>This site is under construction...</h1> -->
+        </h1>
     </div>
 
 
 
         <script src="./js/app.js"></script>
-        <script src="./js/sketch.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
