@@ -78,7 +78,7 @@
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
                         </div>
                         <div class="col-5">
-                            <img src="./img/IMG_1650.JPG" alt="picture">
+                            <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg" alt="picture">
                         </div>
                     </div>
                     <div id="skills" class="row">
@@ -100,22 +100,25 @@
                                 <img id="ira"
                                     src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
-                                <div class="centered"> AI assistant IRA</div>
+                                <div class="centered centeredLeft"> AI assistant IRA</div>
                             </a>
                         </div>
                         <div class="col-4">
                             <a href="#">
                                 <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
-                                <div class="centered">test</div>
+                                <div class="centered centeredCenter">Aprèsdesheuresapparel.com</div>
                             </a>
                         </div>
                         <div class="col-4">
                             <a href="#">
                                 <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
-                                <div class="centered">test 2</div>
+                                <div class="centered centeredRight">test 2</div>
                             </a>
+                        </div>
+                        <div>
+
                         </div>
                     </div>
                 </div>
@@ -132,12 +135,12 @@
                         </div>
                         <div class="col-6">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <label for="exampleFormControlInput1" class="form-label">Email address:</label>
                                 <input type="email" class="form-control" id="exampleFormControlInput1"
                                     placeholder="name@example.com">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                                <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                             <button type="button" class="btn btn-secondary">Submit</button>
@@ -161,7 +164,10 @@
                             <a href="#" class="fa fa-github"></a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="fa fa-discord"></a>
+                            <a href="#" class="fab fa-discord"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="fa fa-linkedin"></a>
                         </li>
                     </ul>
                 </div>
