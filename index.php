@@ -98,14 +98,14 @@
                         <div class="col-4">
                             <a href="#">
                                 <img id="ira"
-                                    src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+                                    src="./img/Screenshot AI_IRA.png"
                                     alt="">
                                 <div class="centered centeredLeft"> AI assistant IRA</div>
                             </a>
                         </div>
                         <div class="col-4">
                             <a href="#">
-                                <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+                                <img src="./img/jpg2.jpg"
                                     alt="">
                                 <div class="centered centeredCenter">Aprèsdesheuresapparel.com</div>
                             </a>
@@ -114,11 +114,13 @@
                             <a href="#">
                                 <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
-                                <div class="centered centeredRight">test 2</div>
+                                <div class="centered centeredRight">PMA (Progressive Monitor App)</div>
                             </a>
                         </div>
+                    </div>
+                    <div class="row">
                         <div>
-
+                            <button class="btn btnCenter">View more</button>
                         </div>
                     </div>
                 </div>
