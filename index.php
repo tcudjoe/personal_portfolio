@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-//test
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -78,7 +78,8 @@
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
                         </div>
                         <div class="col-5">
-                            <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg" alt="picture">
+                            <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+                                alt="picture">
                         </div>
                     </div>
                     <div id="skills" class="row">
@@ -95,24 +96,21 @@
                 <div class="container">
                     <div class="row">
                         <h1>Projects</h1>
-                        <div class="col-4">
-                            <a href="#">
-                                <img id="ira"
-                                    src="./img/Screenshot AI_IRA.png"
-                                    alt="">
+                        <div class="col-4" style="transform-style: preserve-3d;" data-tilt >
+                            <a href="#" >
+                                <img style="transform: translateZ(50px)" id="ira" src="./img/Screenshot AI_IRA.png" alt="">
                                 <div class="centered centeredLeft"> AI assistant IRA</div>
                             </a>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4" style="transform-style: preserve-3d;" data-tilt>
                             <a href="#">
-                                <img src="./img/jpg2.jpg"
-                                    alt="">
+                                <img style="transform: translateZ(50px)" src="./img/jpg1.jpg" alt="">
                                 <div class="centered centeredCenter">Aprèsdesheuresapparel.com</div>
                             </a>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4" style="transform-style: preserve-3d;" data-tilt>
                             <a href="#">
-                                <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+                                <img style="transform: translateZ(50px)" src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
                                 <div class="centered centeredRight">PMA (Progressive Monitor App)</div>
                             </a>
@@ -180,8 +178,12 @@
 
     <script src="./js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="./js/tilt.js"></script>
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
