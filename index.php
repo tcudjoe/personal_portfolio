@@ -112,7 +112,7 @@
                             <a href="#">
                                 <img style="transform: translateZ(50px)" src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
-                                <div class="centered centeredRight">PMA (Progressive Monitor App)</div>
+                                <div class="centered centeredRight">Progressive Monitor App</div>
                             </a>
                         </div>
                     </div>
