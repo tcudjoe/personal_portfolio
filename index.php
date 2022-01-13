@@ -41,7 +41,7 @@
                             <a class="nav-link" href="#projects-section">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#contact-section">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -96,12 +96,12 @@
                 <div class="container">
                     <div class="row">
                         <h1>Projects</h1>
-                        <div class="col-4" style="transform-style: preserve-3d;" data-tilt >
+                        <!-- <div class="col-4" style="transform-style: preserve-3d;" data-tilt >
                             <a href="#" >
                                 <img style="transform: translateZ(50px)" id="ira" src="./img/Screenshot AI_IRA.png" alt="">
                                 <div class="centered centeredLeft"> AI assistant IRA</div>
                             </a>
-                        </div>
+                        </div> -->
                         <div class="col-4" style="transform-style: preserve-3d;" data-tilt>
                             <a href="#">
                                 <img style="transform: translateZ(50px)" src="./img/jpg1.jpg" alt="">
@@ -110,10 +110,11 @@
                         </div>
                         <div class="col-4" style="transform-style: preserve-3d;" data-tilt>
                             <a href="#">
-                                <img style="transform: translateZ(50px)" src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+                                <img style="transform: translateZ(50px)"
+                                    src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
-                                <div class="centered centeredRight">Progressive Monitor App</div>
                             </a>
+                            <div class="centered centeredRight">Progressive Monitor App</div>
                         </div>
                     </div>
                     <div class="row">
@@ -130,21 +131,35 @@
                     <div class="row">
                         <h1>Contact</h1>
                         <div class="col-6">
-                            <img src="./img//placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
-                                alt="">
-                        </div>
-                        <div class="col-6">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Email address:</label>
+                                <input type="name" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Phone number">
+                            </div>
+                            <div class="mb-3">
+
                                 <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="name@example.com">
+                                    placeholder="Email">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    placeholder="Type your message here..."></textarea>
                             </div>
-                            <button type="button" class="btn btn-secondary">Submit</button>
+                            <button type="button" class="btn btn-contact">Submit</button>
                         </div>
+                        <div class="col-6 contactInfo">
+                            <label>Email:</label>
+                            <p>Tyra20015@gmail.com</p>
+                            <br>
+                            <label>Website:</label>
+                            <p>Tcudjoe.com</p>
+                            <p></p>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -178,10 +193,10 @@
 
     <script src="./js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
     <script src="./js/tilt.js"></script>
     <!--

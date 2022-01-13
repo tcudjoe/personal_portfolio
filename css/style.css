@@ -73,7 +73,7 @@ main>div>#about-section>div>div>div>img {
     width: 100%;
     height: auto;
     position: relative;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     margin-top: 20px;
     margin-right: 20px;
     transition: 0.2s;
@@ -92,17 +92,16 @@ main>div>#about-section>div>div>div>img {
 
 .centered {
     position: absolute;
-    /* top: 50%; */
-    /* left: 50%; */
-    visibility: none;
-    /* margin-top: 20px; */
-    /* margin-left: 100px; */
+    color: rgb(199, 199, 199);
+    text-decoration: none;
+    display: block;
+    z-index: 8;
+    margin-top: -30px;
     transform: translate(-50%, -50%);
 
 }
 .centeredLeft {
     left: 27%;
-    position: absolute;
 }
 
 .centeredCenter {
@@ -113,14 +112,34 @@ main>div>#about-section>div>div>div>img {
     left: 73%;
 }
 
-.centered:hover {
-    display: block;
+.centered:hover + #projects-section>div>div>div>a>img {
+    visibility: visible;
+    color:rgb(199, 199, 199)
 }
 
 #contact-section>div>div>h1 {
     margin-bottom: 50px;
     text-align: center;
     font-family: 'Sarabun', sans-serif;
+}
+
+.form-control {
+    background-color: black;
+}
+
+.btn-contact {
+    margin-bottom: -20px !important;
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+.contactInfo {
+    padding-left: 150px;
+}
+
+.contactInfo>label {
+    color: rgb(36, 36, 36);
 }
 
 .fa {
@@ -141,7 +160,7 @@ main>div>#about-section>div>div>div>img {
     color: white;
 }
 
-.btn {
+.btnCenter {
     margin-top: 80px;
     transform: translate(-50%, -50%);
     position: absolute;
