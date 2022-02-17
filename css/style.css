@@ -4,10 +4,10 @@ body {
     height: 100%;
     width: 100%;
     padding: 0;
+    background-color: black;
 }
 
 #home-section {
-    background-color: black;
     display: block;
     height: 100%;
     width: 100%;
@@ -16,25 +16,21 @@ body {
 }
 
 #about-section {
-    background-color: rgb(0, 0, 0);
     color: aliceblue;
     padding: 100px;
 }
 
 #projects-section {
-    background-color: rgb(0, 0, 0);
     color: aliceblue;
-    padding: 100px;
+    padding-top: 100px;
 }
 
 #contact-section {
-    background-color: rgb(0, 0, 0);
     color: aliceblue;
     padding: 75px;
 }
 
 footer {
-    background-color: black;
     padding: 100px;
 }
 
@@ -86,6 +82,7 @@ main>div>#about-section>div>div>div>img {
 #projects-section>div>div>h1 {
     text-align: center;
     margin-bottom: 50px;
+    margin-top: 100px;
     font-family: 'Sarabun', sans-serif;
 
 }
@@ -172,4 +169,62 @@ main>div>#about-section>div>div>div>img {
 .btn:hover {
     background-color: rgb(0, 0, 0);
     color: white;
+}
+
+.wai {
+    width: 40%;
+    height: auto !important;
+}
+
+.wrapper {
+  perspective: 15px;
+}
+
+#tiltable {
+    height:400px;
+    transition: transform 0.5s;
+    backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 576px) {
+    #about-section {
+        color: aliceblue;
+        padding: 30px;
+    }
+    main>div>#about-section>div>div>div>img {
+        width: 270%;
+        border-radius: 10px;
+        margin-top: 50px;
+        /* height: 60%; */
+    }
+    #skills-section {
+        text-align: center;
+        margin-top: 100px;
+    }
+    #projects-section {
+        color: aliceblue;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #projects-section>div>div>div>a>img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: 20px;
+    }
+}
+@media only screen and (min-width: 576px) {
+
+}
+@media only screen and (min-width: 768px) {
+
+}
+@media only screen and (min-width: 992px) {
+
+}
+@media only screen and (min-width: 1200px) {
+
+}
+@media only screen and (max-width: 1400px) {
+
 }

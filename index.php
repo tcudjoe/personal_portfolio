@@ -62,7 +62,7 @@
             <section id="about-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-7">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <h1>Who am I?</h1>
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
@@ -77,16 +77,19 @@
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
                         </div>
-                        <div class="col-5">
-                            <img src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 wai">
+                            <img src="./img/IMG_1650.jpg"
                                 alt="picture">
                         </div>
                     </div>
-                    <div id="skills" class="row">
-                        <div class="col-"></div>
-                        <div class="col-"></div>
-                        <div class="col-"></div>
-                        <div class="col-"></div>
+                    <div id="skills-section" class="row">
+                        <div class="col-12">
+                            <h1>Skills</h1>
+                            <div class="col-"></div>
+                            <div class="col-"></div>
+                            <div class="col-"></div>
+                            <div class="col-"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -102,15 +105,15 @@
                                 <div class="centered centeredLeft"> AI assistant IRA</div>
                             </a>
                         </div> -->
-                        <div class="col-4" style="transform-style: preserve-3d;" data-tilt>
+                        <div class="col-12 wrapper" style="transform-style: preserve-3d;" data-tilt>
                             <a href="#">
-                                <img style="transform: translateZ(50px)" src="./img/jpg1.jpg" alt="">
+                                <img id="tiltable" style="transform: translateZ(50px)" src="./img/jpg1.jpg" alt="">
                                 <div class="centered centeredCenter">Aprèsdesheuresapparel.com</div>
                             </a>
                         </div>
-                        <div class="col-4" style="transform-style: preserve-3d;" data-tilt>
+                        <div class="col-12 wrapper" style="transform-style: preserve-3d;" data-tilt>
                             <a href="#">
-                                <img style="transform: translateZ(50px)"
+                                <img id="tiltable" style="transform: translateZ(50px)"
                                     src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
                                     alt="">
                             </a>
