@@ -78,17 +78,66 @@
                             <p>lorem ipsum dolor sit amet, consectetur adip</p>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 wai">
-                            <img src="./img/IMG_1650.jpg"
-                                alt="picture">
+                            <img src="./img/IMG_1650.jpg" alt="picture">
                         </div>
                     </div>
                     <div id="skills-section" class="row">
-                        <div class="col-12">
+                        <div id="skill-bar-wrapper">
                             <h1>Skills</h1>
-                            <div class="col-"></div>
-                            <div class="col-"></div>
-                            <div class="col-"></div>
-                            <div class="col-"></div>
+                            <div class="text-left">
+                                <span class="skillbarText">HTML</span>
+                                <span style="float:right;">85%</span>
+                                <div class="skillbar-container clearfix" data-percent="85%">
+                                    <div class="skills" style="background: white;"></div>
+                                </div>
+
+                                <!-- Fortran -->
+                                CSS/SASS<span style="float:right;">65%</span>
+                                <div class="skillbar-container clearfix" data-percent="65%">
+                                    <div class="skills" style="background: white;"></div>
+                                </div>
+
+                                <!-- Java -->
+                                JavaScript<span style="float:right;">40%</span>
+                                <div class="skillbar-container clearfix" data-percent="40%">
+                                    <div class="skills" style="background: white;"></div>
+                                </div>
+
+                                <!-- JavaScript -->
+                                VueJS<span style="float:right;">20%</span>
+                                <div class="skillbar-container clearfix" data-percent="20%">
+                                    <div class="skills" style="background: white;"></div>
+                                </div>
+
+                                <!-- Cmake -->
+                                Python<span style="float:right;">30%</span>
+                                <div class="skillbar-container clearfix" data-percent="30%">
+                                    <div class="skills" style="background: white;"></div>
+                                </div>
+
+                                <!-- HTML -->
+                                Bootstrap<span style="float:right;">85%</span>
+                                <div class="skillbar-container clearfix" data-percent="85%">
+                                    <div class="skills" style="background: white;"></div>
+                                </div>
+
+                                <!-- jQuery -->
+                                PHP<span style="float:right;">65%</span>
+                                <div class="skillbar-container clearfix" data-percent="65%">
+                                    <div class="skills" style="background: white;"></div>
+                                </div>
+
+                                MySQL<span style="float:right;">85%</span>
+                                <div class="skillbar-container clearfix" data-percent="85%">
+                                    <div class="skills" style="background: white;"></div>
+                                </div>
+
+                                GitHub/Git<span style="float:right;">80%</span>
+                                <div class="skillbar-container clearfix" data-percent="80%">
+                                    <div class="skills" style="background: white;"></div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -143,12 +192,10 @@
                                     placeholder="Phone number">
                             </div>
                             <div class="mb-3">
-
                                 <input type="email" class="form-control" id="exampleFormControlInput1"
                                     placeholder="Email">
                             </div>
                             <div class="mb-3">
-
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                                     placeholder="Type your message here..."></textarea>
                             </div>
@@ -194,13 +241,14 @@
     </main>
 
 
-    <script src="./js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/app.js"></script>
     <script src="./js/tilt.js"></script>
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

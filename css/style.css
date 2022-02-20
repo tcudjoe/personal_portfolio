@@ -28,7 +28,12 @@ body {
 #contact-section {
     color: aliceblue;
     padding: 75px;
+    margin-top: 100px;
 }
+
+/* #skills-section {
+    margin-top: 150px;
+} */
 
 footer {
     padding: 100px;
@@ -69,7 +74,7 @@ main>div>#about-section>div>div>div>img {
     width: 100%;
     height: auto;
     position: relative;
-    /* border-radius: 10px; */
+    border-radius: 5px;
     margin-top: 20px;
     margin-right: 20px;
     transition: 0.2s;
@@ -95,8 +100,8 @@ main>div>#about-section>div>div>div>img {
     z-index: 8;
     margin-top: -30px;
     transform: translate(-50%, -50%);
-
 }
+
 .centeredLeft {
     left: 27%;
 }
@@ -109,9 +114,9 @@ main>div>#about-section>div>div>div>img {
     left: 73%;
 }
 
-.centered:hover + #projects-section>div>div>div>a>img {
+.centered:hover+#projects-section>div>div>div>a>img {
     visibility: visible;
-    color:rgb(199, 199, 199)
+    color: rgb(199, 199, 199)
 }
 
 #contact-section>div>div>h1 {
@@ -177,13 +182,35 @@ main>div>#about-section>div>div>div>img {
 }
 
 .wrapper {
-  perspective: 15px;
+    perspective: 15px;
 }
 
 #tiltable {
-    height:400px;
+    height: 400px;
     transition: transform 0.5s;
     backface-visibility: hidden;
+}
+
+.skillbar-container {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    width: 100%;
+    background-color: #666463;
+    background-color: rgba(255, 255, 255, .1);
+    height: 35px;
+    height: 5px;
+}
+
+.skills {
+    height: 35px;
+    height: 5px;
+    width: 0px;
+}
+
+.skillbarText{
+    margin-right: 220px;
 }
 
 @media only screen and (max-width: 576px) {
@@ -191,21 +218,35 @@ main>div>#about-section>div>div>div>img {
         color: aliceblue;
         padding: 30px;
     }
+
     main>div>#about-section>div>div>div>img {
         width: 270%;
         border-radius: 10px;
         margin-top: 50px;
         /* height: 60%; */
     }
-    #skills-section {
+
+    #skills-section>div>h1 {
         text-align: center;
-        margin-top: 100px;
+        margin-top: 150px;
     }
+
     #projects-section {
         color: aliceblue;
         padding-left: 20px;
         padding-right: 20px;
+        padding-top: 0px !important;
+        margin-top: 50px;
     }
+
+    #projects-section>div>div>h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        font-family: 'Sarabun', sans-serif;
+
+    }
+
     #projects-section>div>div>div>a>img {
         width: 100%;
         height: auto;
@@ -213,18 +254,13 @@ main>div>#about-section>div>div>div>img {
         margin-top: 20px;
     }
 }
-@media only screen and (min-width: 576px) {
 
-}
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) {}
 
-}
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {}
 
-}
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {}
 
-}
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1200px) {}
 
-}
+@media only screen and (max-width: 1400px) {}
