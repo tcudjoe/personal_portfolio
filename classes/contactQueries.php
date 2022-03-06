@@ -19,19 +19,20 @@
             }
         }
 
-        public function insertDataDrinks($post)
+        public function insertContact($post)
         {
             $name = $this->conn->real_escape_string($_POST['name']);
             $phonenumber = $this->conn->real_escape_string($_POST['phonenumber']);
-            $email = $this->conn->real_escape_string($_POST['number']);
+            $email = $this->conn->real_escape_string($_POST['email']);
             $message = $this->conn->real_escape_string($_POST['message']);
             $query="INSERT INTO contact(name, email, message, phonenumber) VALUES('$name','$email','$message', $phonenumber)";
             $sql = $this->conn->query($query);
             if ($sql==true) {
-                header("Location:message.php?alert=insert_drink_succes");
+                var_dump($sql, $query);exit;
+                header("Location:index.php?content=home");
             }else{
                 var_dump($query, $sql);
-                header("Location:message.php?alert=insert_drink_error");
+                header("Location:index.php?content=home");
             }
         }
     }

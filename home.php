@@ -1,3 +1,14 @@
+<?php
+    include('./classes/contactQueries.php');
+
+    $contactObject = new contactQueries();
+
+    // Insert Record in contact table
+  if(isset($_POST['submit'])) {
+    $contactObject->insertContact($_POST);
+  }
+    // var_dump($contactObject);exit;
+?>
 <div>
             <section id="home-section">
                 <div class="container">
@@ -129,33 +140,35 @@
                 <div class="container">
                     <div class="row">
                         <h1>Contact</h1>
-                        <div class="col-12">
-                            <div class="mb-3">
-                                <input type="name" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Name">
+                        <form action="index.php?content=home" method="post">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" name="phonenumber" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Phone number">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"
+                                        placeholder="Type your message here..."></textarea>
+                                </div>
+                                <button type="submit" name="submit" value="submit" class="btn btn-contact">Submit</button>
                             </div>
-                            <div class="mb-3">
-                                <input type="phonenumber" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Phone number">
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Email">
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                    placeholder="Type your message here..."></textarea>
-                            </div>
-                            <button type="button" class="btn btn-contact">Submit</button>
-                        </div>
-                        <!-- <div class="col-12 contactInfo">
+                        </form>
+                        <div class="col-12 contactInfo">
                             <label>Email:</label>
                             <p>Tyra20015@gmail.com</p>
                             <br>
                             <label>Website:</label>
                             <p>Tcudjoe.com</p>
                             <p></p>
-                        </div> -->
+                        </div>
 
                     </div>
                 </div>

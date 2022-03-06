@@ -300,6 +300,7 @@ main>div>#about-section>div>div>div>img {
     .contactInfo {
         margin-top: 50px;
         padding-left: 0px;
+        display: none;
     }
 
     #contact-section>div>div>h1 {
