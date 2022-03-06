@@ -14,32 +14,60 @@
         <div class="container">
             <img src="./img/tv-static.gif" alt="tv static gif">
             <h1>
-                <a href="" class="typewrite" data-period="2000" data-type='["Welcome to my portfolio!", "Feel free to look around.", "Don&#39;t hesitate to leave your contact information!", "Have a good day!"]'>
+                <a href="" class="typewrite" data-period="2000"
+                    data-type='["Welcome to my portfolio!", "Feel free to look around.", "Don&#39;t hesitate to leave your contact information!", "Have a good day!"]'>
                     <span class="wrap"></span>
                 </a>
             </h1>
         </div>
     </section>
 </div>
-
+<!-- About me section -->
 <div>
     <section id="about-section">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <h1>Who am I?</h1>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
-                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                    <p>Hi,
+                        <br>
+                        My name is <span>T. Cudjoe</span>, I am a Junior developer and welcome to my portfolio.
+                        <br>
+                        <br>
+                        I want to, first and foremost, thank you for visiting my portfolio website. Which probably means that I intrigued
+                        you enough to take a look around 😉
+                        <br>
+                        <br>
+                        Let me tell you about me:
+                        <br>
+                        <ul>
+                            <li><span>I always work efficient.🔥</span> <br> I always try to do my
+                                best to work as neat as possible so that mij
+                                colleagues can understand what ive written by using comments.</li>
+                            <br>
+                            <li><span>I am goal oriented. 🥅</span> <br> I work best When there is a deadline or a goal
+                                that
+                                has to be reached.
+                                That’s when I don’t let distractions distract me so I can get most out of my time. And I
+                                do
+                                sometimes work outside of office hours if it is needed.</li>
+                            <br>
+                            <li><span>I am studious. 📚</span> <br> I love to learn new things about anything. Which
+                                means that
+                                I
+                                love to learn things not only in the tech field, but really anything. This makes it
+                                easier for
+                                me to adjust to new environments and new languages.</li>
+                        </ul>
+                        <br>
+                        I hope this gives you a bit of an idea as to who I am and whether I am a great fit for you and
+                        you work culture.
+                        <br>
+                        <br>
+                        Kind regards,
+                        <br>
+                        T. Cudjoe
+                    </p>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
                     <img src="./img/IMG_1650.jpg" alt="Ty Cudjoe Profile Picture">

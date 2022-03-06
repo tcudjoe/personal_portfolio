@@ -1,12 +1,10 @@
 <?php
-
     class contactQueries {
         private $servername = "localhost";
         private $username   = "root";
         private $password   = "";
         private $database   = "portfolio";
         public  $conn;
-
 
         // Database Connection
         public function __construct()

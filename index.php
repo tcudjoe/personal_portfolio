@@ -55,24 +55,22 @@
     </main>
 
     <footer>
-        <div class="container">
+        <div class="">
             <div class="row">
-                <div>
-                    <ul class="iconSocial">
-                        <a href="https://twitter.com/CudjoeTyra">
-                            <i class="fa-brands fa-twitter fa-2xl"></i>
-                        </a>
-                        <a href="https://github.com/tcudjoe">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://discordapp.com/users/magicalassembler#5251/">
-                            <i class="fa-brands fa-discord"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/tcudjoe2401/">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </ul>
-                </div>
+                <ul class="iconSocial">
+                    <a href="https://twitter.com/CudjoeTyra">
+                        <i class="fa-brands fa-twitter fa-2xl"></i>
+                    </a>
+                    <a href="https://github.com/tcudjoe">
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                    </a>
+                    <a href="https://discordapp.com/users/magicalassembler#5251/">
+                        <i class="fa-brands fa-discord fa-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tcudjoe2401/">
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </a>
+                </ul>
             </div>
         </div>
     </footer>
