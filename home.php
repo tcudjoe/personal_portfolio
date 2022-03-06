@@ -22,6 +22,7 @@
         </div>
     </section>
 </div>
+
 <!-- About me section -->
 <div>
     <section id="about-section">
