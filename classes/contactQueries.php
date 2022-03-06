@@ -28,10 +28,10 @@
             $query="INSERT INTO contact(name, email, message, phonenumber) VALUES('$name','$email','$message', $phonenumber)";
             $sql = $this->conn->query($query);
             if ($sql==true) {
-                var_dump($sql, $query);exit;
+                // var_dump($sql, $query);exit;
                 header("Location:index.php?content=home");
             }else{
-                var_dump($query, $sql);
+                // var_dump($query, $sql);exit;
                 header("Location:index.php?content=home");
             }
         }

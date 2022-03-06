@@ -8,9 +8,9 @@ body {
 }
 
 #home-section {
-    display: block;
-    height: 100%;
-    width: 100%;
+    /* display: block; */
+    /* height: 100%;
+    width: 100%; */
     padding: 100px;
     /* padding-left: 120px; */
 }
@@ -52,12 +52,12 @@ main>div>#home-section>div {
     position: relative;
 }
 
-main>div>section>div>h1 {
+/* main>div>section>div>h1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 main>div>#about-section>div>div>div>img {
     width: 100%;
@@ -228,10 +228,47 @@ main>div>#about-section>div>div>div>img {
         /* margin-top: 51.25; */
     }
 
+    #home-section {
+        padding: 0px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    main>div>#home-section>div {
+        text-align: center;
+        color: white;
+        margin-top: 150px;
+        /* padding-bottom: 150px; */
+        /* margin-bottom: 200px; */
+        /* position: relative; */
+    }
+
+    main>div>section>div>h1 {
+        /* position: absolute; */
+        /* top: 50%;
+        left: 50%; */
+        /* margin-bottom: 200px; */
+        /* transform: translate(-50%, -50%); */
+        /* padding-bottom: 50px; */
+        text-decoration: none;
+        margin-top: 250px;
+        margin-bottom: 150px;
+        text-align: center;
+    }
+
+    .typewrite {
+        color: white;
+    }
+
+    #home-section>.container>img {
+       display: none;
+    }
+
     #about-section {
         color: aliceblue;
         padding: 30px;
         text-align: center;
+        /* margin-top: 100px; */
     }
 
     main>div>#about-section>div>div>div>img {
