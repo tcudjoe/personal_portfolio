@@ -59,16 +59,16 @@
             <div class="row">
                 <div>
                     <ul class="iconSocial">
-                        <a href="">
+                        <a href="https://twitter.com/CudjoeTyra">
                             <i class="fa-brands fa-twitter fa-2xl"></i>
                         </a>
-                        <a href="">
+                        <a href="https://github.com/tcudjoe">
                             <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="">
+                        <a href="https://discordapp.com/users/magicalassembler#5251/">
                             <i class="fa-brands fa-discord"></i>
                         </a>
-                        <a href="">
+                        <a href="https://www.linkedin.com/in/tcudjoe2401/">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                     </ul>
