@@ -175,8 +175,8 @@
         <div class="container">
             <div class="row">
                 <h1>Contact</h1>
-                <form action="index.php?content=home" method="post">
-                    <div class="col-12">
+                <form action="index.php?content=home" method="post" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="">
                         <div class="mb-3">
                             <input type="text" name="name" class="form-control" id="exampleFormControlInput1"
                                 placeholder="John Doe">
@@ -196,7 +196,7 @@
                         <button type="submit" name="submit" value="submit" class="btn btn-contact">Submit</button>
                     </div>
                 </form>
-                <div class="col-12 contactInfo">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 contactInfo">
                     <label>Email:</label>
                     <p>Tyra20015@gmail.com</p>
                     <br>
