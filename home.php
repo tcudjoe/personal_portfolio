@@ -23,7 +23,7 @@
     </section>
 </div>
 
-<!-- About me section -->
+<!-- About me-section -->
 <div>
     <section id="about-section">
         <div class="container">
@@ -138,6 +138,7 @@
     </section>
 </div>
 
+<!-- projects-section -->
 <div>
     <section id="projects-section">
         <div class="container">
@@ -168,6 +169,7 @@
     </section>
 </div>
 
+<!-- contact-section -->
 <div>
     <section id="contact-section">
         <div class="container">
