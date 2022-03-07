@@ -144,13 +144,13 @@
         <div class="container">
             <div class="row">
                 <h1>Projects</h1>
-                <div class="col-12 wrapper" style="transform-style: preserve-3d;" data-tilt>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper" style="transform-style: preserve-3d;" data-tilt>
                     <a href="#">
                         <img id="tiltable" style="transform: translateZ(50px)" src="./img/jpg1.jpg" alt="">
                     </a>
                     <p>Aprèsdesheuresapparel.com</p>
                 </div>
-                <div class="col-12 wrapper" style="transform-style: preserve-3d;" data-tilt>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper" style="transform-style: preserve-3d;" data-tilt>
                     <a href="#">
                         <img id="tiltable" style="transform: translateZ(50px)"
                             src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg" alt="">
