@@ -603,9 +603,9 @@ main>div>#about-section>div>div>div>img {
     }
 
     .contactInfo {
-        margin-top: 50px;
-        padding-left: 0px;
-        display: none;
+        margin-top: 5px;
+        padding-left: 70px;
+        display: block;
     }
 
     #contact-section>div>div>h1 {

@@ -200,9 +200,11 @@
                     <label>Email:</label>
                     <p>Tyra20015@gmail.com</p>
                     <br>
+                    <label>Phonenumber:</label>
+                    <p>+31 6 15 36 47 92</p>
+                    <br>
                     <label>Website:</label>
                     <p>Tcudjoe.com</p>
-                    <p></p>
                 </div>
 
             </div>
