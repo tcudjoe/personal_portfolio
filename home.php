@@ -1,7 +1,7 @@
 <?php
-    include('./classes/contactQueries.php');
+    include('./classes/databaseQueries.php');
 
-    $contactObject = new contactQueries();
+    $contactObject = new databaseQueries();
 
     // Insert Record in contact table
   if(isset($_POST['submit'])) {

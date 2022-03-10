@@ -33,7 +33,7 @@
                 <div>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home-section">Home</a>
+                            <a class="nav-link" href="index.php?content=home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about-section">About</a>
