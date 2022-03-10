@@ -19,6 +19,10 @@
                     <span class="wrap"></span>
                 </a>
             </h1>
+            <section id="section10" class="demo">
+                <!-- <h1>Scroll Down Button #10</h1> -->
+                <a href="#thanks"><span></span></a>
+            </section>
         </div>
     </section>
 </div>
@@ -35,7 +39,8 @@
                         My name is <span>T. Cudjoe</span>, I am a Junior developer and welcome to my portfolio.
                         <br>
                         <br>
-                        I want to, first and foremost, thank you for visiting my portfolio website. Which probably means that I intrigued
+                        I want to, first and foremost, thank you for visiting my portfolio website. Which probably means
+                        that I intrigued
                         you enough to take a look around 😉
                         <br>
                         <br>
@@ -144,13 +149,15 @@
         <div class="container">
             <div class="row">
                 <h1>Projects</h1>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper" style="transform-style: preserve-3d;" data-tilt>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper"
+                    style="transform-style: preserve-3d;" data-tilt>
                     <a href="#">
                         <img id="tiltable" style="transform: translateZ(50px)" src="./img/jpg1.jpg" alt="">
                     </a>
                     <p>Aprèsdesheuresapparel.com</p>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper" style="transform-style: preserve-3d;" data-tilt>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper"
+                    style="transform-style: preserve-3d;" data-tilt>
                     <a href="#">
                         <img id="tiltable" style="transform: translateZ(50px)"
                             src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg" alt="">
@@ -175,7 +182,8 @@
         <div class="container">
             <div class="row">
                 <h1>Contact</h1>
-                <form action="index.php?content=home" method="post" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <form action="index.php?content=home" method="post"
+                    class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="">
                         <div class="mb-3">
                             <input type="text" name="name" class="form-control" id="exampleFormControlInput1"
