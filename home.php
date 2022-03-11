@@ -1,11 +1,13 @@
 <?php
     include('./classes/databaseQueries.php');
 
-    $contactObject = new databaseQueries();
+    // $contactObject = new databaseQueries();
+    $object = new databaseQueries();
+    $projects = $object->displayProjects();
 
     // Insert Record in contact table
   if(isset($_POST['submit'])) {
-    $contactObject->insertContact($_POST);
+    $object->insertContact($_POST);
   }
     // var_dump($contactObject);exit;
 ?>
@@ -21,7 +23,7 @@
             </h1>
             <section id="section10" class="demo">
                 <!-- <h1>Scroll Down Button #10</h1> -->
-                <a href="#thanks"><span></span></a>
+                <a href="#about-section"><span></span></a>
             </section>
         </div>
     </section>
@@ -149,30 +151,24 @@
         <div class="container">
             <div class="row">
                 <h1>Projects</h1>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper"
-                    style="transform-style: preserve-3d;" data-tilt>
-                    <a href="#">
-                        <img id="tiltable" style="transform: translateZ(50px)" src="./img/jpg1.jpg" alt="">
-                    </a>
-                    <p>Aprèsdesheuresapparel.com</p>
-                </div>
+                <?php foreach ($projects as $project) {?>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper"
                     style="transform-style: preserve-3d;" data-tilt>
                     <a href="#">
                         <img id="tiltable" style="transform: translateZ(50px)"
-                            src="./img/placeholders/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg" alt="">
+                            src="./img/<?php echo $project['filename']?>" alt="">
                     </a>
-                    <p>Progressive Monitor App</p>
+                    <p><?php echo $project['name']?></p>
+                </div>
+                <?php }?>
+                <div class="row">
+                    <div>
+                        <a href="index.php?content=projects">
+                            <button class="btn btnCenter">View more</button>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div>
-                    <a href="index.php?content=projects">
-                        <button class="btn btnCenter">View more</button>
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
 </div>
 
