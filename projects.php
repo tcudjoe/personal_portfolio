@@ -14,7 +14,7 @@
         ?>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper" style="transform-style: preserve-3d;"
             data-tilt>
-            <a href="#">
+            <a href="index.php?content=<?php echo $project['pagename']?>">
                 <img id="tiltable" style="transform: translateZ(50px)" src="./img/<?php echo $project['filename'] ?>"
                     alt="">
             </a>
