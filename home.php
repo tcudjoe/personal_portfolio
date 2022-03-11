@@ -22,7 +22,6 @@
                 </a>
             </h1>
             <section id="section10" class="demo">
-                <!-- <h1>Scroll Down Button #10</h1> -->
                 <a href="#about-section"><span></span></a>
             </section>
         </div>

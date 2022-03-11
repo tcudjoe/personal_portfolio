@@ -4,7 +4,7 @@
     $projects = $object->displayProjects();
 ?>
 
-<div class="container">
+<div class="container projects">
     <div class="row">
         <h1>Projects</h1>
         <small>These are all the projects I've made. Some may have been made for friends, some just for fun and some as

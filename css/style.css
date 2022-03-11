@@ -429,11 +429,16 @@ main>div>#about-section>div>div>div>img {
         margin: 5px;
     }
 
+    .projects {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .container>.row>.col-12>a>img {
         width: 100%;
         height: auto;
-        padding: 10px;
-        border-radius: 20px;
+        /* padding: 10px; */
+        border-radius: 5px;
         position: relative;
         margin-top: 20px;
     }
