@@ -35,14 +35,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?content=home">Home</a>
                         </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="index.php?content=ho">About</a>
+                        </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#about-section">About</a>
+                            <a class="nav-link" href="index.php?content=projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects-section">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact-section">Contact</a>
+                            <!-- <a class="nav-link" href="#contact-section">Contact</a> -->
                         </li>
                     </ul>
                 </div>

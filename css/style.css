@@ -461,11 +461,21 @@ main>div>#about-section>div>div>div>img {
         margin-bottom: 20px;
         padding-left: 50px;
         padding-right: 50px;
-        color: rgb(97, 96, 96);
+        color: rgb(255, 255, 255);
     }
 
     .container>.row>.col-12>a>img:hover {
         opacity: 0.5;
+    }
+
+    .backgroundImg {
+        /* background-image: url("../img/projectImg/jpg1.jpg"); */
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 500px;
+        margin-top: -60px;
+        background-color: rgba(0, 0, 0, 0.665);
     }
 
 }
