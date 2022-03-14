@@ -2,10 +2,8 @@
     include './classes/databaseQueries.php';
     $object = new databaseQueries();
     $projects = $object->displayProjects();
-    $project = $object->displayProjectsContent();
-    if(isset($_GET['pagename'])){
+    // $project = $object->displayProjectsContent();
 
-    }
 ?>
 
 <div class="container projects">
@@ -18,7 +16,7 @@
         ?>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper" style="transform-style: preserve-3d;"
             data-tilt>
-            <a href="index.php?content=articles&pagename=<?php echo $project['pagename']?>">
+            <a href="index.php?content=articles&pagename=<?php echo $project["pagename"]?>">
                 <img id="tiltable" style="transform: translateZ(50px)" src="./img/<?php echo $project['filename'] ?>"
                     alt="">
             </a>
