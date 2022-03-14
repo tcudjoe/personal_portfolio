@@ -1,8 +1,8 @@
 <?php
  include './classes/databaseQueries.php';
  $object = new databaseQueries();
- $project = $object->displayProjectsContent();
- var_dump($project);
+ $projects = $object->displayProjectsContent();
+ var_dump($projects);
 //  if (isset($_GET['pagename'])) {
 //     require_once './classes/databaseQueries.php';
 //     $conn = new mysqli($servername, $username,$password,$database);
@@ -21,7 +21,7 @@
 // } else {
 //     echo 'doei';
 // }
-//  foreach ($project as $project){
+ foreach ($projects as $project){
 ?>
 
 <section class="backgroundImg" style="background-image: url('./img<?php echo $project['filename'];?>')">
@@ -33,3 +33,4 @@
         </div>
     </div>
 </section>
+<?php }?>
