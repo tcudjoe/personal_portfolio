@@ -36,7 +36,7 @@
 
         public function displayProjects()
         {
-            $query = "SELECT * FROM projects ";
+            $query = "SELECT * FROM projects limit 3";
             $result = $this->conn->query($query);
             // echo $query;
             if($result){
@@ -76,5 +76,9 @@
             }
         }
     }
+
+    class Pagination{
+    }
+
 
 ?>
