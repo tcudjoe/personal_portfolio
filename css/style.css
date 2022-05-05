@@ -193,6 +193,7 @@ main>div>#about-section>div>div>div>img {
 #tiltable {
     transition: transform 0.5s;
     backface-visibility: hidden;
+    width: 100%;
 }
 
 .appearRight {
@@ -219,13 +220,33 @@ main>div>#about-section>div>div>div>img {
     transition-delay: 0.3s;
 }
 
-/* .appear {
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
-    opacity: 0;
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
-} */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+.appear {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.projects>.row>h1 {
+    color: rgb(255, 255, 255);
+}
+
+.projects>.row>small {
+    color: rgb(151, 149, 149);
+}
+
+.wrapper>p{
+    color: rgb(151, 149, 149);
+    text-align: center;
+}
 
 @media only screen and (max-width: 576px) {
 
@@ -518,6 +539,8 @@ main>div>#about-section>div>div>div>img {
         text-align: left;
     }
 
+
+
 }
 
 @media only screen and (min-width: 576px) {
@@ -661,6 +684,7 @@ main>div>#about-section>div>div>div>img {
         padding-top: 30px;
         margin: 5px;
     }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -1252,5 +1276,15 @@ main>div>#about-section>div>div>div>img {
         color: white;
         padding-top: 30px;
         margin: 30px;
+    }
+
+    .projects>.row>h1 {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .projects>.row>small {
+        margin-bottom: 50px;
+        text-align: center
     }
 }
