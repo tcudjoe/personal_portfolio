@@ -33,7 +33,7 @@
     <section id="about-section">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 appearLeft">
                     <h1>Who am I?</h1>
                     <p>Hi,
                         <br>
@@ -47,7 +47,7 @@
                         <br>
                         Let me tell you about me:
                         <br>
-                        <ul>
+                        <ul style="list-style: none">
                             <li><span>I always work efficient.🔥</span> <br> I always try to do my
                                 best to work as neat as possible so that mij
                                 colleagues can understand what ive written by using comments.</li>
@@ -76,7 +76,7 @@
                         T. Cudjoe
                     </p>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 appearRight">
                     <img src="./img/IMG_1650.jpg" alt="Ty Cudjoe Profile Picture">
                 </div>
             </div>

@@ -2,8 +2,6 @@
     include './classes/databaseQueries.php';
     $object = new databaseQueries();
     $projects = $object->displayProjects();
-    // $project = $object->displayProjectsContent();
-
 ?>
 
 <div class="container projects">
@@ -14,15 +12,18 @@
         <?php
             foreach ($projects as $project){
         ?>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper" style="transform-style: preserve-3d;"
-            data-tilt>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper appear"
+            style="transform-style: preserve-3d;" data-tilt>
             <a href="index.php?content=articles&pagename=<?php echo $project["pagename"]?>">
-                <img id="tiltable" style="transform: translateZ(50px)" src="./img/projectImg/<?php echo $project['filename'] ?>"
-                    alt="">
+                <img id="tiltable" style="transform: translateZ(50px)"
+                    src="./img/projectImg/<?php echo $project['filename'] ?>" alt="">
             </a>
             <p><?php echo $project['name']?></p>
         </div>
         <?php } ?>
     </div>
 </div>
-</div>
+
+<script>
+    document.appear.classList.add('fade');
+</script>
