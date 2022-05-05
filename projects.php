@@ -12,7 +12,7 @@
         <?php
             foreach ($projects as $project){
         ?>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper appear"
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 wrapper appear"
             style="transform-style: preserve-3d;" data-tilt>
             <a href="index.php?content=articles&pagename=<?php echo $project["pagename"]?>">
                 <img id="tiltable" style="transform: translateZ(50px)"
