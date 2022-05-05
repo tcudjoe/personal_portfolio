@@ -222,12 +222,13 @@ main>div>#about-section>div>div>div>img {
 
 @keyframes slideInFromLeft {
     0% {
-      transform: translateY(20%);
-      opacity: 0;
+        transform: translateY(20%);
+        opacity: 0;
     }
+
     100% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
@@ -243,7 +244,7 @@ main>div>#about-section>div>div>div>img {
     color: rgb(151, 149, 149);
 }
 
-.wrapper>p{
+.wrapper>p {
     color: rgb(151, 149, 149);
     text-align: center;
 }
@@ -495,13 +496,11 @@ main>div>#about-section>div>div>div>img {
     }
 
     .container>.row>.col-12>p {
-        color: white;
         text-align: center;
     }
 
     .container>.row>h1 {
         text-align: center;
-        color: white;
         margin-top: 90px;
         margin-bottom: 30px;
     }
@@ -512,7 +511,6 @@ main>div>#about-section>div>div>div>img {
         margin-bottom: 20px;
         padding-left: 50px;
         padding-right: 50px;
-        color: rgb(255, 255, 255);
     }
 
     .container>.row>.col-12>a>img:hover {
@@ -535,7 +533,7 @@ main>div>#about-section>div>div>div>img {
         font-family: 'Sarabun', sans-serif;
     }
 
-    .projectDescription{
+    .projectDescription {
         text-align: left;
     }
 
@@ -685,6 +683,16 @@ main>div>#about-section>div>div>div>img {
         margin: 5px;
     }
 
+    .projects>.row>h1 {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .projects>.row>small {
+        margin-bottom: 50px;
+        text-align: center
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -829,6 +837,21 @@ main>div>#about-section>div>div>div>img {
         color: white;
         padding-top: 30px;
         margin: 20px;
+    }
+
+    .projects>.row>h1 {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .projects>.row>small {
+        font-size: 20px;
+        margin-bottom: 50px;
+        text-align: center
+    }
+
+    .wrapper>p {
+        font-size: 20px;
     }
 }
 
@@ -979,6 +1002,21 @@ main>div>#about-section>div>div>div>img {
         padding-top: 30px;
         margin: 30px;
     }
+
+    .projects>.row>h1 {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .projects>.row>small {
+        font-size: 16px;
+        margin-bottom: 50px;
+        text-align: center
+    }
+
+    .wrapper>p {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1127,6 +1165,21 @@ main>div>#about-section>div>div>div>img {
         color: white;
         padding-top: 30px;
         margin: 30px;
+    }
+
+    .projects>.row>h1 {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .projects>.row>small {
+        font-size: 16px;
+        margin-bottom: 50px;
+        text-align: center
+    }
+
+    .wrapper>p {
+        font-size: 16px;
     }
 }
 
