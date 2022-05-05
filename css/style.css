@@ -190,9 +190,21 @@ main>div>#about-section>div>div>div>img {
     font-size: 16px;
 }
 
+.fa-brands {
+    color: white;
+    padding-top: 30px;
+    margin: 5px;
+    transition: 300ms;
+}
+
+.fa-brands:hover{
+    color: rgb(137, 137, 137);
+}
+
 #tiltable {
     transition: transform 0.5s;
     backface-visibility: hidden;
+    width: 100%;
 }
 
 .appearRight {
@@ -219,13 +231,17 @@ main>div>#about-section>div>div>div>img {
     transition-delay: 0.3s;
 }
 
-/* .appear {
-    -webkit-transition: all 0.8s;
+.appearUp {
     transition: all 0.8s;
     opacity: 0;
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
-} */
+    transform: translateY(-40px);
+}
+
+.appearUp.inview {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.3s;
+}
 
 @media only screen and (max-width: 576px) {
 
@@ -457,6 +473,10 @@ main>div>#about-section>div>div>div>img {
         color: white;
         padding-top: 30px;
         margin: 5px;
+        transition: 300ms;
+    }
+     .fa-brands:hover{
+        color: rgb(137, 137, 137);
     }
 
     .projects {
@@ -491,7 +511,7 @@ main>div>#about-section>div>div>div>img {
         margin-bottom: 20px;
         padding-left: 50px;
         padding-right: 50px;
-        color: rgb(255, 255, 255);
+        color: rgb(85, 84, 84);
     }
 
     .container>.row>.col-12>a>img:hover {
@@ -1252,5 +1272,18 @@ main>div>#about-section>div>div>div>img {
         color: white;
         padding-top: 30px;
         margin: 30px;
+    }
+
+    .projects>.row>h1 {
+        color: white;
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .projects>.row>small {
+        margin-bottom: 70px;
+        text-align: center;
+        color: rgb(85, 84, 84);
+        font-size: 16px;
     }
 }
