@@ -196,6 +196,16 @@ main>div>#about-section>div>div>div>img {
     width: 100%;
 }
 
+.fa-brands {
+    color: white;
+    padding-top: 30px;
+    transition: 0.2s
+}
+
+.fa-brands:hover {
+    color: rgb(124, 123, 123);
+}
+
 .appearRight {
     transition: all 0.8s;
     opacity: 0;
@@ -476,8 +486,6 @@ main>div>#about-section>div>div>div>img {
     }
 
     .fa-brands {
-        color: white;
-        padding-top: 30px;
         margin: 5px;
     }
 
@@ -678,8 +686,6 @@ main>div>#about-section>div>div>div>img {
     }
 
     .fa-brands {
-        color: white;
-        padding-top: 30px;
         margin: 5px;
     }
 
@@ -834,8 +840,6 @@ main>div>#about-section>div>div>div>img {
     }
 
     .fa-brands {
-        color: white;
-        padding-top: 30px;
         margin: 20px;
     }
 
@@ -998,8 +1002,6 @@ main>div>#about-section>div>div>div>img {
     }
 
     .fa-brands {
-        color: white;
-        padding-top: 30px;
         margin: 30px;
     }
 
@@ -1162,8 +1164,6 @@ main>div>#about-section>div>div>div>img {
     }
 
     .fa-brands {
-        color: white;
-        padding-top: 30px;
         margin: 30px;
     }
 
@@ -1326,8 +1326,6 @@ main>div>#about-section>div>div>div>img {
     }
 
     .fa-brands {
-        color: white;
-        padding-top: 30px;
         margin: 30px;
     }
 

@@ -23,7 +23,3 @@
         <?php } ?>
     </div>
 </div>
-
-<script>
-    document.appear.classList.add('fade');
-</script>
