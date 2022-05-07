@@ -6,18 +6,29 @@
  foreach ($projects as $project){
 ?>
 
-<section class="backgroundImg" style="background-image: url('./img/projectImg/<?php echo $project['filename'];?>')">
-</section>
 <section>
-    <div class="container">
+    <div class="container articles">
         <div class="row">
             <h2><?php echo $project['name']?></h2>
-            <p><?php echo $project['description']?></p>
-            <video width="100%" height="100%" controls>
-                <source src="img/projectImg/<?php echo $project['videoFilename'];?>" type="video/mp4">
-                <source src="img/projectImg/<?php echo $project['videoFilename'];?>" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                <p><?php echo $project['p1']?></p>
+                <p><?php echo $project['p2']?></p>
+                <p><?php echo $project['p3']?></p>
+                <p><?php echo $project['p4']?></p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                <img src="./img/projectImg/<?php echo $project['filename'];?>" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 links">
+                <p>Would you like to get more info about this project?
+                    <br>
+                    Click the link(s) down below:
+                </p>
+                <a href="<?php echo $project['githublink'] ?>">Github</a>
+                <a href="<?php echo $project['websitelink'] ?>" style="display: <?php if ($project['websitelink'] == NULL){echo 'none';}else{echo 'block';}?>;">Website</a>
+            </div>
         </div>
     </div>
 </section>
