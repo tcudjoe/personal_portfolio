@@ -247,6 +247,7 @@ main>div>#about-section>div>div>div>img {
 }
 
 .projects>.row>h1 {
+    margin-top: 50px;
     color: rgb(255, 255, 255);
 }
 
@@ -257,6 +258,36 @@ main>div>#about-section>div>div>div>img {
 .wrapper>p {
     color: rgb(151, 149, 149);
     text-align: center;
+}
+
+.articles>.row>h2 {
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    text-align: center;
+}
+
+.articles>.row>.col-12>p {
+    color: rgb(151, 149, 149);
+    text-align: left;
+}
+
+.links>p {
+    color: rgb(188, 186, 186);
+}
+
+.links>a {
+    color: rgb(151, 149, 149);
+    transition: 0.3s;
+}
+
+.links>a:hover {
+    color: rgb(212, 212, 212);
+    font-size: 20px;
+}
+
+.articles>.row>.col-12>img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 @media only screen and (max-width: 576px) {
@@ -401,7 +432,6 @@ main>div>#about-section>div>div>div>img {
 
     #about-section>div>div>div>p>span {
         font-weight: bold;
-        /* color: rgb(99, 187, 143); */
     }
 
     .wai {
@@ -497,7 +527,6 @@ main>div>#about-section>div>div>div>img {
     .container>.row>.col-12>a>img {
         width: 100%;
         height: auto;
-        /* padding: 10px; */
         border-radius: 5px;
         position: relative;
         margin-top: 20px;
@@ -525,16 +554,6 @@ main>div>#about-section>div>div>div>img {
         opacity: 0.5;
     }
 
-    .backgroundImg {
-        /* background-image: url("../img/projectImg/jpg1.jpg"); */
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 500px;
-        margin-top: -60px;
-        background-color: rgba(0, 0, 0, 0.665);
-    }
-
     .projectName {
         text-align: center;
         color: #fff;
@@ -545,8 +564,31 @@ main>div>#about-section>div>div>div>img {
         text-align: left;
     }
 
+    .articles>.row>h2 {
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
 
+    .articles>.row>.col-12>p {
+        text-align: center;
+    }
 
+    .articles>.row>.col-12>img {
+        border-radius: 10px;
+        margin-top: 35px;
+        width: 100%;
+    }
+
+    .links>p {
+        color: rgb(188, 186, 186);
+        margin-top: 50px;
+    }
+
+    .links>a {
+        color: rgb(212, 212, 212);
+        padding-left: 100px;
+        text-decoration: underline;
+    }
 }
 
 @media only screen and (min-width: 576px) {
@@ -690,7 +732,6 @@ main>div>#about-section>div>div>div>img {
     }
 
     .projects>.row>h1 {
-        margin-top: 50px;
         text-align: center;
     }
 
@@ -699,6 +740,31 @@ main>div>#about-section>div>div>div>img {
         text-align: center
     }
 
+    .articles>.row>h2 {
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+
+    .articles>.row>.col-12>p {
+        text-align: center;
+    }
+
+    .articles>.row>.col-12>img {
+        border-radius: 10px;
+        margin-top: 35px;
+        width: 100%;
+    }
+
+    .links>p {
+        color: rgb(188, 186, 186);
+        margin-top: 50px;
+    }
+
+    .links>a {
+        color: rgb(212, 212, 212);
+        padding-left: 230px;
+        text-decoration: underline;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -844,7 +910,6 @@ main>div>#about-section>div>div>div>img {
     }
 
     .projects>.row>h1 {
-        margin-top: 50px;
         text-align: center;
     }
 
@@ -856,6 +921,32 @@ main>div>#about-section>div>div>div>img {
 
     .wrapper>p {
         font-size: 20px;
+    }
+
+    .articles>.row>h2 {
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+
+    .articles>.row>.col-12>p {
+        text-align: center;
+    }
+
+    .articles>.row>.col-12>img {
+        border-radius: 10px;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .links>p {
+        color: rgb(188, 186, 186);
+        margin-top: 50px;
+    }
+
+    .links>a {
+        color: rgb(212, 212, 212);
+        padding-left: 320px;
+        text-decoration: underline;
     }
 }
 
@@ -1006,7 +1097,6 @@ main>div>#about-section>div>div>div>img {
     }
 
     .projects>.row>h1 {
-        margin-top: 50px;
         text-align: center;
     }
 
@@ -1018,6 +1108,32 @@ main>div>#about-section>div>div>div>img {
 
     .wrapper>p {
         font-size: 16px;
+    }
+
+    .articles>.row>h2 {
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+
+    .articles>.row>.col-12>p {
+        text-align: center;
+    }
+
+    .articles>.row>.col-12>img {
+        border-radius: 10px;
+        margin-top: 35px;
+        width: 100%;
+    }
+
+    .links>p {
+        color: rgb(188, 186, 186);
+        margin-top: 50px;
+    }
+
+    .links>a {
+        color: rgb(212, 212, 212);
+        padding-left: 200px;
+        text-decoration: underline;
     }
 }
 
@@ -1168,7 +1284,6 @@ main>div>#about-section>div>div>div>img {
     }
 
     .projects>.row>h1 {
-        margin-top: 50px;
         text-align: center;
     }
 
@@ -1180,6 +1295,32 @@ main>div>#about-section>div>div>div>img {
 
     .wrapper>p {
         font-size: 16px;
+    }
+
+    .articles>.row>h2 {
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    .articles>.row>.col-12>p {
+        text-align: center;
+    }
+
+    .articles>.row>.col-12>img {
+        border-radius: 10px;
+        margin-top: 35px;
+        width: 100%;
+    }
+
+    .links>p {
+        color: rgb(188, 186, 186);
+        margin-top: 50px;
+    }
+
+    .links>a {
+        color: rgb(212, 212, 212);
+        padding-left: 230px;
+        text-decoration: underline;
     }
 }
 
@@ -1330,12 +1471,41 @@ main>div>#about-section>div>div>div>img {
     }
 
     .projects>.row>h1 {
-        margin-top: 50px;
         text-align: center;
     }
 
     .projects>.row>small {
         margin-bottom: 50px;
         text-align: center
+    }
+
+    .articles>.row>h2{
+        margin-bottom: 70px;
+    }
+
+    .articles>.row>h2 {
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+
+    .articles>.row>.col-12>p {
+        text-align: center;
+    }
+
+    .articles>.row>.col-12>img {
+        border-radius: 10px;
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .links>p {
+        color: rgb(188, 186, 186);
+        margin-top: 50px;
+    }
+
+    .links>a {
+        color: rgb(212, 212, 212);
+        padding-left: 280px;
+        text-decoration: underline;
     }
 }
