@@ -141,10 +141,6 @@ main>div>#about-section>div>div>div>img {
     transition: 0.3s;
 }
 
-/* .contactInfo {
-    padding-left: 150px;
-} */
-
 .contactInfo>label {
     color: rgb(150, 148, 148);
 }
@@ -288,6 +284,32 @@ main>div>#about-section>div>div>div>img {
 .articles>.row>.col-12>img {
     width: 100%;
     border-radius: 10px;
+}
+
+.loginForm {
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
+    padding-bottom: 100px;
+}
+
+.loginForm>h1 {
+    display: block;
+}
+
+.btn-login {
+    background-color: white;
+    color: black;
+    float: right;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: black;
+    border-color: white;
+    color: white;
 }
 
 @media only screen and (max-width: 576px) {
@@ -1479,7 +1501,7 @@ main>div>#about-section>div>div>div>img {
         text-align: center
     }
 
-    .articles>.row>h2{
+    .articles>.row>h2 {
         margin-bottom: 70px;
     }
 
