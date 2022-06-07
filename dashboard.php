@@ -1,5 +1,6 @@
 <?php
-
+    include './functions.php';
+    is_authorised(['admin'])
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +12,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 style="color: white;">Hello World</h1>
+    <main class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 style="color: white;">Hello World</h1>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-8"></div>
+        </div>
+    </main>
 </body>
 </html>

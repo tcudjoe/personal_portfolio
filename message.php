@@ -20,6 +20,13 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=LoginPage");
         break;
+
+        case 'successfull-logout':
+            echo '<div class="alert alert-success text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    You have been succesfully logged out.
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=LoginPage");
+        break;
     }
 
 ?>

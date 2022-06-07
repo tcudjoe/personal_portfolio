@@ -5,6 +5,7 @@
 
     $username = sanitize($_POST["username"]);
     $password = sanitize($_POST["password"]);
+    $id       = sanitize($_POST["id"]);
 
     if(empty($username) || empty($password)) {
         header("Location: ./index.php?content=message&alert=no-login");
@@ -22,9 +23,17 @@
             }if ($password !== $record["password"]) {
                 //No password match
                 // var_dump($record["password"], $record["username"], $sql, $record, $password,password_verify($password, $record["password"]));exit();
-                header("Location: ./index.php?content=message&alert=error-login&username=$username");
+                header("Location: ./index.php?content=message&alert=error-login&username=$username&id=$id");
             }else {
+                $_SESSION["id"] = $record["id"];
+                $_SESSION["userrole"] = $record["userrole"];
 
-                header("Location: ./index.php?content=dashboard");
+                switch ($record["userrole"]){
+                    case 'admin':
+                        header("Location: ./index.php?content=dashboard");
+                    break;
+                }
+
+                // header("Location: ./index.php?content=dashboard");
             }
     }

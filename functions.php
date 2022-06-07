@@ -25,6 +25,7 @@
 
   function is_authorised($userroles) {
     if (!isset($_SESSION["id"])){
+      // var_dump($_SESSION["id"]);exit();
       return header("Location: ./index.php?content=message&alert=auth-error");
     }elseif (!in_array($_SESSION["userrole"], $userroles)) {
       return header("Location: ./index.php?content=message&alert=auth-error-user");
