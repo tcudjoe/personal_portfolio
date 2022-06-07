@@ -9,6 +9,14 @@ body {
 
 a {
     text-decoration: none;
+    color: white !important;
+}
+
+.dropdown-item {
+    color: black !important;
+}
+.dropdown-menu {
+    width : 100%;
 }
 
 #home-section {
