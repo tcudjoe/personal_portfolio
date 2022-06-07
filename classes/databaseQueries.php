@@ -79,9 +79,36 @@
 
 
 
-    class User{
+    // class User{
 
-    }
+    //     public function check_login($username, $password){
+
+    //         $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+    //         $result = $this->conn->query($query);
+
+    //         if($result->num_rows > 0){
+    //             $row = $result->fetch_array();
+    //             return $row['id'];
+    //         }
+    //         else{
+    //             return false;
+    //         }
+    //     }
+
+    //     public function details($sql){
+
+    //         $query = $this->connection->query($sql);
+
+    //         $row = $query->fetch_array();
+
+    //         return $row;
+    //     }
+
+    //     public function escape_string($value){
+
+    //         return $this->connection->real_escape_string($value);
+    //     }
+    // }
 
 
 ?>
