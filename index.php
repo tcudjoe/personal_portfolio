@@ -37,19 +37,21 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?content=projects">Projects</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                                dropdown menu
-                            </a>
-                            <ul class="dropdown-menu">
+
                                 <?php if(isset($_SESSION['id'])){
                                 //   var_dump($_SESSION["id"]);exit();
                                     switch($_SESSION['userrole']){
                                         case 'admin':
                                             echo '
-                                            <li><a class="dropdown-item" href="index.php?content=dashboard">Dahboard</a></li>
-                                            <li><a class="dropdown-item" href="index.php?content=logout">Logout</a></li>
-                                            ';
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                                                    dropdown menu
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="index.php?content=dashboard">Dahboard</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=logout">Logout</a></li>
+                                                </ul>
+                                            </li>';
                                         break;
                                         case '':
                                             echo '';
@@ -57,8 +59,7 @@
                                     }
                                 } ?>
 
-                            </ul>
-                        </li>
+
                     </ul>
                 </div>
             </div>
