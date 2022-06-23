@@ -24,13 +24,12 @@
             $email = $this->conn->real_escape_string($_POST['email']);
             $message = $this->conn->real_escape_string($_POST['message']);
             $created_at = $this->conn->real_escape_string($_POST['created_at']);
-            $query="INSERT INTO contact(name, email, message, phonenumber, created_at) VALUES('$name','$email','$message', $phonenumber, '$created_at')";
+            $responded = $this->conn->real_escape_string($_POST['responded']);
+            $query="INSERT INTO contact(name, email, message, phonenumber, created_at, responded) VALUES('$name','$email','$message', $phonenumber, '$created_at', '$responded')";
             $sql = $this->conn->query($query);
             if ($sql==true) {
-                // var_dump($sql, $query);exit;
                 header("Location: index.php?content=message&alert=form-success");
             }else{
-                var_dump($query, $sql, $created_at);exit;
                 header("Location: index.php?content=message&alert=form-error");
             }
         }
@@ -77,10 +76,49 @@
             }
         }
 
-        public function displayContactInfo(){
-            $per_page = 5;
+        public function displayContactInfo($perPage){
+            $query = "SELECT * FROM contact ORDER BY id DESC limit $perPage";
+            $result = $this->conn->query($query);
 
-            $query = "SELECT * FROM contact ORDER BY id DESC limit 4";
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
+
+                            $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
+
+        public function readMessages(){
+            $id =$this->conn->real_escape_string($_GET["id"]);
+            $query = "SELECT * FROM contact WHERE id = $id";
+            $result = $this->conn->query($query);
+
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
+
+                            $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
+
+        public function pagination(){
+            $query = "SELECT * FROM contact ORDER BY id DESC";
             $result = $this->conn->query($query);
 
             if($result){
@@ -99,39 +137,4 @@
             }
         }
     }
-
-
-
-    // class User{
-
-    //     public function check_login($username, $password){
-
-    //         $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-    //         $result = $this->conn->query($query);
-
-    //         if($result->num_rows > 0){
-    //             $row = $result->fetch_array();
-    //             return $row['id'];
-    //         }
-    //         else{
-    //             return false;
-    //         }
-    //     }
-
-    //     public function details($sql){
-
-    //         $query = $this->connection->query($sql);
-
-    //         $row = $query->fetch_array();
-
-    //         return $row;
-    //     }
-
-    //     public function escape_string($value){
-
-    //         return $this->connection->real_escape_string($value);
-    //     }
-    // }
-
-
 ?>

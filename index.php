@@ -44,11 +44,12 @@
                                     echo '
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                                                dropdown menu
+                                                Dashboard menu
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="index.php?content=dashboard">Dahboard</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=dashboard">Dashboard</a></li>
                                                 <li><a class="dropdown-item" href="index.php?content=editProjects">Edit projects</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=readContact">Contact messages</a></li>
                                                 <li><a class="dropdown-item" href="index.php?content=logout">Logout</a></li>
                                             </ul>
                                         </li>';

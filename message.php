@@ -39,6 +39,14 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=home#contact-section");
         break;
+        case 'auth-error':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    You are not authorized to access this page.
+                    <br>
+                    You are being redirected to the login page.
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=loginPage");
+        break;
     }
 
 ?>

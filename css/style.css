@@ -347,6 +347,21 @@ main>div>#about-section>div>div>div>img {
     margin-top: 88px;
 }
 
+.alert {
+    color: black;
+}
+
+.readMessages {
+    color: rgb(151, 149, 149);
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form>.mb-3>label {
+    color: white;
+}
+
 @media only screen and (max-width: 576px) {
 
     #home-section {

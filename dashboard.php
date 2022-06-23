@@ -28,7 +28,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            $contacts = $contactObj->displayContactInfo();
+                            $contacts = $contactObj->displayContactInfo(5);
                             foreach($contacts as $contact){
                         ?>
                         <tr>
@@ -41,7 +41,7 @@
                         <?php } ?>
                     </tbody>
                 </table>
-                <a href="">
+                <a href="index.php?content=contactMessages">
                     <button type="button" class="btn btn-dark">view more</button>
                 </a>
             </div>
