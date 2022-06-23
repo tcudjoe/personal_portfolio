@@ -23,14 +23,14 @@
             $phonenumber = $this->conn->real_escape_string($_POST['phonenumber']);
             $email = $this->conn->real_escape_string($_POST['email']);
             $message = $this->conn->real_escape_string($_POST['message']);
-            $query="INSERT INTO contact(name, email, message, phonenumber) VALUES('$name','$email','$message', $phonenumber)";
+            $created_at = $this->conn->real_escape_string($_POST['created_at']);
+            $responded = $this->conn->real_escape_string($_POST['responded']);
+            $query="INSERT INTO contact(name, email, message, phonenumber, created_at, responded) VALUES('$name','$email','$message', $phonenumber, '$created_at', '$responded')";
             $sql = $this->conn->query($query);
             if ($sql==true) {
-                // var_dump($sql, $query);exit;
-                header("Location:index.php?content=home");
+                header("Location: index.php?content=message&alert=form-success");
             }else{
-                // var_dump($query, $sql);exit;
-                header("Location:index.php?content=home");
+                header("Location: index.php?content=message&alert=form-error");
             }
         }
 
@@ -75,10 +75,66 @@
                 echo "error in ".$query."<br>".$this->conn->error;
             }
         }
+
+        public function displayContactInfo($perPage){
+            $query = "SELECT * FROM contact ORDER BY id DESC limit $perPage";
+            $result = $this->conn->query($query);
+
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
+
+                            $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
+
+        public function readMessages(){
+            $id =$this->conn->real_escape_string($_GET["id"]);
+            $query = "SELECT * FROM contact WHERE id = $id";
+            $result = $this->conn->query($query);
+
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
+
+                            $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
+
+        public function pagination(){
+            $query = "SELECT * FROM contact ORDER BY id DESC";
+            $result = $this->conn->query($query);
+
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
+
+                            $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
     }
-
-    class Pagination{
-    }
-
-
 ?>

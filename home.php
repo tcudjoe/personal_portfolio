@@ -196,6 +196,7 @@
                             <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"
                                 placeholder="Type your message here..."></textarea>
                         </div>
+                        <input type="hidden" name="created_at" value="<?php echo date("Y-m-d h:i:s") ?>">
                         <button type="submit" name="submit" value="submit" class="btn btn-contact">Submit</button>
                     </div>
                 </form>
