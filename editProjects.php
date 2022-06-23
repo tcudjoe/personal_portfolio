@@ -43,10 +43,10 @@
                             <td><?php  echo $project['pagename'] ?></td>
                             <td><?php  echo $project['githublink'] ?></td>
                             <td><?php  echo $project['websitelink'] ?></td>
-                            <td><?php  echo $project['p1'] ?></td>
-                            <td><?php  echo $project['p2'] ?></td>
-                            <td><?php  echo $project['p3'] ?></td>
-                            <td><?php  echo $project['p4'] ?></td>
+                            <td><?php  echo mb_strimwidth($project['p1'], 0, 40, "...") ?></td>
+                            <td><?php  echo mb_strimwidth($project['p2'], 0, 40, "...") ?></td>
+                            <td><?php  echo mb_strimwidth($project['p3'], 0, 40, "...") ?></td>
+                            <td><?php  echo mb_strimwidth($project['p4'], 0, 40, "...") ?></td>
                             <td>
                                 <a href="index.php?content=editProject&id=<?php echo $project['id'] ?>">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

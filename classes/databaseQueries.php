@@ -23,14 +23,15 @@
             $phonenumber = $this->conn->real_escape_string($_POST['phonenumber']);
             $email = $this->conn->real_escape_string($_POST['email']);
             $message = $this->conn->real_escape_string($_POST['message']);
-            $query="INSERT INTO contact(name, email, message, phonenumber) VALUES('$name','$email','$message', $phonenumber)";
+            $created_at = $this->conn->real_escape_string($_POST['created_at']);
+            $query="INSERT INTO contact(name, email, message, phonenumber, created_at) VALUES('$name','$email','$message', $phonenumber, '$created_at')";
             $sql = $this->conn->query($query);
             if ($sql==true) {
                 // var_dump($sql, $query);exit;
-                header("Location:index.php?content=home");
+                header("Location: index.php?content=message&alert=form-success");
             }else{
-                // var_dump($query, $sql);exit;
-                header("Location:index.php?content=home");
+                var_dump($query, $sql, $created_at);exit;
+                header("Location: index.php?content=message&alert=form-error");
             }
         }
 

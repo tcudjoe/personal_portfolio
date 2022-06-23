@@ -23,6 +23,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Phonenumber</th>
                             <th scope="col">Message</th>
+                            <th scope="col">Created at:</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,11 +35,15 @@
                             <td><?php echo $contact['name']; ?></td>
                             <td><?php echo $contact['email']; ?></td>
                             <td><?php echo $contact['phonenumber']; ?></td>
-                            <td><?php echo $contact['message']; ?></td>
+                            <td><?php echo mb_strimwidth($contact['message'], 0, 20, "..."); ?></td>
+                            <td><?php echo $contact['created_at']; ?></td>
                         </tr>
                         <?php } ?>
                     </tbody>
                 </table>
+                <a href="">
+                    <button type="button" class="btn btn-dark">view more</button>
+                </a>
             </div>
         </div>
         <div class="col-4">

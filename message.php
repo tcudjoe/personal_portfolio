@@ -27,6 +27,18 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=LoginPage");
         break;
+        case 'form-success':
+            echo '<div class="alert alert-success text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    The form has successfully been submitted.
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=home");
+        break;
+        case 'form-error':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    Something went wrong. Please try again..
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=home#contact-section");
+        break;
     }
 
 ?>
