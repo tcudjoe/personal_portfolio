@@ -320,6 +320,33 @@ main>div>#about-section>div>div>div>img {
     color: white;
 }
 
+.dashboard>.row>.col-12>h1 {
+    color: white;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.dashboard>.row>.col-12>p {
+    color: rgb(174, 173, 173);
+    text-align: center;
+}
+
+.dashboard>.row>.col-8>h4 {
+    color: rgb(214, 213, 213);
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.dashboard>.row>.col-8>div {
+    border: solid 3px rgb(174, 173, 173);
+    border-radius: 7px;
+    padding: 25px;
+}
+
+.dashboard>.row>.col-4 {
+    margin-top: 88px;
+}
+
 @media only screen and (max-width: 576px) {
 
     #home-section {
