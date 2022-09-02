@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `userrole`) VALUES
-(1, 'admin', 'tyra20015@gmail.com', 'digibord33', 'admin');
+(1, 'admin', 'tyra20015@gmail.com', 'qwertyuiopasdfghjkzxcvbnm1234567890', 'admin');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
