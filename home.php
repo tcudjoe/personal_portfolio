@@ -3,7 +3,7 @@
 
     // $contactObject = new databaseQueries();
     $object = new databaseQueries();
-    $projects = $object->displayProjects();
+    $projects = $object->displayProjects(3);
 
     // Insert Record in contact table
   if(isset($_POST['submit'])) {

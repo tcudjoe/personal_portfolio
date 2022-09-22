@@ -34,15 +34,15 @@
                     </thead>
                     <tbody>
                         <?php
-                            $projects = $projectsObj->displayProjects();
+                            $projects = $projectsObj->displayProjects(20);
                             foreach($projects as $id => $project ){
                         ?>
                         <tr>
                             <td><?php  echo $project['filename'] ?></td>
                             <td><?php  echo $project['name'] ?></td>
                             <td><?php  echo $project['pagename'] ?></td>
-                            <td><?php  echo $project['githublink'] ?></td>
-                            <td><?php  echo $project['websitelink'] ?></td>
+                            <td><?php  echo mb_strimwidth($project['githublink'], 0, 20, "...") ?></td>
+                            <td><?php  echo mb_strimwidth($project['websitelink'], 0, 20, "...") ?></td>
                             <td><?php  echo mb_strimwidth($project['p1'], 0, 40, "...") ?></td>
                             <td><?php  echo mb_strimwidth($project['p2'], 0, 40, "...") ?></td>
                             <td><?php  echo mb_strimwidth($project['p3'], 0, 40, "...") ?></td>
@@ -61,6 +61,11 @@
                         <?php }?>
                     </tbody>
                 </table>
+                <a href="index.php?content=createProject">
+                    <div class="d-grid">
+                        <button type="button" name="button" value="button" class="btn btn-primary">Add Project +</button>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <?php
     include './classes/databaseQueries.php';
     $object = new databaseQueries();
-    $projects = $object->displayProjects();
+    $projects = $object->displayProjects(20);
 ?>
 
 <div class="container projects">

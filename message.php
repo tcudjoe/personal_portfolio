@@ -47,6 +47,18 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=loginPage");
         break;
+        case 'updateProject-success':
+            echo '<div class="alert alert-success text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    Project update succesful.
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=editProjects");
+        break;
+        case 'updateProject-error':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    Something went wrong while updating the project. Try again later.
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=editProjects");
+        break;
     }
 
 ?>

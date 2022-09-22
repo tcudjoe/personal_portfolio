@@ -19,22 +19,22 @@
             <div class="mb-3">
                 <label for="exampleInputName1" class="form-label">Name</label>
                 <input type="text" name="name" class="form-control" value="<?php echo $contact["name"] ?>"
-                    id="exampleInputName1" aria-describedby="emailHelp" disabled>
+                    id="exampleInputName1" aria-describedby="emailHelp" readonly>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
                 <input type="text" name="email" class="form-control" value="<?php echo $contact["email"] ?>"
-                    id="exampleInputEmail1" disabled>
+                    id="exampleInputEmail1" readonly>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPhonenumber1" class="form-label">Phonenumber</label>
                 <input type="text" name="phonenumber" class="form-control" value="<?php echo $contact["phonenumber"] ?>"
-                    id="exampleInputPhonenumber1" disabled>
+                    id="exampleInputPhonenumber1" readonly>
             </div>
             <div class="mb-3">
                 <label for="exampleInputTimestamp1" class="form-label">created at:</label>
                 <input type="text" name="created_at" class="form-control" value="<?php echo $contact["created_at"] ?>"
-                    id="exampleInputTimestamp1" disabled>
+                    id="exampleInputTimestamp1" readonly>
             </div>
             <div class="mb-3">
                 <label for="exampleInputResponded1" class="form-label">Responded</label>
@@ -48,8 +48,8 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
-                    value="<?php echo $contact["message"] ?>" rows="3" disabled></textarea>
+                <input type="text" name="message" class="form-control message" value="<?php echo $contact["message"] ?>"
+                    id="exampleInputMessage1" readonly>
             </div>
             <a href="">
                 <input type="hidden" name="id" value="<?php echo $contact['id'] ?>">

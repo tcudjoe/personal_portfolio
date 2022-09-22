@@ -34,11 +34,36 @@
             }
         }
 
-        public function displayProjects()
+        public function displayProjects($perPage)
         {
-            $query = "SELECT * FROM projects limit 3";
+            $query = "SELECT * FROM projects ORDER BY id DESC limit $perPage";
             $result = $this->conn->query($query);
             // echo $query;
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
+
+                            $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
+
+        public function insertProjects() {
+
+        }
+
+        public function displayProjectUpdate()
+        {
+            $id =$this->conn->real_escape_string($_GET["id"]);
+            $query = "SELECT * FROM projects WHERE id = '$id'";
+            $result = $this->conn->query($query);
             if($result){
                 if ($result->num_rows > 0) {
                     $data = array();
@@ -60,8 +85,6 @@
             $query = "SELECT * FROM projects WHERE pagename = '$pagename'";
             $result = $this->conn->query($query);
             if(isset($_GET['pagename'])){
-                // var_dump($query);exit;
-
                 if ($result->num_rows > 0) {
                     $data = array();
                     while ($row = $result->fetch_assoc()) {
@@ -74,6 +97,28 @@
             }else {
                 echo "error in ".$query."<br>".$this->conn->error;
             }
+        }
+
+        public function updateProjects($postData) {
+            $filename = $this->conn->real_escape_string($_POST['filename']);
+            $name = $this->conn->real_escape_string($_POST['name']);
+            $githublink = $this->conn->real_escape_string($_POST['githublink']);
+            $websitelink = $this->conn->real_escape_string($_POST['websitelink']);
+            $p1 = $this->conn->real_escape_string($_POST['p1']);
+            $p2 = $this->conn->real_escape_string($_POST['p2']);
+            $p3 = $this->conn->real_escape_string($_POST['p3']);
+            $p4 = $this->conn->real_escape_string($_POST['p4']);
+            $id = $this->conn->real_escape_string($_POST['id']);
+            if (!empty($id) && !empty($postData)) {
+                $query = "UPDATE projects SET filename = '$filename', name = '$name', githublink = '$githublink', websitelink = '$websitelink', p1 = '$p1', p2 = '$p2', p3 = '$p3', p4 = '$p4' WHERE id = '$id'";
+                $sql = $this->conn->query($query);
+                if ($sql==true) {
+                    header("Location: index.php?content=message&alert=updateProject-success");
+                }else{
+                    header("Location: index.php?content=message&alert=updateProject-error");
+
+                }
+                }
         }
 
         public function displayContactInfo($perPage){
