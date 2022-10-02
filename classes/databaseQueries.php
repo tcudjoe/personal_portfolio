@@ -56,7 +56,45 @@
         }
 
         public function insertProjects() {
-
+            $targetDir = "./img/projectImg";
+            $fileName = basename( $_FILES["filename"]["name"]);
+            $targetFilePath = $targetDir . $fileName;
+            $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+            // $filename = $this->conn->real_escape_string($_POST['filename']);
+            $name = $this->conn->real_escape_string($_POST['name']);
+            $pagename = $this->conn->real_escape_string($_POST['pagename']);
+            $githublink = $this->conn->real_escape_string($_POST['githublink']);
+            $websitelink = $this->conn->real_escape_string($_POST['websitelink']);
+            $p1 = $this->conn->real_escape_string($_POST['p1']);
+            $p2 = $this->conn->real_escape_string($_POST['p2']);
+            $p3 = $this->conn->real_escape_string($_POST['p3']);
+            $p4 = $this->conn->real_escape_string($_POST['p4']);
+            $query = "INSERT INTO projects (filename, name, pagename, githublink, websitelink, p1, p2, p3, p4) VALUES ('$fileName','$name','$pagename', '$githublink', '$websitelink', '$p1', '$p2', '$p3', '$p4')";
+            if(isset($_POST['submit']) && !empty($_FILES['filename']['name'])){
+                $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
+                if(in_array($fileType, $allowTypes)){
+                    if(move_uploaded_file($_FILES["filename"]["tmp_name"], $targetFilePath)){
+                        $sql = $this->conn->query($query);
+                        var_dump( $sql); //query is not working properly, here is where we keep getting kicked out.
+                        if($sql == true){
+                            // var_dump($sql);exit();
+                            header("Location: index.php?content=message&alert=create-project-success");
+                        }else{
+                            var_dump($query, $sql);exit();
+                            header("Location: index.php?content=message&alert=create-project-error");
+                        }
+                    }else{
+                        var_dump($targetFilePath);exit();
+                        header("Location: index.php?content=message&alert=upload-image-error");
+                    }
+                }else{
+                    var_dump($fileType, $allowTypes);exit();
+                    header("Location: index.php?content=message&alert=upload-file-type-error");
+                }
+            }else{
+                header("Location: index.php?content=message&alert=no-file-selected");
+                var_dump($_POST);exit();
+            }
         }
 
         public function displayProjectUpdate()

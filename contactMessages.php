@@ -26,7 +26,7 @@
                             <th scope="col">Message</th>
                             <th scope="col">Created at:</th>
                             <th scope="col">Responded?</th>
-                            <th scope="col">Read</th>
+                            <th scope="col">Read/Edit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,6 +44,7 @@
                             <td>
                                 <a href="index.php?content=readContact&id=<?php echo $contact['id'] ?>">
                                     <i class="bi bi-eye"></i>
+                                    <i class="bi bi-pencil-square"></i>
                                 </a>
                             </td>
                         </tr>

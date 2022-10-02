@@ -53,9 +53,33 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=editProjects");
         break;
-        case 'updateProject-error':
+        case 'create-project-success':
+            echo '<div class="alert alert-success text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    Project was created successfully.
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=editProjects");
+        break;
+        case 'create-project-error':
             echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
-                    Something went wrong while updating the project. Try again later.
+                    Project was not created. Please try again later.
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=editProjects");
+        break;
+        case 'upload-image-error':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+            Something went wrong while creating this project. Probs something with the file. Check your code dumbass 🤦‍♀️
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=editProjects");
+        break;
+        case 'upload-file-type-error':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    You are supposed to upload files with type png. jpg, jpeg and/or gif. Why did you try anything else 😠
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=editProjects");
+        break;
+        case 'no-file-selected':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    You forgot to select a file weirdo🙄
                   </div>';
             header("Refresh: 3.5; ./index.php?content=editProjects");
         break;

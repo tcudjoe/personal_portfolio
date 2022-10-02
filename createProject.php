@@ -3,10 +3,14 @@
     is_authorised(['admin']);
     include './classes/databaseQueries.php';
     $projectsObj = new databaseQueries();
+
+    if(isset($_POST['submit'])){
+        $projectsObj->insertProjects($_POST);
+    }
 ?>
 
 <div class="container">
-    <form class="addProjects" method="post" action="index.php?content=editProject" enctype="multipart/form-data">
+    <form class="addProjects" method="post" action="index.php?content=createProject" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="formFile" class="form-label">File:</label>
             <input class="form-control" type="file" name="filename" id="fileToUpload">
@@ -52,7 +56,7 @@
                 value="" rows="3"></textarea>
         </div>
         <a href="index.php?content=editProjects">
-            <button type="submit" name="update" value="update" class="btn btn-primary">Update</button>
+            <button type="submit" name="submit" value="submit" class="btn btn-dark">Create project</button>
         </a>
     </form>
 </div>

@@ -49,7 +49,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="index.php?content=dashboard">Dashboard</a></li>
                                                 <li><a class="dropdown-item" href="index.php?content=editProjects">Edit projects</a></li>
-                                                <li><a class="dropdown-item" href="index.php?content=readContact">Contact messages</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=contactMessages">Contact messages</a></li>
                                                 <li><a class="dropdown-item" href="index.php?content=logout">Logout</a></li>
                                             </ul>
                                         </li>';
