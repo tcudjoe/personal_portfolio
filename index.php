@@ -27,7 +27,7 @@
     <header>
         <nav class="navbar navbar-expand fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.php?content=home">
                     T. Cudjoe
                 </a>
                 <div>
