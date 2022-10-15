@@ -278,5 +278,22 @@
                 }
             }
         }
+
+        public function insertExperience()
+        {
+            $function = $this->conn->real_escape_string($_POST['function']);
+            $company = $this->conn->real_escape_string($_POST['company']);
+            $place = $this->conn->real_escape_string($_POST['place']);
+            $summary = $this->conn->real_escape_string($_POST['summary']);
+            $period = $this->conn->real_escape_string($_POST['period']);
+            $companywebsite = $this->conn->real_escape_string($_POST['companywebsite']);
+            $query="INSERT INTO experience (function, company, place, summary, period, companywebsite) VALUES('$function', '$company', '$place', '$summary', '$period', '$companywebsite')";
+            $sql = $this->conn->query($query);
+            if ($sql==true) {
+                header("Location: index.php?content=message&alert=create-experience-success");
+            }else{
+                header("Location: index.php?content=message&alert=create-experience-error");
+            }
+        }
     }
 ?>
