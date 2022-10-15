@@ -31,7 +31,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            $experiences = $experienceObj->displayExperiences(20);
+                            $experiences = $experienceObj->displayExperience(20);
                             foreach($experiences as $id => $experience ){
                         ?>
                         <tr>
