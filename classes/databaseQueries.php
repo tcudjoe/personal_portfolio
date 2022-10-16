@@ -219,5 +219,26 @@
                 echo "error in ".$query."<br>".$this->conn->error;
             }
         }
+
+        public function displaySkills()
+        {
+            // $id =$this->conn->real_escape_string($_GET["id"]);
+            $query = "SELECT * FROM skills";
+            $result = $this->conn->query($query);
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
+
+                            $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
     }
 ?>

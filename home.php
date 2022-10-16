@@ -1,9 +1,10 @@
 <?php
     include('./classes/databaseQueries.php');
+    include './functions.php';
 
-    // $contactObject = new databaseQueries();
     $object = new databaseQueries();
     $projects = $object->displayProjects(3);
+    $skills = $object->displaySkills();
 
     // Insert Record in contact table
   if(isset($_POST['submit'])) {
@@ -92,51 +93,15 @@
                 <div id="skill-bar-wrapper">
                     <div class="text-left">
                         <h1 class="skill-bartext">Skills</h1>
-
-                        HTML<span style="float:right;">85%</span>
-                        <div class="skillbar-container clearfix" data-percent="85%">
+                        <?php
+                            $skills = $object->displaySkills();
+                            foreach($skills as $skill){
+                        ?>
+                        <?php echo $skill['name']?><span style="float:right;"><?php echo $skill['percentage'] ?>%</span>
+                        <div class="skillbar-container clearfix" data-percent="<?php echo $skill['percentage'] ?>%">
                             <div class="skills" style="background: white;"></div>
                         </div>
-
-                        CSS<span style="float:right;">65%</span>
-                        <div class="skillbar-container clearfix" data-percent="65%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        Bootstrap<span style="float:right;">85%</span>
-                        <div class="skillbar-container clearfix" data-percent="85%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        JavaScript<span style="float:right;">40%</span>
-                        <div class="skillbar-container clearfix" data-percent="40%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        VueJS<span style="float:right;">20%</span>
-                        <div class="skillbar-container clearfix" data-percent="20%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        Python<span style="float:right;">30%</span>
-                        <div class="skillbar-container clearfix" data-percent="30%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        PHP<span style="float:right;">65%</span>
-                        <div class="skillbar-container clearfix" data-percent="65%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        MySQL<span style="float:right;">85%</span>
-                        <div class="skillbar-container clearfix" data-percent="85%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        Git/Github<span style="float:right;">80%</span>
-                        <div class="skillbar-container clearfix" data-percent="80%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
+                        <?php }?>
                     </div>
                 </div>
             </div>
