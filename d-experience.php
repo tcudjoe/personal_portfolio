@@ -2,7 +2,22 @@
     include './functions.php';
     is_authorised(['admin']);
     include './classes/databaseQueries.php';
+    // include './deleteRecord.php';
+    // $deleteObj = new DeleteRec();
     $experienceObj = new databaseQueries();
+
+    // Delete record from table
+    if(isset($_GET['deleteRecord']) && !empty(['deleteRecord'])) {
+        $recordId = (int)$_GET['deleteRecord'];
+        $experienceObj->deleteRecord($recordId, 'experience');
+        // var_dump($recordId);exit();
+        // if(!) {
+        //     header("Location: index.php?content=message&alert=delete-experience-error");
+        // }else{
+        //     header("Location: index.php?content=message&alert=delete-experience-success");
+        // }
+        // $deleteObj->deleteRecord($id, 'experience');
+    }
 ?>
 
 <div class="container dashboard">
@@ -47,17 +62,18 @@
                                 </a>
                             </td>
                             <td>
-                                <a href="index.php?content=deleteExperience&id=<?php echo $experience['id'] ?>">
+                                <a href="index.php?content=deleteRecord&id=<?php echo $experience['id'] ?>">
                                     <i class="bi bi-trash3"></i>
                                 </a>
                             </td>
                         </tr>
-                        <?php }?>
+                        <?php } ?>
                     </tbody>
                 </table>
                 <a href="index.php?content=createExperience">
                     <div class="d-grid">
-                        <button type="button" name="button" value="button" class="btn btn-dark">Add Experience +</button>
+                        <button type="button" name="button" value="button" class="btn btn-dark">Add Experience
+                            +</button>
                     </div>
                 </a>
             </div>

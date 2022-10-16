@@ -266,9 +266,10 @@
             $place = $this->conn->real_escape_string($_POST['place']);
             $summary = $this->conn->real_escape_string($_POST['summary']);
             $period = $this->conn->real_escape_string($_POST['period']);
+            $companywebsite = $this->conn->real_escape_string($_POST['companywebsite']);
             $id = $this->conn->real_escape_string($_POST['id']);
             if (!empty($id) && !empty($postData)) {
-                $query = "UPDATE experience SET function = '$function', company = '$company', place = '$place', summary = '$summary', period = '$period' WHERE id = '$id'";
+                $query = "UPDATE experience SET function = '$function', company = '$company', place = '$place', summary = '$summary', period = '$period', companywebsite = '$companywebsite' WHERE id = '$id'";
                 $sql = $this->conn->query($query);
                 if ($sql==true) {
                     header("Location: index.php?content=message&alert=update-experience-success");
@@ -294,6 +295,20 @@
             }else{
                 header("Location: index.php?content=message&alert=create-experience-error");
             }
+        }
+
+        public function deleteRecord($id, $table)
+        {
+            $query = "DELETE FROM `$table` WHERE id = $id";
+            $sql = $this->conn->query($query);
+            if($sql==true){
+                echo $query, $sql;exit();
+                // var_dump($query,$sql);exit();
+                header("Location: index.php?content=message&alert=delete-experience-error");
+            }else{
+                header("Location: index.php?content=message&alert=delete-experience-success");
+            }
+
         }
     }
 ?>
