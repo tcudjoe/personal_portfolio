@@ -83,6 +83,18 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=editProjects");
         break;
+        case 'updateSkill-success':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    Updating skill went successfully!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-skills");
+        break;
+        case 'updateSkill-error':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    Skill was not updated, try again later!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-skills");
+        break;
     }
 
 ?>
