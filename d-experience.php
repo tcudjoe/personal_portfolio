@@ -4,12 +4,12 @@
     include './classes/databaseQueries.php';
     // include './deleteRecord.php';
     // $deleteObj = new DeleteRec();
-    $experienceObj = new databaseQueries();
+    $obj = new databaseQueries();
 
     // Delete record from table
-    if(isset($_GET['deleteRecord']) && !empty(['deleteRecord'])) {
-        $recordId = (int)$_GET['deleteRecord'];
-        $experienceObj->deleteRecord($recordId, 'experience');
+    // if(isset($_GET['deleteRecord']) && !empty(['deleteRecord'])) {
+    //     $recordId = (int)$_GET['deleteRecord'];
+    //     $obj->deleteRecord($recordId, 'experience');
         // var_dump($recordId);exit();
         // if(!) {
         //     header("Location: index.php?content=message&alert=delete-experience-error");
@@ -17,7 +17,7 @@
         //     header("Location: index.php?content=message&alert=delete-experience-success");
         // }
         // $deleteObj->deleteRecord($id, 'experience');
-    }
+    // }
 ?>
 
 <div class="container dashboard">
@@ -46,7 +46,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            $experiences = $experienceObj->displayExperience(20);
+                            $experiences = $obj->displayExperience(20);
                             foreach($experiences as $id => $experience ){
                         ?>
                         <tr>
@@ -62,7 +62,7 @@
                                 </a>
                             </td>
                             <td>
-                                <a href="index.php?content=deleteRecord&id=<?php echo $experience['id'] ?>">
+                                <a href="deleteExperience.php?id=<?php echo $experience['id'] ?>">
                                     <i class="bi bi-trash3"></i>
                                 </a>
                             </td>

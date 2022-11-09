@@ -107,18 +107,20 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=d-experience");
         break;
-        case 'delete-experience-success':
+        case 'deleteExperience-success':
             echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
                     Experience was successfully deleted.
                   </div>';
             header("Refresh: 3.5; ./index.php?content=d-experience");
         break;
-        case 'delete-experience-error':
+        case 'deleteExperience-error':
             echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
                     Experience was not deleted. Something went wrong, try again later.
                   </div>';
             header("Refresh: 3.5; ./index.php?content=d-experience");
         break;
+
+
     }
 
 ?>

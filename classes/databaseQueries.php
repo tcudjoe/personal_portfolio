@@ -297,18 +297,18 @@
             }
         }
 
-        public function deleteRecord($id, $table)
-        {
-            $query = "DELETE FROM `$table` WHERE id = $id";
-            $sql = $this->conn->query($query);
-            if($sql==true){
-                echo $query, $sql;exit();
-                // var_dump($query,$sql);exit();
-                header("Location: index.php?content=message&alert=delete-experience-error");
-            }else{
-                header("Location: index.php?content=message&alert=delete-experience-success");
-            }
+        // public function deleteRecord($id, $table)
+        // {
+        //     $query = "DELETE FROM `$table` WHERE id = $id";
+        //     $sql = $this->conn->query($query);
+        //     if($sql==true){
+        //         echo $query, $sql;exit();
+        //         // var_dump($query,$sql);exit();
+        //         header("Location: index.php?content=message&alert=delete-experience-error");
+        //     }else{
+        //         header("Location: index.php?content=message&alert=delete-experience-success");
+        //     }
 
-        }
+        // }
     }
 ?>
