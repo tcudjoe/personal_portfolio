@@ -2,7 +2,22 @@
     include './functions.php';
     is_authorised(['admin']);
     include './classes/databaseQueries.php';
-    $object = new databaseQueries();
+    $obj = new databaseQueries();
+
+    // if(isset($_GET['deleteSkill']) && !empty($_GET['deleteSkill'])){
+    //     $id = (int) $_GET['deleteSkill'];
+    //     if($obj->deleteSkill($id)){
+    //         header("Location: index.php?content=message&alert=deleteSkill-success");
+    //     }else{
+    //         header("Location: index.php?content=message&alert=deleteSkill-error");
+    //     }
+    //     exit;
+    // }
+
+    // var_dump($_POST);
+    // var_dump($_GET);exit();
+
+
 ?>
 
 <div class="container dashboard">
@@ -27,19 +42,19 @@
                     </thead>
                     <tbody>
                         <?php
-                            $skills = $object->displaySkills(20);
+                            $skills = $obj->displaySkills(20);
                             foreach($skills as $id => $skill ){
                         ?>
                         <tr>
                             <td><?php  echo $skill['name'] ?></td>
-                            <td><?php  echo $skill['percentage'] ?></td>
+                            <td><?php  echo $skill['percentage'] ?>%</td>
                             <td>
                                 <a href="index.php?content=editSkill&id=<?php echo $skill['id'] ?>">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="index.php?content=deleteSkill&id=<?php echo $skill['id'] ?>">
+                                <a href="deleteSkill.php?id=<?php echo $skill['id'] ?>">
                                     <i class="bi bi-trash3"></i>
                                 </a>
                             </td>

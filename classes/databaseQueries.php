@@ -290,5 +290,12 @@
             }
         }
 
+        public function deleteSkill($id) {
+            $query = "DELETE FROM skills WHERE id = $id";
+            return $this->conn->query($query);
+            var_dump($query);exit;
+
+        }
+
     }
 ?>

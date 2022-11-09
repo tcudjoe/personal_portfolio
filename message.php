@@ -107,6 +107,18 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=d-skills");
         break;
+        case 'deleteSkill-success':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    New skill was succesfully deleted!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-skills");
+        break;
+        case 'deleteSkill-error':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    New skill was not deleted, try again later!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-skills");
+        break;
     }
 
 ?>
