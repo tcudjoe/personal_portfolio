@@ -95,6 +95,18 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=d-skills");
         break;
+        case 'createSkill-success':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    New skill was successfully created!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-skills");
+        break;
+        case 'createSkill-error':
+            echo '<div class="alert alert-error text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    New skill was not created, try again later!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-skills");
+        break;
     }
 
 ?>

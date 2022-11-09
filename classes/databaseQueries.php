@@ -277,5 +277,18 @@
                 }
         }
 
+        public function createSkill($post)
+        {
+            $name = $this->conn->real_escape_string($_POST['name']);
+            $percentage = $this->conn->real_escape_string($_POST['percentage']);
+            $query="INSERT INTO skills(name, percentage) VALUES('$name','$percentage')";
+            $sql = $this->conn->query($query);
+            if ($sql==true) {
+                header("Location: index.php?content=message&alert=createSkill-success");
+            }else{
+                header("Location: index.php?content=message&alert=createSkill-error");
+            }
+        }
+
     }
 ?>
