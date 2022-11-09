@@ -14,15 +14,13 @@
     if(isset($_POST['update'])){
         $projectsObj->updateProjects($_POST);
     }
-
-
-    ?>
+?>
 
 <div class="container">
-    <form class="readProjects" method="post" action="index.php?content=editProject">
+    <form class="readProjects" method="POST" action="index.php?content=editProject">
         <?php
-        $projects = $projectsObj->displayProjectUpdate();
-        foreach($projects as $id => $project) {
+            $projects = $projectsObj->displayProjectUpdate();
+            foreach($projects as $id => $project) {
         ?>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Filename:</label>
@@ -61,9 +59,9 @@
             <input type="text" name="p4" class="form-control" style="height: 70px;" value="<?php echo $project['p4']; ?>" id="exampleInputPassword1">
         </div>
         <?php } ?>
-        <a href="index.php?content=editProjects">
+        <a href="index.php?content=d-projects">
             <input type="hidden" name="id" value="<?php echo $project['id']?>">
-            <button type="submit" name="update" value="update" class="btn btn-primary">Update</button>
+            <button type="submit" name="update" value="update" class="btn btn-dark">Update</button>
         </a>
     </form>
 </div>

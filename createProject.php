@@ -55,7 +55,7 @@
             <textarea class="form-control" name="p4" id="exampleFormControlTextarea1"
                 value="" rows="3"></textarea>
         </div>
-        <a href="index.php?content=editProjects">
+        <a href="index.php?content=d-project">
             <button type="submit" name="submit" value="submit" class="btn btn-dark">Create project</button>
         </a>
     </form>

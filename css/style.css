@@ -366,6 +366,15 @@ form>.mb-3>label {
     padding: 20px;
 }
 
+.companySite>h3 {
+    color: rgb(197, 197, 197);
+    transition: all 0.3s;
+}
+
+.companySite>h3:hover{
+    color: #666463;
+}
+
 @media only screen and (max-width: 576px) {
 
     #home-section {

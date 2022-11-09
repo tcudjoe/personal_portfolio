@@ -106,7 +106,7 @@
                 if ($result->num_rows > 0) {
                     $data = array();
                     while ($row = $result->fetch_assoc()) {
-
+                        // var_dump($id, $query);exit();
                             $data[] = $row;
                     }
                     return $data;
@@ -229,6 +229,26 @@
                 if ($result->num_rows > 0) {
                     $data = array();
                     while ($row = $result->fetch_assoc()) {
+                        $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
+
+        public function displayExperience($perPage)
+        {
+            $query = "SELECT * FROM experience ORDER BY id DESC limit $perPage";
+            $result = $this->conn->query($query);
+            // echo $query;
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
 
                             $data[] = $row;
                     }
@@ -249,8 +269,26 @@
                 if ($result->num_rows > 0) {
                     $data = array();
                     while ($row = $result->fetch_assoc()) {
+                        $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
 
-                            $data[] = $row;
+        public function displayExperienceUpdate() {
+            $id =$this->conn->real_escape_string($_GET["id"]);
+            $query = "SELECT * FROM experience WHERE id = '$id'";
+            $result = $this->conn->query($query);
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
+                        $data[] = $row;
                     }
                     return $data;
                 }else{
@@ -297,5 +335,55 @@
 
         }
 
+        public function updateExperience($postData) {
+            $function = $this->conn->real_escape_string($_POST['function']);
+            $company = $this->conn->real_escape_string($_POST['company']);
+            $place = $this->conn->real_escape_string($_POST['place']);
+            $summary = $this->conn->real_escape_string($_POST['summary']);
+            $period = $this->conn->real_escape_string($_POST['period']);
+            $companywebsite = $this->conn->real_escape_string($_POST['companywebsite']);
+            $id = $this->conn->real_escape_string($_POST['id']);
+            if (!empty($id) && !empty($postData)) {
+                $query = "UPDATE experience SET function = '$function', company = '$company', place = '$place', summary = '$summary', period = '$period', companywebsite = '$companywebsite' WHERE id = '$id'";
+                $sql = $this->conn->query($query);
+                if ($sql==true) {
+                    header("Location: index.php?content=message&alert=update-experience-success");
+                }else{
+                    header("Location: index.php?content=message&alert=update-experience-error");
+
+                }
+            }
+        }
+
+        public function insertExperience()
+        {
+            $function = $this->conn->real_escape_string($_POST['function']);
+            $company = $this->conn->real_escape_string($_POST['company']);
+            $place = $this->conn->real_escape_string($_POST['place']);
+            $summary = $this->conn->real_escape_string($_POST['summary']);
+            $period = $this->conn->real_escape_string($_POST['period']);
+            $companywebsite = $this->conn->real_escape_string($_POST['companywebsite']);
+            $query="INSERT INTO experience (function, company, place, summary, period, companywebsite) VALUES('$function', '$company', '$place', '$summary', '$period', '$companywebsite')";
+            $sql = $this->conn->query($query);
+            if ($sql==true) {
+                header("Location: index.php?content=message&alert=create-experience-success");
+            }else{
+                header("Location: index.php?content=message&alert=create-experience-error");
+            }
+        }
+
+        // public function deleteRecord($id, $table)
+        // {
+        //     $query = "DELETE FROM `$table` WHERE id = $id";
+        //     $sql = $this->conn->query($query);
+        //     if($sql==true){
+        //         echo $query, $sql;exit();
+        //         // var_dump($query,$sql);exit();
+        //         header("Location: index.php?content=message&alert=delete-experience-error");
+        //     }else{
+        //         header("Location: index.php?content=message&alert=delete-experience-success");
+        //     }
+
+        // }
     }
 ?>
