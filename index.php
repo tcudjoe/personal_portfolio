@@ -38,6 +38,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?content=projects">Projects</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?content=experience">Experiences</a>
+                        </li>
                         <?php if(isset($_SESSION['id'])){
                             switch($_SESSION['userrole']){
                                 case 'admin':
@@ -48,7 +51,8 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="index.php?content=dashboard">Dashboard</a></li>
-                                                <li><a class="dropdown-item" href="index.php?content=editProjects">Edit projects</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=d-projects">Edit projects</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=d-experience">Edit Experience</a></li>
                                                 <li><a class="dropdown-item" href="index.php?content=contactMessages">Contact messages</a></li>
                                                 <li><a class="dropdown-item" href="index.php?content=logout">Logout</a></li>
                                             </ul>
