@@ -143,6 +143,18 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=d-skills");
         break;
+        case 'deleteProject-success':
+            echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
+                   Project was successfully deleted!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-projects");
+        break;
+        case 'deleteProject-error':
+            echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
+                   Project was not deleted, try again later!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-projects");
+        break;
     }
 
 ?>
