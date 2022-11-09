@@ -220,6 +220,26 @@
             }
         }
 
+        public function displaySkills()
+        {
+            // $id =$this->conn->real_escape_string($_GET["id"]);
+            $query = "SELECT * FROM skills";
+            $result = $this->conn->query($query);
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
+                        $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
+
         public function displayExperience($perPage)
         {
             $query = "SELECT * FROM experience ORDER BY id DESC limit $perPage";
@@ -231,6 +251,25 @@
                     while ($row = $result->fetch_assoc()) {
 
                             $data[] = $row;
+                    }
+                    return $data;
+                }else{
+                    echo "No found records";
+                    }
+            }else {
+                echo "error in ".$query."<br>".$this->conn->error;
+            }
+        }
+
+        public function displaySkillsUpdate() {
+            $id =$this->conn->real_escape_string($_GET["id"]);
+            $query = "SELECT * FROM skills where id = $id";
+            $result = $this->conn->query($query);
+            if($result){
+                if ($result->num_rows > 0) {
+                    $data = array();
+                    while ($row = $result->fetch_assoc()) {
+                        $data[] = $row;
                     }
                     return $data;
                 }else{
@@ -258,6 +297,42 @@
             }else {
                 echo "error in ".$query."<br>".$this->conn->error;
             }
+        }
+
+        public function updateSkills($postData) {
+            $name = $this->conn->real_escape_string($_POST['name']);
+            $percentage = $this->conn->real_escape_string($_POST['percentage']);
+            $id = $this->conn->real_escape_string($_POST['id']);
+            if (!empty($id) && !empty($postData)) {
+                $query = "UPDATE skills SET name = '$name', percentage = '$percentage' WHERE id = '$id'";
+                $sql = $this->conn->query($query);
+                if ($sql==true) {
+                    header("Location: index.php?content=message&alert=updateSkill-success");
+                }else{
+                    header("Location: index.php?content=message&alert=updateSkill-error");
+
+                }
+                }
+        }
+
+        public function createSkill($post)
+        {
+            $name = $this->conn->real_escape_string($_POST['name']);
+            $percentage = $this->conn->real_escape_string($_POST['percentage']);
+            $query="INSERT INTO skills(name, percentage) VALUES('$name','$percentage')";
+            $sql = $this->conn->query($query);
+            if ($sql==true) {
+                header("Location: index.php?content=message&alert=createSkill-success");
+            }else{
+                header("Location: index.php?content=message&alert=createSkill-error");
+            }
+        }
+
+        public function deleteSkill($id) {
+            $query = "DELETE FROM skills WHERE id = $id";
+            return $this->conn->query($query);
+            var_dump($query);exit;
+
         }
 
         public function updateExperience($postData) {
