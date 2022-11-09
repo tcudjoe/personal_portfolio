@@ -53,6 +53,7 @@
                                                 <li><a class="dropdown-item" href="index.php?content=dashboard">Dashboard</a></li>
                                                 <li><a class="dropdown-item" href="index.php?content=d-projects">Edit projects</a></li>
                                                 <li><a class="dropdown-item" href="index.php?content=d-experience">Edit Experience</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=d-skills">Edit Skills</a></li>
                                                 <li><a class="dropdown-item" href="index.php?content=contactMessages">Contact messages</a></li>
                                                 <li><a class="dropdown-item" href="index.php?content=logout">Logout</a></li>
                                             </ul>

@@ -119,8 +119,30 @@
                   </div>';
             header("Refresh: 3.5; ./index.php?content=d-experience");
         break;
-
-
+        case 'createSkill-success':
+            echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
+                    New skill was succesfully created!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-skills");
+        break;
+        case 'createSkill-error':
+            echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
+                   New skill was not created, try again later!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-skills");
+        break;
+        case 'deleteSkill-success':
+            echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
+                   Skill was successfully deleted!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-skills");
+        break;
+        case 'deleteSkill-error':
+            echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
+                   Skill was not deleted, try again later!
+                  </div>';
+            header("Refresh: 3.5; ./index.php?content=d-skills");
+        break;
     }
 
 ?>
