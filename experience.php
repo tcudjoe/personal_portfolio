@@ -7,7 +7,7 @@
 <div class="container projects">
     <div class="row">
         <h1>Experiences</h1>
-        <small>These are the places I've worked at, how long I worked at those places and the title that I got when I was workink at those places.</small>
+        <small>These are the places I've worked at, how long I worked at those places and the title that I got when I was working at those places.</small>
         <?php
             foreach ($experiences as $experience){
         ?>

@@ -10,15 +10,13 @@
   if(isset($_POST['submit'])) {
     $object->insertContact($_POST);
   }
-    // var_dump($contactObject);exit;
 ?>
 <div>
     <section id="home-section">
         <div class="container">
-            <img src="./img/tv-static.gif" alt="tv static gif">
             <h1>
                 <a href="" class="typewrite" data-period="2000"
-                    data-type='["Welcome to my portfolio!", "Feel free to look around.", "Don&#39;t hesitate to leave your contact information!", "Have a good day!"]'>
+                    data-type='["Welcome to my portfolio!", "Feel free to look around.", "Don&#39;t hesitate to leave your contact information!", "I hope you you are staying hydrated!", "Have a good day!"]'>
                     <span class="wrap"></span>
                 </a>
             </h1>
@@ -78,7 +76,7 @@
                     </p>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 appearRight">
-                    <img src="./img/IMG_1650.jpg" alt="Ty Cudjoe Profile Picture">
+                    <img src="./img/IMG_1227.PNG" alt="Ty Cudjoe Profile Picture">
                 </div>
             </div>
         </div>
