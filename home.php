@@ -1,23 +1,22 @@
 <?php
     include('./classes/databaseQueries.php');
+    include './functions.php';
 
-    // $contactObject = new databaseQueries();
     $object = new databaseQueries();
-    $projects = $object->displayProjects();
+    $projects = $object->displayProjects(3);
+    $skills = $object->displaySkills();
 
     // Insert Record in contact table
   if(isset($_POST['submit'])) {
     $object->insertContact($_POST);
   }
-    // var_dump($contactObject);exit;
 ?>
 <div>
     <section id="home-section">
         <div class="container">
-            <img src="./img/tv-static.gif" alt="tv static gif">
             <h1>
                 <a href="" class="typewrite" data-period="2000"
-                    data-type='["Welcome to my portfolio!", "Feel free to look around.", "Don&#39;t hesitate to leave your contact information!", "Have a good day!"]'>
+                    data-type='["Welcome to my portfolio!", "Feel free to look around.", "Don&#39;t hesitate to leave your contact information!", "I hope you you are staying hydrated!", "Have a good day!"]'>
                     <span class="wrap"></span>
                 </a>
             </h1>
@@ -77,7 +76,7 @@
                     </p>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 appearRight">
-                    <img src="./img/IMG_1650.jpg" alt="Ty Cudjoe Profile Picture">
+                    <img src="./img/IMG_1227.PNG" alt="Ty Cudjoe Profile Picture">
                 </div>
             </div>
         </div>
@@ -92,51 +91,15 @@
                 <div id="skill-bar-wrapper">
                     <div class="text-left">
                         <h1 class="skill-bartext">Skills</h1>
-
-                        HTML<span style="float:right;">85%</span>
-                        <div class="skillbar-container clearfix" data-percent="85%">
+                        <?php
+                            $skills = $object->displaySkills();
+                            foreach($skills as $skill){
+                        ?>
+                        <?php echo $skill['name']?><span style="float:right;"><?php echo $skill['percentage'] ?>%</span>
+                        <div class="skillbar-container clearfix" data-percent="<?php echo $skill['percentage'] ?>%">
                             <div class="skills" style="background: white;"></div>
                         </div>
-
-                        CSS<span style="float:right;">65%</span>
-                        <div class="skillbar-container clearfix" data-percent="65%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        Bootstrap<span style="float:right;">85%</span>
-                        <div class="skillbar-container clearfix" data-percent="85%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        JavaScript<span style="float:right;">40%</span>
-                        <div class="skillbar-container clearfix" data-percent="40%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        VueJS<span style="float:right;">20%</span>
-                        <div class="skillbar-container clearfix" data-percent="20%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        Python<span style="float:right;">30%</span>
-                        <div class="skillbar-container clearfix" data-percent="30%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        PHP<span style="float:right;">65%</span>
-                        <div class="skillbar-container clearfix" data-percent="65%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        MySQL<span style="float:right;">85%</span>
-                        <div class="skillbar-container clearfix" data-percent="85%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
-
-                        Git/Github<span style="float:right;">80%</span>
-                        <div class="skillbar-container clearfix" data-percent="80%">
-                            <div class="skills" style="background: white;"></div>
-                        </div>
+                        <?php }?>
                     </div>
                 </div>
             </div>
@@ -196,6 +159,7 @@
                             <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"
                                 placeholder="Type your message here..."></textarea>
                         </div>
+                        <input type="hidden" name="created_at" value="<?php echo date("Y-m-d h:i:s") ?>">
                         <button type="submit" name="submit" value="submit" class="btn btn-contact">Submit</button>
                     </div>
                 </form>

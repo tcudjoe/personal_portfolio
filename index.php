@@ -1,3 +1,4 @@
+<?php session_start(); session_gc();?>
 <!doctype html>
 <html lang="en">
 
@@ -14,36 +15,60 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" -->
-    <!-- rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>tcudjoe.com</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
+    <title>tcudjoe.com</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand fixed-top">
+        <nav class="navbar navbar-expand-md fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.php?content=home">
                     T. Cudjoe
                 </a>
-                <div>
-                    <ul class="navbar-nav">
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto justify-content-end">
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?content=home">Home</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="index.php?content=ho">About</a>
-                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?content=projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <!-- <a class="nav-link" href="#contact-section">Contact</a> -->
+                            <a class="nav-link" href="index.php?content=experience">Experiences</a>
                         </li>
+                        <?php if(isset($_SESSION['id'])){
+                            switch($_SESSION['userrole']){
+                                case 'admin':
+                                    echo '
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                                                Dashboard menu
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="index.php?content=dashboard">Dashboard</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=d-projects">Edit projects</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=d-experience">Edit Experience</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=d-skills">Edit Skills</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=contactMessages">Contact messages</a></li>
+                                                <li><a class="dropdown-item" href="index.php?content=logout">Logout</a></li>
+                                            </ul>
+                                        </li>';
+                                break;
+                                case '':
+                                    echo '';
+                                break;
+                            }
+                        } ?>
                     </ul>
                 </div>
             </div>
