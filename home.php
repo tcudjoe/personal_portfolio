@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 appearLeft">
-                    <h1>Who am I?</h1>
+                    <h1>Who am Is?</h1>
                     <p>Hi,
                         <br>
                         My name is <span>T. Cudjoe</span>, I am a Junior developer and welcome to my portfolio.
