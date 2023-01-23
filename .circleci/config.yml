@@ -27,7 +27,7 @@ jobs:
           server: ns1-500.axc.nl
           username: ${{ secrets.secrets_ftp_username }}
           password: ${{ secrets.secrets_ftp_password }}
-          server-dir: tcudjoe.com
+          server-dir: domains/tcudjoe.com/public_html/
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
