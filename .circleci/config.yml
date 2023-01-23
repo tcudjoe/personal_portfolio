@@ -25,8 +25,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with: 
           server: ns1-500.axc.nl
-          username: ${{ secrets_ftp_username }}
-          password: ${{ secrets_ftp_password }}
+          username: ${{ secrets.secrets_ftp_username }}
+          password: ${{ secrets.secrets_ftp_password }}
           server-dir: tcudjoe.com
 
 # Invoke jobs via workflows
