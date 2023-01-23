@@ -19,6 +19,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with: 
           server: ns1-500.axc.nl
-          username: ${{ secrets.secrets_ftp_username }}
-          password: ${{ secrets.secrets_ftp_password }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
           server-dir: tcudjoe.com
