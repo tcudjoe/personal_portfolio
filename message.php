@@ -7,10 +7,10 @@
     switch($alert){
         case 'no-login':
             echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
-                    one of the 2 fields was not filled in.
-                    Try again...
+                    one of the 2 fields was not filled in or not filled in correctly.
+                    Try again or contact the admin of this site...
                   </div>';
-            header("Refresh: 3.5; ./index.php?content=LoginPage");
+            header("Refresh: 3.5; ./index.php?content=loginPage");
         break;
 
         case 'error-login':
@@ -18,14 +18,14 @@
                     password or username was incorrect.
                     Try again...
                   </div>';
-            header("Refresh: 3.5; ./index.php?content=LoginPage");
+            header("Refresh: 3.5; ./index.php?content=loginPage");
         break;
 
         case 'successfull-logout':
             echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
                     You have been succesfully logged out.
                   </div>';
-            header("Refresh: 3.5; ./index.php?content=LoginPage");
+            header("Refresh: 3.5; ./index.php?content=loginPage");
         break;
         case 'form-success':
             echo '<div class="alert text-center container" style="color: white; margin-top: 50px;" role="alert">
