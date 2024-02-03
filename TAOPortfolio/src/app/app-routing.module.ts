@@ -24,6 +24,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./admin/admin.module').then((m) => m.AdminModule),
   },
+  {
+    path: 'music',
+    loadChildren: () =>
+      import('./music/music.module').then((m) => m.MusicModule),
+  },
+  {
+    path: 'programming',
+    loadChildren: () =>
+      import('./programming/programming.module').then((m) => m.ProgrammingModule),
+  },
   {path: 'forbidden', component: PageNotFoundComponent},
   {path: '**', component: PageNotFoundComponent},
 ];
