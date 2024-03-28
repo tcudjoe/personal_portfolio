@@ -7,7 +7,7 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
-    title: 'Vatworkx Portal'
+    title: ''
   },
   {
     path: 'auth',
