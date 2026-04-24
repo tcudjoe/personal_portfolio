@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "TAOPortfolio:build:production"
+              "buildTarget": "TAOPortfolio:build:production"
             },
             "development": {
-              "browserTarget": "TAOPortfolio:build:development"
+              "buildTarget": "TAOPortfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "TAOPortfolio:build"
+            "buildTarget": "TAOPortfolio:build"
           }
         },
         "test": {
