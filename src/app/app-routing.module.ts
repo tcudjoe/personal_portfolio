@@ -9,11 +9,11 @@ const routes: Routes = [
     redirectTo: '/home'
   },
   {
-    path: '',
+    path: 'tech',
     loadChildren: () => import('./tech/tech-routing.module').then((m) => m.TechRoutingModule)
   },
   {
-    path: '',
+    path: 'music',
     loadChildren: () => import('./music/music-routing.module').then((m) => m.MusicRoutingModule)
   },
   {

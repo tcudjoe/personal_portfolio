@@ -5,17 +5,22 @@ import { MainRoutingModule } from './main-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { LayoutComponent } from './components/layout/layout.component';
+
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     ContactComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    LayoutComponent
   ],
   imports: [
     CommonModule,
-    MainRoutingModule
+    MainRoutingModule,
+    RouterModule
   ]
 })
 export class MainModule { }

@@ -6,6 +6,7 @@ import { BlogComponent } from './blog/blog.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { HomeComponent } from './home/home.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HomeComponent } from './home/home.component';
     BlogComponent,
     SkillsComponent,
     ExperienceComponent,
-    HomeComponent
+    HomeComponent,
+    LayoutComponent
   ],
   imports: [
     CommonModule,
