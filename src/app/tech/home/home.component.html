@@ -78,4 +78,30 @@
       </div>
     </div>
   </section>
+
+  <section class="home-writing" aria-labelledby="home-writing-heading">
+    <div class="home-writing__inner">
+      <header class="home-writing__header">
+        <div>
+          <h2 id="home-writing-heading" class="home-writing__heading">Thoughts, Lessons &amp; Experiments</h2>
+          <p class="home-writing__intro">Documenting what I build, what I learn, and what I’d do differently.</p>
+        </div>
+        <a class="home-writing__all-link" routerLink="/writing">All Writing <span aria-hidden="true">→</span></a>
+      </header>
+
+      <div class="home-writing__list">
+        <a *ngFor="let article of homeArticles; let index = index"
+           class="home-writing__item" [routerLink]="['/writing-detail-page', article.slug]">
+          <p class="home-writing__meta">
+            <span class="home-writing__number">{{ index + 1 | number:'2.0' }}</span>
+            <span>{{ article.category }}</span>
+            <span aria-hidden="true">·</span>
+            <span>{{ article.readTime }}</span>
+          </p>
+          <h3 class="home-writing__title">{{ article.title }}</h3>
+          <p class="home-writing__description">{{ article.description }}</p>
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
