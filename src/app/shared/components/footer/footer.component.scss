@@ -45,6 +45,10 @@
   justify-content: space-between;
 }
 
+.site-footer--with-secondary-link .site-footer__actions {
+  margin-top: 1.5rem;
+}
+
 .site-footer__button {
   align-items: center;
   background: var(--color-warm-white);
