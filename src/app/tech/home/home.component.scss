@@ -207,6 +207,146 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.home-about-preview {
+  background: var(--color-warm-white);
+  color: var(--color-primary);
+  padding: clamp(3rem, 7vw, 6rem) clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.home-about-preview__inner {
+  align-items: center;
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  margin: 0 auto;
+  max-width: 76rem;
+}
+
+.home-about-preview__gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.home-about-preview__image {
+  align-items: flex-end;
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-neutral-200);
+  background-image: linear-gradient(145deg, color-mix(in srgb, var(--color-soft-blue) 55%, transparent), transparent 70%);
+  border: 1px solid var(--color-border-default);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1rem color-mix(in srgb, var(--color-primary) 16%, transparent);
+  display: flex;
+  overflow: hidden;
+  padding: 0.75rem;
+  position: relative;
+}
+
+.home-about-preview__image::before {
+  background: var(--color-neutral-400);
+  border-radius: 50%;
+  content: '';
+  height: 28%;
+  left: 50%;
+  position: absolute;
+  top: 18%;
+  transform: translateX(-50%);
+  width: 30%;
+}
+
+.home-about-preview__image::after {
+  background: var(--color-secondary);
+  border-radius: 48% 48% 0 0;
+  bottom: -4%;
+  content: '';
+  height: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 72%;
+}
+
+.home-about-preview__image--performance {
+  background-color: var(--color-primary-dark);
+}
+
+.home-about-preview__image--performance::before {
+  background: var(--color-soft-blue);
+}
+
+.home-about-preview__image--performance::after {
+  background: var(--color-primary);
+}
+
+.home-about-preview__image--guitar {
+  background-color: var(--color-warm-white);
+}
+
+.home-about-preview__image--guitar::after {
+  background: var(--color-neutral-700);
+}
+
+.home-about-preview__image--portrait {
+  background-color: var(--color-soft-blue);
+}
+
+.home-about-preview__image--portrait::before {
+  background: var(--color-neutral-100);
+}
+
+.home-about-preview__image--portrait::after {
+  background: var(--color-secondary);
+}
+
+.home-about-preview__image--studio {
+  background-color: var(--color-secondary);
+}
+
+.home-about-preview__image--studio::before {
+  background: var(--color-neutral-200);
+}
+
+.home-about-preview__image--studio::after {
+  background: var(--color-primary);
+}
+
+.home-about-preview__image span {
+  background: color-mix(in srgb, var(--color-primary) 76%, transparent);
+  color: var(--color-white);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  padding: 0.3rem 0.45rem;
+  position: relative;
+  z-index: 1;
+}
+
+.home-about-preview__copy > p {
+  color: var(--color-neutral-700);
+  margin: 1rem 0 0;
+}
+
+.home-about-preview__heading {
+  color: var(--color-primary);
+  font-size: var(--text-h3);
+  margin: 0;
+}
+
+.home-about-preview__link {
+  color: var(--color-primary);
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 1.25rem;
+}
+
+.home-about-preview__link:hover {
+  color: var(--color-secondary);
+}
+
+.home-about-preview__link:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
 .home-hero__portrait {
   align-items: flex-end;
   aspect-ratio: 4 / 5;
@@ -279,6 +419,18 @@
   .home-hero__heading {
     font-size: clamp(2.5rem, 7vw, 4rem);
   }
+
+  .home-about-preview__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .home-about-preview__gallery {
+    max-width: 34rem;
+  }
+
+  .home-about-preview__image:nth-child(n + 3) {
+    display: none;
+  }
 }
 
 @media (max-width: 36rem) {
@@ -305,6 +457,21 @@
 
   .home-projects__grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-about-preview {
+    padding-inline: 1.25rem;
+  }
+
+  .home-about-preview__gallery {
+    gap: 0.75rem;
+    grid-template-columns: 1fr;
+    justify-self: center;
+    max-width: 18rem;
+  }
+
+  .home-about-preview__image:nth-child(n + 2) {
+    display: none;
   }
 
   .home-hero__portrait {

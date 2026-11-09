@@ -58,4 +58,24 @@
       </div>
     </div>
   </section>
+
+  <section class="home-about-preview" aria-labelledby="about-preview-heading">
+    <div class="home-about-preview__inner">
+      <div class="home-about-preview__gallery" aria-label="A little about me">
+        <div *ngFor="let image of aboutImages"
+             class="home-about-preview__image"
+             [ngClass]="'home-about-preview__image--' + image.variant"
+             role="img" [attr.aria-label]="image.label">
+          <span>Image placeholder</span>
+        </div>
+      </div>
+
+      <div class="home-about-preview__copy">
+        <h2 id="about-preview-heading" class="home-about-preview__heading">Curiosity is what drives me.</h2>
+        <p>I’ve always been curious about how things work, and even more curious about how I could make them better. That curiosity led me into software engineering, building products and exploring new technologies.</p>
+        <p>But code isn’t my only creative outlet. Music has always been a huge part of my life. Whether I’m building software or making music, I love creating something meaningful and sharing it with others.</p>
+        <a class="home-about-preview__link" routerLink="/about">More About Me <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
 </main>

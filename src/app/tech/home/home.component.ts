@@ -13,6 +13,13 @@ interface ProjectPreview {
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  readonly aboutImages = [
+    { label: 'Music performance photo placeholder', variant: 'performance' },
+    { label: 'Guitar photo placeholder', variant: 'guitar' },
+    { label: 'Portrait photo placeholder', variant: 'portrait' },
+    { label: 'Studio portrait placeholder', variant: 'studio' }
+  ];
+
   readonly featuredProject: ProjectPreview = {
     slug: 'compliance-management-platform',
     category: 'Client work · Hibera',
