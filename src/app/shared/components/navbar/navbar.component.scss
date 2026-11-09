@@ -1,0 +1,67 @@
+.site-nav {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding-block: 0;
+}
+
+.site-nav__inner {
+  margin: 0 auto;
+  max-width: 76rem;
+  min-height: 4.5rem;
+  padding-inline: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.site-nav__brand,
+.site-nav__brand:hover {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.site-nav__links {
+  gap: clamp(0.75rem, 2vw, 1.75rem);
+}
+
+.site-nav .navbar-nav .nav-link {
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  transition: color 160ms ease;
+}
+
+.site-nav .navbar-nav .nav-link:hover,
+.site-nav .navbar-nav .nav-link.site-nav__link--active {
+  color: var(--color-soft-blue);
+}
+
+.site-nav .navbar-toggler {
+  border-color: color-mix(in srgb, var(--color-soft-blue) 55%, transparent);
+}
+
+.site-nav .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--color-accent) 55%, transparent);
+}
+
+.site-nav .nav-link:focus-visible,
+.site-nav__brand:focus-visible {
+  border-radius: 0.2rem;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 47.999rem) {
+  .site-nav__inner {
+    min-height: 4rem;
+    padding-inline: 1.25rem;
+  }
+
+  .site-nav__links {
+    gap: 0;
+    padding-block: 0.4rem 0.9rem;
+  }
+
+  .site-nav .navbar-nav .nav-link {
+    padding-block: 0.65rem;
+  }
+}
