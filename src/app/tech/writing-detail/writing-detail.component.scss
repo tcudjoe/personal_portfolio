@@ -1,0 +1,335 @@
+.writing-detail-hero {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: clamp(4rem, 9vw, 7rem) clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.writing-detail-hero__inner,
+.writing-detail-content__inner,
+.writing-related__inner {
+  margin: 0 auto;
+  max-width: 76rem;
+}
+
+.writing-detail-hero__category,
+.writing-detail-hero__meta,
+.writing-related__eyebrow,
+.writing-author__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.writing-detail-hero__category {
+  color: var(--color-soft-blue);
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+.writing-detail-hero__category span {
+  margin-inline: 0.35rem;
+}
+
+.writing-detail-hero h1 {
+  color: var(--color-white);
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  margin: 0;
+  max-width: 68rem;
+}
+
+.writing-detail-hero__excerpt {
+  color: var(--color-soft-blue);
+  font-size: var(--text-lg);
+  line-height: var(--leading-heading);
+  margin: 0.9rem 0 0;
+  max-width: 54rem;
+}
+
+.writing-detail-hero__meta {
+  align-items: center;
+  border-top: 1px solid #38516D;
+  color: var(--color-soft-blue);
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+}
+
+.writing-detail-content {
+  background: var(--color-warm-white);
+  color: var(--color-primary);
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.writing-detail-content__inner {
+  display: grid;
+  gap: clamp(2rem, 7vw, 6rem);
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 22rem);
+  grid-template-areas:
+    "article toc"
+    "author author";
+}
+
+.writing-article {
+  grid-area: article;
+  min-width: 0;
+}
+
+.writing-article__section {
+  margin: 0 0 2rem;
+  scroll-margin-top: 2rem;
+}
+
+.writing-article__section h2 {
+  color: var(--color-primary);
+  font-size: var(--text-h3);
+  margin: 0 0 0.75rem;
+}
+
+.writing-article__section > p {
+  color: var(--color-neutral-700);
+  font-size: var(--text-lg);
+  line-height: var(--leading-body);
+  margin: 0 0 1rem;
+  max-width: 52rem;
+}
+
+.writing-toc {
+  align-self: start;
+  background: color-mix(in srgb, var(--color-white) 38%, var(--color-soft-blue));
+  border-radius: 0.8rem;
+  display: grid;
+  gap: 0.35rem;
+  grid-area: toc;
+  padding: 1.25rem 1.4rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.writing-toc p {
+  color: color-mix(in srgb, var(--color-primary) 62%, transparent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  margin: 0 0 0.15rem;
+  text-transform: uppercase;
+}
+
+.writing-toc a {
+  border-radius: 0.2rem;
+  color: var(--color-primary);
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: var(--leading-heading);
+  padding: 0.12rem 0;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.writing-toc a:hover {
+  color: var(--color-secondary);
+}
+
+.writing-toc a:focus-visible,
+.writing-related-card:focus-visible,
+.writing-detail-not-found a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.decision-record {
+  background: var(--color-soft-blue);
+  border-radius: 0.8rem;
+  color: var(--color-primary);
+  margin: 2rem 0 2.5rem;
+  max-width: 44rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.decision-record__label {
+  color: color-mix(in srgb, var(--color-primary) 48%, transparent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.decision-record h3 {
+  color: var(--color-primary);
+  font-size: var(--text-h4);
+  margin: 0;
+}
+
+.decision-record__flow {
+  color: var(--color-neutral-700);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  margin: 0.5rem 0 0;
+}
+
+.writing-author {
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-default);
+  border-top: 1px solid var(--color-border-default);
+  display: flex;
+  gap: 1.5rem;
+  grid-area: author;
+  padding: 1.25rem 1.5rem;
+}
+
+.writing-author__avatar {
+  align-items: center;
+  background: var(--color-neutral-200);
+  border-radius: 50%;
+  color: var(--color-primary);
+  display: flex;
+  flex: 0 0 6rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 700;
+  height: 6rem;
+  justify-content: center;
+}
+
+.writing-author__eyebrow {
+  color: var(--color-soft-blue);
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.writing-author h2 {
+  color: var(--color-primary);
+  font-size: var(--text-h3);
+  margin: 0;
+}
+
+.writing-author div > p:last-child {
+  color: var(--color-neutral-700);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  margin: 0.25rem 0 0;
+}
+
+.writing-related {
+  background: var(--color-soft-blue);
+  color: var(--color-primary);
+  padding: clamp(3.5rem, 7vw, 5rem) clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.writing-related__eyebrow {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.writing-related h2 {
+  color: var(--color-primary);
+  font-size: var(--text-h3);
+  margin: 0;
+}
+
+.writing-related__grid {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.25rem;
+}
+
+.writing-related-card {
+  background: color-mix(in srgb, var(--color-white) 38%, var(--color-soft-blue));
+  border-radius: 0.8rem;
+  color: var(--color-primary);
+  display: grid;
+  gap: 0.45rem;
+  min-height: 9rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.writing-related-card:hover {
+  background: var(--color-warm-white);
+  transform: translateY(-2px);
+}
+
+.writing-related-card > span {
+  color: color-mix(in srgb, var(--color-primary) 48%, transparent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.writing-related-card strong {
+  align-self: start;
+  font-size: var(--text-base);
+}
+
+.writing-detail-not-found {
+  background: var(--color-warm-white);
+  color: var(--color-primary);
+  min-height: 50vh;
+  padding: 5rem clamp(1.5rem, 4vw, 3.5rem);
+  text-align: center;
+}
+
+.writing-detail-not-found a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 48rem) {
+  .writing-detail-hero h1 {
+    font-size: clamp(2.5rem, 7vw, 4.25rem);
+  }
+
+  .writing-detail-content__inner {
+    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "toc" "article" "author";
+  }
+
+  .writing-toc {
+    position: static;
+  }
+}
+
+@media (max-width: 36rem) {
+  .writing-detail-hero,
+  .writing-detail-content,
+  .writing-related {
+    padding-inline: 1.25rem;
+  }
+
+  .writing-detail-hero h1 {
+    font-size: clamp(2.25rem, 10vw, 3.5rem);
+  }
+
+  .writing-detail-hero__meta {
+    flex-wrap: wrap;
+  }
+
+  .writing-related__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .writing-author {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .writing-toc a,
+  .writing-related-card {
+    transition: none;
+  }
+
+  .writing-related-card:hover {
+    transform: none;
+  }
+}

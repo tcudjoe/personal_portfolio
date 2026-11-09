@@ -39,6 +39,7 @@ De design tokens worden globaal ingeladen via `src/styles.scss`. Gebruik de best
 - [x] About-pagina bevat de hero, het verhaal, ervaring, engineeringprincipes en muziekintro uit het ontwerp.
 - [x] Work-overzicht met featured project, responsive projectraster en lokale categorie-filters.
 - [x] Work-detailpagina met sluggebonden content, projectmetadata en responsive verhaal-layout.
+- [x] Writing-detailpagina met sluggebonden artikelcontent, inhoudsopgave, auteursblok en gerelateerde artikelen.
 - [x] Responsive navbar voor de tech-pagina met routes naar Work, Writing, About en Music.
 - [x] Footer met standaard CTA-copy en een `config`-input voor eyebrow, header, body, buttontekst en buttonicoon.
 - [x] Footer toont vaste Twitch-, GitHub-, e-mail- en LinkedIn-iconen en gebruikt dezelfde social-URL’s op elke pagina.
@@ -53,7 +54,7 @@ De design tokens worden globaal ingeladen via `src/styles.scss`. Gebruik de best
 - [ ] Work-overzicht: tijdelijke beelden en voorbeeldprojecten vervangen door definitieve content.
 - [ ] Work-detailpagina: tijdelijke projectverhalen, beelden, metadata en links vervangen/bevestigen.
 - [ ] Writing-overzicht bouwen.
-- [ ] Writing-detailpagina bouwen.
+- [ ] Writing-detailpagina: voorbeeldartikelen en auteursfoto vervangen/bevestigen.
 - [ ] Footer CTA koppelen aan de juiste contactactie.
 - [ ] Navigatie- en pagina-layout handmatig nalopen op mobiel en desktop.
 

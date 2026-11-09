@@ -1,1 +1,65 @@
-<p>writing-detail works!</p>
+<main *ngIf="article as currentArticle; else articleNotFound" class="writing-detail">
+  <header class="writing-detail-hero">
+    <div class="writing-detail-hero__inner">
+      <p class="writing-detail-hero__category">Writing <span>/</span> {{ currentArticle.category }}</p>
+      <h1>{{ currentArticle.title }}</h1>
+      <p class="writing-detail-hero__excerpt">{{ currentArticle.excerpt }}</p>
+      <div class="writing-detail-hero__meta">
+        <time>{{ currentArticle.date }}</time>
+        <span aria-hidden="true">·</span>
+        <span>{{ currentArticle.readingTime }} min read</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="writing-detail-content" aria-label="Article">
+    <div class="writing-detail-content__inner">
+      <article class="writing-article">
+        <section *ngFor="let section of currentArticle.sections" class="writing-article__section" [id]="section.id">
+          <h2>{{ section.title }}</h2>
+          <p *ngFor="let paragraph of section.paragraphs">{{ paragraph }}</p>
+
+          <aside *ngIf="section.decisionRecord as record" class="decision-record" aria-label="Architecture decision record example">
+            <p class="decision-record__label">{{ record.label }}</p>
+            <h3>{{ record.title }}</h3>
+            <p class="decision-record__flow">{{ record.flow }}</p>
+          </aside>
+        </section>
+      </article>
+
+      <nav class="writing-toc" aria-label="On this page">
+        <p>On this page</p>
+        <a *ngFor="let section of currentArticle.sections" [href]="'#' + section.id">{{ section.title }}</a>
+      </nav>
+
+      <section class="writing-author" aria-label="About the author">
+        <div class="writing-author__avatar" role="img" aria-label="Author photo placeholder">TC</div>
+        <div>
+          <p class="writing-author__eyebrow">Written by</p>
+          <h2>Tyra A.O. Cudjoe</h2>
+          <p>Software engineer, builder and curious by nature.</p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section *ngIf="relatedArticles.length" class="writing-related" aria-labelledby="related-heading">
+    <div class="writing-related__inner">
+      <p class="writing-related__eyebrow">More to explore</p>
+      <h2 id="related-heading">Keep reading.</h2>
+      <div class="writing-related__grid">
+        <a *ngFor="let related of relatedArticles" class="writing-related-card" [routerLink]="['/writing', related.slug]">
+          <span>{{ related.category }}</span>
+          <strong>{{ related.title }} <span aria-hidden="true">→</span></strong>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<ng-template #articleNotFound>
+  <main class="writing-detail-not-found">
+    <h1>Article not found</h1>
+    <a routerLink="/writing">Back to all writing <span aria-hidden="true">→</span></a>
+  </main>
+</ng-template>
