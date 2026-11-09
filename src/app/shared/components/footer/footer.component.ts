@@ -9,6 +9,12 @@ export interface FooterSocialLinks {
   email: string;
 }
 
+export interface FooterLink {
+  eyebrow: string;
+  label: string;
+  href: string;
+}
+
 export interface FooterConfig {
   eyebrowText: string;
   showEyebrow: boolean;
@@ -17,6 +23,8 @@ export interface FooterConfig {
   showBody: boolean;
   buttonText: string;
   buttonIcon: FooterIcon;
+  buttonHref: string;
+  secondaryLink?: FooterLink;
 }
 
 const DEFAULT_FOOTER_CONFIG: FooterConfig = {
@@ -26,7 +34,8 @@ const DEFAULT_FOOTER_CONFIG: FooterConfig = {
   bodyText: "Whether it's software, an interesting collaboration, or just a conversation about technology; my inbox is open.",
   showBody: true,
   buttonText: 'Get in touch',
-  buttonIcon: 'mail-arrow'
+  buttonIcon: 'mail-arrow',
+  buttonHref: 'mailto:taocudjoe@gmail.com'
 };
 
 @Component({
