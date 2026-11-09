@@ -291,10 +291,10 @@ function FooterComponent_a_21_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    const twitchSvg_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", ctx_r0.content.socialLinks.twitch, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    const githubSvg_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", ctx_r0.socialLinks.github, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", twitchSvg_r2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", githubSvg_r2);
   }
 }
 function FooterComponent_ng_template_22_ng_container_1_Template(rf, ctx) {
@@ -310,9 +310,9 @@ function FooterComponent_ng_template_22_Template(rf, ctx) {
   }
   if (rf & 2) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    const twitchSvg_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](25);
+    const githubSvg_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](25);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", twitchSvg_r2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", githubSvg_r2);
   }
 }
 function FooterComponent_ng_template_24_Template(rf, ctx) {
@@ -336,10 +336,10 @@ function FooterComponent_a_26_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    const githubSvg_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", ctx_r0.content.socialLinks.github, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    const linkedinSvg_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", ctx_r0.socialLinks.linkedin, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", githubSvg_r3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", linkedinSvg_r3);
   }
 }
 function FooterComponent_ng_template_27_ng_container_1_Template(rf, ctx) {
@@ -355,9 +355,9 @@ function FooterComponent_ng_template_27_Template(rf, ctx) {
   }
   if (rf & 2) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    const githubSvg_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](30);
+    const linkedinSvg_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](30);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", githubSvg_r3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", linkedinSvg_r3);
   }
 }
 function FooterComponent_ng_template_29_Template(rf, ctx) {
@@ -382,7 +382,7 @@ function FooterComponent_a_31_Template(rf, ctx) {
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     const emailSvg_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](35);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", "mailto:" + ctx_r0.content.socialLinks.email, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", "mailto:" + ctx_r0.socialLinks.email, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", emailSvg_r4);
   }
@@ -426,10 +426,10 @@ function FooterComponent_a_36_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    const linkedinSvg_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", ctx_r0.content.socialLinks.linkedin, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    const twitchSvg_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("href", ctx_r0.socialLinks.twitch, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", linkedinSvg_r5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", twitchSvg_r5);
   }
 }
 function FooterComponent_ng_template_37_ng_container_1_Template(rf, ctx) {
@@ -445,9 +445,9 @@ function FooterComponent_ng_template_37_Template(rf, ctx) {
   }
   if (rf & 2) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    const linkedinSvg_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](40);
+    const twitchSvg_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](40);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", linkedinSvg_r5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", twitchSvg_r5);
   }
 }
 function FooterComponent_ng_template_39_Template(rf, ctx) {
@@ -465,27 +465,23 @@ const DEFAULT_FOOTER_CONFIG = {
   bodyText: "Whether it's software, an interesting collaboration, or just a conversation about technology; my inbox is open.",
   showBody: true,
   buttonText: 'Get in touch',
-  buttonIcon: 'mail-arrow',
-  socialLinks: {
-    linkedin: '',
-    twitch: '',
-    github: '',
-    email: ''
-  }
+  buttonIcon: 'mail-arrow'
 };
 class FooterComponent {
   constructor() {
     this.config = {};
+    this.socialLinks = {
+      linkedin: 'https://www.linkedin.com/in/tcudjoe2401/',
+      twitch: 'https://www.twitch.tv/taocudjoe',
+      github: 'https://github.com/tcudjoe',
+      email: 'taocudjoe@gmail.com'
+    };
     this.currentYear = new Date().getFullYear();
   }
   get content() {
     return {
       ...DEFAULT_FOOTER_CONFIG,
-      ...this.config,
-      socialLinks: {
-        ...DEFAULT_FOOTER_CONFIG.socialLinks,
-        ...this.config.socialLinks
-      }
+      ...this.config
     };
   }
   static {
@@ -502,7 +498,7 @@ class FooterComponent {
       },
       decls: 41,
       vars: 15,
-      consts: [["twitchIcon", ""], ["twitchSvg", ""], ["githubIcon", ""], ["githubSvg", ""], ["emailIcon", ""], ["emailSvg", ""], ["linkedinIcon", ""], ["linkedinSvg", ""], [1, "site-footer"], [1, "site-footer__inner"], ["aria-labelledby", "footer-heading", 1, "site-footer__callout"], ["class", "site-footer__eyebrow", 4, "ngIf"], ["id", "footer-heading", 1, "site-footer__heading"], ["class", "site-footer__body", 4, "ngIf"], ["type", "button", 1, "site-footer__button"], ["class", "site-footer__icon", "viewBox", "0 0 24 24", "fill", "none", "aria-hidden", "true", 4, "ngIf"], [1, "site-footer__bottom"], [1, "site-footer__brand"], [1, "site-footer__tagline"], [1, "site-footer__copyright"], ["aria-label", "Social links", 1, "site-footer__socials"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "Twitch", 3, "href", 4, "ngIf", "ngIfElse"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "GitHub", 3, "href", 4, "ngIf", "ngIfElse"], ["aria-label", "Email", 3, "href", 4, "ngIf", "ngIfElse"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "LinkedIn", 3, "href", 4, "ngIf", "ngIfElse"], [1, "site-footer__eyebrow"], [1, "site-footer__body"], ["viewBox", "0 0 24 24", "fill", "none", "aria-hidden", "true", 1, "site-footer__icon"], ["x", "3", "y", "5", "width", "18", "height", "14", "rx", "2", "stroke", "currentColor", "stroke-width", "2"], ["d", "m4 7 8 6 8-6", "stroke", "currentColor", "stroke-width", "2", "stroke-linecap", "round", "stroke-linejoin", "round"], ["d", "M5 12h14m-6-6 6 6-6 6", "stroke", "currentColor", "stroke-width", "2", "stroke-linecap", "round", "stroke-linejoin", "round"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "Twitch", 3, "href"], [4, "ngTemplateOutlet"], ["role", "img", "aria-label", "Twitch"], ["viewBox", "0 0 24 24", "aria-hidden", "true"], ["d", "M4 3h18v12l-5 5h-4l-3 3v-3H6V7l-2-4Zm4 3v11h4v2l2-2h4l3-3V6H8Zm4 2h2v5h-2V8Zm5 0h2v5h-2V8Z", "fill", "currentColor"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "GitHub", 3, "href"], ["role", "img", "aria-label", "GitHub"], ["d", "M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.5-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.12.08 1.71 1.16 1.71 1.16 1 .7 2.62.5 3.26.38.1-.73.39-1.23.7-1.52-2.5-.28-5.13-1.25-5.13-5.55 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.62 1.54.23 2.68.12 2.96.72.78 1.15 1.78 1.15 3 0 4.31-2.63 5.26-5.14 5.54.4.35.75 1.03.75 2.08v3.08c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z", "fill", "currentColor"], ["aria-label", "Email", 3, "href"], ["role", "img", "aria-label", "Email"], ["viewBox", "0 0 24 24", "fill", "none", "aria-hidden", "true"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "LinkedIn", 3, "href"], ["role", "img", "aria-label", "LinkedIn"], ["d", "M5.16 3a2.16 2.16 0 1 0 0 4.32 2.16 2.16 0 0 0 0-4.32ZM3.3 9h3.72v12H3.3V9Zm5.95 0h3.56v1.64h.05c.5-.94 1.7-1.93 3.5-1.93 3.74 0 4.43 2.46 4.43 5.66V21h-3.72v-5.88c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.52-2.26 3.1V21H9.25V9Z", "fill", "currentColor"]],
+      consts: [["githubIcon", ""], ["githubSvg", ""], ["linkedinIcon", ""], ["linkedinSvg", ""], ["emailIcon", ""], ["emailSvg", ""], ["twitchIcon", ""], ["twitchSvg", ""], [1, "site-footer"], [1, "site-footer__inner"], ["aria-labelledby", "footer-heading", 1, "site-footer__callout"], ["class", "site-footer__eyebrow", 4, "ngIf"], ["id", "footer-heading", 1, "site-footer__heading"], ["class", "site-footer__body", 4, "ngIf"], ["type", "button", 1, "site-footer__button"], ["class", "site-footer__icon", "viewBox", "0 0 24 24", "fill", "none", "aria-hidden", "true", 4, "ngIf"], [1, "site-footer__bottom"], [1, "site-footer__brand"], [1, "site-footer__tagline"], [1, "site-footer__copyright"], ["aria-label", "Social links", 1, "site-footer__socials"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "GitHub", 3, "href", 4, "ngIf", "ngIfElse"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "LinkedIn", 3, "href", 4, "ngIf", "ngIfElse"], ["aria-label", "Email", 3, "href", 4, "ngIf", "ngIfElse"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "Twitch", 3, "href", 4, "ngIf", "ngIfElse"], [1, "site-footer__eyebrow"], [1, "site-footer__body"], ["viewBox", "0 0 24 24", "fill", "none", "aria-hidden", "true", 1, "site-footer__icon"], ["x", "3", "y", "5", "width", "18", "height", "14", "rx", "2", "stroke", "currentColor", "stroke-width", "2"], ["d", "m4 7 8 6 8-6", "stroke", "currentColor", "stroke-width", "2", "stroke-linecap", "round", "stroke-linejoin", "round"], ["d", "M5 12h14m-6-6 6 6-6 6", "stroke", "currentColor", "stroke-width", "2", "stroke-linecap", "round", "stroke-linejoin", "round"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "GitHub", 3, "href"], [4, "ngTemplateOutlet"], ["role", "img", "aria-label", "GitHub"], ["viewBox", "0 0 24 24", "aria-hidden", "true"], ["d", "M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.5-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.12.08 1.71 1.16 1.71 1.16 1 .7 2.62.5 3.26.38.1-.73.39-1.23.7-1.52-2.5-.28-5.13-1.25-5.13-5.55 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.62 1.54.23 2.68.12 2.96.72.78 1.15 1.78 1.15 3 0 4.31-2.63 5.26-5.14 5.54.4.35.75 1.03.75 2.08v3.08c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z", "fill", "currentColor"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "LinkedIn", 3, "href"], ["role", "img", "aria-label", "LinkedIn"], ["d", "M5.16 3a2.16 2.16 0 1 0 0 4.32 2.16 2.16 0 0 0 0-4.32ZM3.3 9h3.72v12H3.3V9Zm5.95 0h3.56v1.64h.05c.5-.94 1.7-1.93 3.5-1.93 3.74 0 4.43 2.46 4.43 5.66V21h-3.72v-5.88c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.52-2.26 3.1V21H9.25V9Z", "fill", "currentColor"], ["aria-label", "Email", 3, "href"], ["role", "img", "aria-label", "Email"], ["viewBox", "0 0 24 24", "fill", "none", "aria-hidden", "true"], ["target", "_blank", "rel", "noopener noreferrer", "aria-label", "Twitch", 3, "href"], ["role", "img", "aria-label", "Twitch"], ["d", "M4 3h18v12l-5 5h-4l-3 3v-3H6V7l-2-4Zm4 3v11h4v2l2-2h4l3-3V6H8Zm4 2h2v5h-2V8Zm5 0h2v5h-2V8Z", "fill", "currentColor"]],
       template: function FooterComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "footer", 8)(1, "div", 9)(2, "section", 10);
@@ -532,10 +528,10 @@ class FooterComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()();
         }
         if (rf & 2) {
-          const twitchIcon_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](23);
-          const githubIcon_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](28);
+          const githubIcon_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](23);
+          const linkedinIcon_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](28);
           const emailIcon_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](33);
-          const linkedinIcon_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](38);
+          const twitchIcon_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](38);
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.content.showEyebrow && ctx.content.eyebrowText);
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
@@ -551,13 +547,13 @@ class FooterComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("\u00A9 ", ctx.currentYear, " \u00B7 All rights reserved.");
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.content.socialLinks.twitch)("ngIfElse", twitchIcon_r6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.socialLinks.github)("ngIfElse", githubIcon_r6);
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.content.socialLinks.github)("ngIfElse", githubIcon_r7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.socialLinks.linkedin)("ngIfElse", linkedinIcon_r7);
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.content.socialLinks.email)("ngIfElse", emailIcon_r8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.socialLinks.email)("ngIfElse", emailIcon_r8);
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.content.socialLinks.linkedin)("ngIfElse", linkedinIcon_r9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.socialLinks.twitch)("ngIfElse", twitchIcon_r9);
         }
       },
       dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_1__.NgIf, _angular_common__WEBPACK_IMPORTED_MODULE_1__.NgTemplateOutlet],

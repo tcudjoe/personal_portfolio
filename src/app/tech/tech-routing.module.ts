@@ -14,22 +14,28 @@ const routes: Routes = [
     path: '', component: LayoutComponent,
     children: [
       {
-        path: '', component: HomeComponent
+        path: '',
+        component: HomeComponent
       },
       {
-        path: 'work', component: WorkComponent
+        path: 'work',
+        component: WorkComponent
       },
       {
-        path: 'work-detail/:slug', component: WorkDetailComponent
+        path: 'work/:slug',
+        component: WorkDetailComponent
       },
       {
-        path: 'writing', component: WritingComponent
+        path: 'writing',
+        component: WritingComponent
       },
       {
-        path: 'writing-detail-page/:slug', component: WritingDetailComponent
+        path: 'writing/:slug',
+        component: WritingDetailComponent
       },
       {
-        path: 'about', component: AboutComponent
+        path: 'about',
+        component: AboutComponent
       },
       {
         path: '404',

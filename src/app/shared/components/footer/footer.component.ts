@@ -17,7 +17,6 @@ export interface FooterConfig {
   showBody: boolean;
   buttonText: string;
   buttonIcon: FooterIcon;
-  socialLinks: FooterSocialLinks;
 }
 
 const DEFAULT_FOOTER_CONFIG: FooterConfig = {
@@ -27,13 +26,7 @@ const DEFAULT_FOOTER_CONFIG: FooterConfig = {
   bodyText: "Whether it's software, an interesting collaboration, or just a conversation about technology; my inbox is open.",
   showBody: true,
   buttonText: 'Get in touch',
-  buttonIcon: 'mail-arrow',
-  socialLinks: {
-    linkedin: '',
-    twitch: '',
-    github: '',
-    email: ''
-  }
+  buttonIcon: 'mail-arrow'
 };
 
 @Component({
@@ -44,16 +37,16 @@ const DEFAULT_FOOTER_CONFIG: FooterConfig = {
 export class FooterComponent {
   @Input() config: Partial<FooterConfig> = {};
 
+  readonly socialLinks: FooterSocialLinks = {
+    linkedin: 'https://www.linkedin.com/in/tcudjoe2401/',
+    twitch: 'https://www.twitch.tv/taocudjoe',
+    github: 'https://github.com/tcudjoe',
+    email: 'taocudjoe@gmail.com'
+  };
+
   readonly currentYear = new Date().getFullYear();
 
   get content(): FooterConfig {
-    return {
-      ...DEFAULT_FOOTER_CONFIG,
-      ...this.config,
-      socialLinks: {
-        ...DEFAULT_FOOTER_CONFIG.socialLinks,
-        ...this.config.socialLinks
-      }
-    };
+    return { ...DEFAULT_FOOTER_CONFIG, ...this.config };
   }
 }

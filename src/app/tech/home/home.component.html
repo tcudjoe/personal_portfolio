@@ -34,7 +34,7 @@
         <a class="home-projects__all-link" routerLink="/work">All Projects <span aria-hidden="true">→</span></a>
       </header>
 
-      <a class="project-card project-card--featured" [routerLink]="['/work-detail', featuredProject.slug]">
+      <a class="project-card project-card--featured" [routerLink]="['/work', featuredProject.slug]">
         <div class="project-card__image project-card__image--wide" role="img" aria-label="Project image placeholder">
           <span>Project image placeholder</span>
         </div>
@@ -46,7 +46,7 @@
       </a>
 
       <div class="home-projects__grid">
-        <a class="project-card" *ngFor="let project of projects" [routerLink]="['/work-detail', project.slug]">
+        <a class="project-card" *ngFor="let project of projects" [routerLink]="['/work', project.slug]">
           <div class="project-card__image" role="img" aria-label="Project image placeholder">
             <span>Project image placeholder</span>
           </div>
@@ -91,7 +91,7 @@
 
       <div class="home-writing__list">
         <a *ngFor="let article of homeArticles; let index = index"
-           class="home-writing__item" [routerLink]="['/writing-detail-page', article.slug]">
+           class="home-writing__item" [routerLink]="['/writing', article.slug]">
           <p class="home-writing__meta">
             <span class="home-writing__number">{{ index + 1 | number:'2.0' }}</span>
             <span>{{ article.category }}</span>

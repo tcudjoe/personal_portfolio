@@ -138,8 +138,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const _c0 = a0 => ["/work-detail", a0];
-const _c1 = a0 => ["/writing-detail-page", a0];
+const _c0 = a0 => ["/work", a0];
+const _c1 = a0 => ["/writing", a0];
 function HomeComponent_a_53_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "a", 48)(1, "div", 49)(2, "span");
@@ -488,13 +488,13 @@ const routes = [{
     path: 'work',
     component: _work_work_component__WEBPACK_IMPORTED_MODULE_3__.WorkComponent
   }, {
-    path: 'work-detail/:slug',
+    path: 'work/:slug',
     component: _work_detail_work_detail_component__WEBPACK_IMPORTED_MODULE_4__.WorkDetailComponent
   }, {
     path: 'writing',
     component: _writing_writing_component__WEBPACK_IMPORTED_MODULE_5__.WritingComponent
   }, {
-    path: 'writing-detail-page/:slug',
+    path: 'writing/:slug',
     component: _writing_detail_writing_detail_component__WEBPACK_IMPORTED_MODULE_7__.WritingDetailComponent
   }, {
     path: 'about',

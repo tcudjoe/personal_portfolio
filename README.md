@@ -35,29 +35,37 @@ De design tokens worden globaal ingeladen via `src/styles.scss`. Gebruik de best
 - [x] Engineering-design tokens voor kleuren en typografie globaal aangesloten.
 - [x] Soft Blue (`#93BCE7`) toegevoegd aan de SCSS- en CSS-tokenlijst.
 - [x] Tech-home route toont een statische hero met introductie, naam, technologie-tags en een tijdelijke portretplaceholder.
+- [x] Tech-home bevat previews voor projecten, About, Writing en Music.
 - [x] Responsive navbar voor de tech-pagina met routes naar Work, Writing, About en Music.
-- [x] Footer met standaard CTA-copy en een `config`-input voor eyebrow, header, body, buttontekst, buttonicoon en sociallinks.
-- [x] Footer ondersteunt Twitch, GitHub, e-mail en LinkedIn-iconen. Profiel-URL’s kunnen later via `config.socialLinks` worden ingevuld.
+- [x] Footer met standaard CTA-copy en een `config`-input voor eyebrow, header, body, buttontekst en buttonicoon.
+- [x] Footer toont vaste Twitch-, GitHub-, e-mail- en LinkedIn-iconen en gebruikt dezelfde social-URL’s op elke pagina.
 - [x] Development-build slaagt met `npm run build -- --configuration development`.
 
 ### Nog te doen
 
 #### Tech-portfolio — pagina voor pagina
 
-- [ ] Home afmaken: projecten, korte About-sectie, recente artikelen, muziekblok en overige secties uit het ontwerp.
+- [ ] Home: tijdelijke beelden en voorbeeldinhoud vervangen door definitieve portfolio-content.
 - [ ] About-pagina bouwen.
 - [ ] Work-overzicht bouwen, inclusief statische categorie-filtering.
 - [ ] Work-detailpagina bouwen.
 - [ ] Writing-overzicht bouwen.
 - [ ] Writing-detailpagina bouwen.
-- [ ] Footer CTA koppelen aan de juiste contactactie en echte social-URL’s invullen.
+- [ ] Footer CTA koppelen aan de juiste contactactie.
 - [ ] Navigatie- en pagina-layout handmatig nalopen op mobiel en desktop.
 
 #### Music
 
-- [ ] Music-routing en eerste muziekpagina toevoegen; de music-routingmodule heeft momenteel nog geen routes.
+- [x] `/music` route koppelen aan de bestaande tijdelijke muziek-home.
+- [ ] Muziek-home en overige muziekpagina’s volgens het ontwerp bouwen.
 - [ ] Muziekontwerp en eventuele afwijkende navigatie uitwerken.
 - [ ] Music-favicon dynamisch activeren op `/music`; dit is bewust uitgesteld.
+
+#### UX en polish
+
+- [ ] Skeleton loading states toevoegen voor Directus-content die merkbaar vertraagd binnenkomt. Houd de skeletons passend bij de uiteindelijke inhoud; gebruik ze niet voor de huidige statische content.
+- [ ] Subtiele overgangen tussen routes toevoegen, bij voorkeur voor de pagina-inhoud terwijl navbar en footer stabiel blijven.
+- [ ] Beweging beperken of uitschakelen wanneer `prefers-reduced-motion` is ingesteld.
 
 #### Directus en lancering
 
@@ -78,13 +86,7 @@ footerConfig = {
   headerText: 'Heb je een project in gedachten?',
   showBody: false,
   buttonText: 'Stuur me een bericht',
-  buttonIcon: 'mail',
-  socialLinks: {
-    linkedin: 'https://www.linkedin.com/in/your-profile',
-    twitch: '',
-    github: 'https://github.com/your-profile',
-    email: 'hello@example.com'
-  }
+  buttonIcon: 'mail'
 };
 ```
 
@@ -93,6 +95,7 @@ footerConfig = {
 ```
 
 Beschikbare buttoniconen: `mail-arrow`, `mail`, `arrow` en `none`.
+De sociale iconen en bestemmingen zijn gedeeld en worden niet per pagina ingesteld.
 
 ## Lokaal ontwikkelen
 

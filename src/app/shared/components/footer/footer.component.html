@@ -36,20 +36,7 @@
       </div>
 
       <nav class="site-footer__socials" aria-label="Social links">
-        <a *ngIf="content.socialLinks.twitch; else twitchIcon" [href]="content.socialLinks.twitch"
-           target="_blank" rel="noopener noreferrer" aria-label="Twitch">
-          <ng-container *ngTemplateOutlet="twitchSvg"></ng-container>
-        </a>
-        <ng-template #twitchIcon><span role="img" aria-label="Twitch"><ng-container
-          *ngTemplateOutlet="twitchSvg"></ng-container></span></ng-template>
-        <ng-template #twitchSvg>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 3h18v12l-5 5h-4l-3 3v-3H6V7l-2-4Zm4 3v11h4v2l2-2h4l3-3V6H8Zm4 2h2v5h-2V8Zm5 0h2v5h-2V8Z"
-                  fill="currentColor"/>
-          </svg>
-        </ng-template>
-
-        <a *ngIf="content.socialLinks.github; else githubIcon" [href]="content.socialLinks.github"
+        <a *ngIf="socialLinks.github; else githubIcon" [href]="socialLinks.github"
            target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <ng-container *ngTemplateOutlet="githubSvg"></ng-container>
         </a>
@@ -63,7 +50,21 @@
           </svg>
         </ng-template>
 
-        <a *ngIf="content.socialLinks.email; else emailIcon" [href]="'mailto:' + content.socialLinks.email"
+        <a *ngIf="socialLinks.linkedin; else linkedinIcon" [href]="socialLinks.linkedin"
+           target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <ng-container *ngTemplateOutlet="linkedinSvg"></ng-container>
+        </a>
+        <ng-template #linkedinIcon><span role="img" aria-label="LinkedIn"><ng-container
+          *ngTemplateOutlet="linkedinSvg"></ng-container></span></ng-template>
+        <ng-template #linkedinSvg>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M5.16 3a2.16 2.16 0 1 0 0 4.32 2.16 2.16 0 0 0 0-4.32ZM3.3 9h3.72v12H3.3V9Zm5.95 0h3.56v1.64h.05c.5-.94 1.7-1.93 3.5-1.93 3.74 0 4.43 2.46 4.43 5.66V21h-3.72v-5.88c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.52-2.26 3.1V21H9.25V9Z"
+              fill="currentColor"/>
+          </svg>
+        </ng-template>
+
+        <a *ngIf="socialLinks.email; else emailIcon" [href]="'mailto:' + socialLinks.email"
            aria-label="Email">
           <ng-container *ngTemplateOutlet="emailSvg"></ng-container>
         </a>
@@ -77,19 +78,19 @@
           </svg>
         </ng-template>
 
-        <a *ngIf="content.socialLinks.linkedin; else linkedinIcon" [href]="content.socialLinks.linkedin"
-           target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <ng-container *ngTemplateOutlet="linkedinSvg"></ng-container>
+        <a *ngIf="socialLinks.twitch; else twitchIcon" [href]="socialLinks.twitch"
+           target="_blank" rel="noopener noreferrer" aria-label="Twitch">
+          <ng-container *ngTemplateOutlet="twitchSvg"></ng-container>
         </a>
-        <ng-template #linkedinIcon><span role="img" aria-label="LinkedIn"><ng-container
-          *ngTemplateOutlet="linkedinSvg"></ng-container></span></ng-template>
-        <ng-template #linkedinSvg>
+        <ng-template #twitchIcon><span role="img" aria-label="Twitch"><ng-container
+          *ngTemplateOutlet="twitchSvg"></ng-container></span></ng-template>
+        <ng-template #twitchSvg>
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M5.16 3a2.16 2.16 0 1 0 0 4.32 2.16 2.16 0 0 0 0-4.32ZM3.3 9h3.72v12H3.3V9Zm5.95 0h3.56v1.64h.05c.5-.94 1.7-1.93 3.5-1.93 3.74 0 4.43 2.46 4.43 5.66V21h-3.72v-5.88c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.52-2.26 3.1V21H9.25V9Z"
-              fill="currentColor"/>
+            <path d="M4 3h18v12l-5 5h-4l-3 3v-3H6V7l-2-4Zm4 3v11h4v2l2-2h4l3-3V6H8Zm4 2h2v5h-2V8Zm5 0h2v5h-2V8Z"
+                  fill="currentColor"/>
           </svg>
         </ng-template>
+
       </nav>
     </div>
   </div>
