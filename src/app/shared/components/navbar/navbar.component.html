@@ -1,1 +1,20 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-md navbar-dark site-nav">
+  <div class="container-fluid site-nav__inner">
+    <a class="navbar-brand site-nav__brand" routerLink="/" aria-label="Tyra Cudjoe home" (click)="closeMenu()">TC.</a>
+
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()"
+            [attr.aria-expanded]="isMenuOpen" aria-controls="primary-navigation"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="primary-navigation" class="collapse navbar-collapse" [class.show]="isMenuOpen">
+      <ul class="navbar-nav ms-auto site-nav__links">
+        <li class="nav-item"><a class="nav-link site-nav__link" routerLink="/work" routerLinkActive="site-nav__link--active" (click)="closeMenu()">Work</a></li>
+        <li class="nav-item"><a class="nav-link site-nav__link" routerLink="/writing" routerLinkActive="site-nav__link--active" (click)="closeMenu()">Writing</a></li>
+        <li class="nav-item"><a class="nav-link site-nav__link" routerLink="/about" routerLinkActive="site-nav__link--active" (click)="closeMenu()">About</a></li>
+        <li class="nav-item"><a class="nav-link site-nav__link" routerLink="/music" routerLinkActive="site-nav__link--active" (click)="closeMenu()">Music</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
