@@ -37,6 +37,7 @@ De design tokens worden globaal ingeladen via `src/styles.scss`. Gebruik de best
 - [x] Tech-home route toont een statische hero met introductie, naam, technologie-tags en een tijdelijke portretplaceholder.
 - [x] Tech-home bevat previews voor projecten, About, Writing en Music.
 - [x] About-pagina bevat de hero, het verhaal, ervaring, engineeringprincipes en muziekintro uit het ontwerp.
+- [x] Work-overzicht met featured project, responsive projectraster en lokale categorie-filters.
 - [x] Responsive navbar voor de tech-pagina met routes naar Work, Writing, About en Music.
 - [x] Footer met standaard CTA-copy en een `config`-input voor eyebrow, header, body, buttontekst en buttonicoon.
 - [x] Footer toont vaste Twitch-, GitHub-, e-mail- en LinkedIn-iconen en gebruikt dezelfde social-URL’s op elke pagina.
@@ -48,7 +49,7 @@ De design tokens worden globaal ingeladen via `src/styles.scss`. Gebruik de best
 
 - [ ] Home: tijdelijke beelden en voorbeeldinhoud vervangen door definitieve portfolio-content.
 - [ ] About-pagina: tijdelijke beelden vervangen en werkervaring/data en copy door Tyra laten bevestigen.
-- [ ] Work-overzicht bouwen, inclusief statische categorie-filtering.
+- [ ] Work-overzicht: tijdelijke beelden en voorbeeldprojecten vervangen door definitieve content.
 - [ ] Work-detailpagina bouwen.
 - [ ] Writing-overzicht bouwen.
 - [ ] Writing-detailpagina bouwen.

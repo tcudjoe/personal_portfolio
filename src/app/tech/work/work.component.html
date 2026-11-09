@@ -1,1 +1,51 @@
-<p>work works!</p>
+<main class="work-page">
+  <header class="work-hero" aria-labelledby="work-heading">
+    <div class="work-hero__inner">
+      <h1 id="work-heading">Things I’ve Built.</h1>
+      <p>A collection of software products, client projects and experiments. Each one taught me something different about building better systems.</p>
+    </div>
+  </header>
+
+  <section class="work-listing" aria-label="Project portfolio">
+    <div class="work-listing__inner">
+      <div class="work-filters" role="group" aria-label="Filter projects">
+        <button *ngFor="let filter of filters" type="button"
+                class="work-filters__button"
+                [class.work-filters__button--active]="activeFilter === filter"
+                [attr.aria-pressed]="activeFilter === filter"
+                (click)="setFilter(filter)">
+          {{ filter }}
+        </button>
+      </div>
+
+      <a *ngIf="showFeaturedProject" class="work-card work-card--featured"
+         [routerLink]="['/work', featuredProject.slug]">
+        <div class="work-card__image work-card__image--wide" role="img" aria-label="Featured project image placeholder">
+          <span>Project image placeholder</span>
+        </div>
+        <div class="work-card__content">
+          <p class="work-card__category">{{ featuredProject.category }}</p>
+          <h2 class="work-card__title">{{ featuredProject.title }}</h2>
+          <p class="work-card__description">{{ featuredProject.description }}</p>
+        </div>
+      </a>
+
+      <div class="work-grid" aria-live="polite">
+        <a *ngFor="let project of filteredProjects" class="work-card"
+           [routerLink]="['/work', project.slug]">
+          <div class="work-card__image" role="img" aria-label="Project image placeholder">
+            <span>Project image placeholder</span>
+          </div>
+          <div class="work-card__content">
+            <p class="work-card__category">{{ project.category }}</p>
+            <h2 class="work-card__title">{{ project.title }}</h2>
+          </div>
+        </a>
+      </div>
+
+      <p *ngIf="!showFeaturedProject && filteredProjects.length === 0" class="work-listing__empty">
+        No projects in this category yet.
+      </p>
+    </div>
+  </section>
+</main>
