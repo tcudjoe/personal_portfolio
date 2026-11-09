@@ -36,6 +36,7 @@ De design tokens worden globaal ingeladen via `src/styles.scss`. Gebruik de best
 - [x] Soft Blue (`#93BCE7`) toegevoegd aan de SCSS- en CSS-tokenlijst.
 - [x] Tech-home route toont een statische hero met introductie, naam, technologie-tags en een tijdelijke portretplaceholder.
 - [x] Tech-home bevat previews voor projecten, About, Writing en Music.
+- [x] About-pagina bevat de hero, het verhaal, ervaring, engineeringprincipes en muziekintro uit het ontwerp.
 - [x] Responsive navbar voor de tech-pagina met routes naar Work, Writing, About en Music.
 - [x] Footer met standaard CTA-copy en een `config`-input voor eyebrow, header, body, buttontekst en buttonicoon.
 - [x] Footer toont vaste Twitch-, GitHub-, e-mail- en LinkedIn-iconen en gebruikt dezelfde social-URL’s op elke pagina.
@@ -46,7 +47,7 @@ De design tokens worden globaal ingeladen via `src/styles.scss`. Gebruik de best
 #### Tech-portfolio — pagina voor pagina
 
 - [ ] Home: tijdelijke beelden en voorbeeldinhoud vervangen door definitieve portfolio-content.
-- [ ] About-pagina bouwen.
+- [ ] About-pagina: tijdelijke beelden vervangen en werkervaring/data en copy door Tyra laten bevestigen.
 - [ ] Work-overzicht bouwen, inclusief statische categorie-filtering.
 - [ ] Work-detailpagina bouwen.
 - [ ] Writing-overzicht bouwen.

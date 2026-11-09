@@ -1,1 +1,103 @@
-<p>about works!</p>
+<main class="about-page">
+  <section class="about-hero" aria-labelledby="about-heading">
+    <div class="about-hero__inner">
+      <div class="about-hero__copy">
+        <p class="about-hero__eyebrow">A little more about me</p>
+        <h1 id="about-heading">Engineer by profession.<br />Curious by nature.</h1>
+        <p class="about-hero__intro">Software engineer, entrepreneur and creative mind. I love understanding how things work, solving problems and turning ideas into something meaningful.</p>
+      </div>
+
+      <div class="about-hero__portrait" role="img" aria-label="Portrait placeholder">
+        <div class="about-hero__silhouette" aria-hidden="true"></div>
+        <span>Portrait placeholder</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-story" aria-labelledby="about-story-heading">
+    <div class="about-story__inner">
+      <div class="about-story__copy">
+        <p class="about-story__eyebrow">My story</p>
+        <h2 id="about-story-heading">It started with curiosity.</h2>
+        <p>I’ve always been fascinated by how technology works — and even more by what I could create with it.</p>
+        <p>That curiosity grew into a career in software engineering, working on real-world applications and eventually starting my own software development agency.</p>
+        <p>Today, I’m focused on understanding systems more deeply, building thoughtful software and sharing what I learn along the way.</p>
+      </div>
+
+      <div class="about-story__image" role="img" aria-label="Creative portrait placeholder">
+        <div class="about-story__silhouette" aria-hidden="true"></div>
+        <span>Photo placeholder</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-experience" aria-labelledby="experience-heading">
+    <div class="about-experience__inner">
+      <header class="about-experience__header">
+        <p class="about-experience__eyebrow">Professional experience</p>
+        <h2 id="experience-heading">The journey so far</h2>
+        <p class="about-experience__intro">The teams, projects and responsibilities that shaped me as an engineer.</p>
+      </header>
+
+      <ol class="experience-list">
+        <li *ngFor="let item of experience; let index = index" class="experience-item">
+          <p class="experience-item__period">{{ item.period }}</p>
+          <div class="experience-item__details">
+            <p class="experience-item__number">{{ index + 1 | number:'2.0' }}</p>
+            <div>
+              <h3>{{ item.title }}</h3>
+              <p class="experience-item__organization">{{ item.organization }}</p>
+              <p class="experience-item__description">{{ item.description }}</p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="about-approach" aria-labelledby="approach-heading">
+    <div class="about-approach__inner">
+      <p class="about-approach__eyebrow">How I approach engineering</p>
+      <h2 id="approach-heading">Good engineering is more than working code.</h2>
+      <p class="about-approach__intro">For me, engineering means understanding the problem, questioning assumptions and taking responsibility for the decisions behind the software.</p>
+
+      <div class="approach-grid">
+        <article class="approach-card">
+          <h3>Curiosity</h3>
+          <p>Understanding how systems work and questioning why things are built the way they are.</p>
+        </article>
+        <article class="approach-card">
+          <h3>Ownership</h3>
+          <p>Taking responsibility for technical decisions and the consequences they create.</p>
+        </article>
+        <article class="approach-card">
+          <h3>Craftsmanship</h3>
+          <p>Building software thoughtfully, not just making something that works.</p>
+        </article>
+        <article class="approach-card">
+          <h3>Community</h3>
+          <p>Sharing knowledge, learning from others and helping engineers grow.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-beyond" aria-labelledby="beyond-heading">
+    <div class="about-beyond__inner">
+      <div class="about-beyond__copy">
+        <p class="about-beyond__eyebrow">Beyond the code</p>
+        <h2 id="beyond-heading">There is more to life than code.</h2>
+      </div>
+
+      <div class="about-beyond__content">
+        <div class="about-beyond__image" role="img" aria-label="Music and creativity image placeholder">
+          <span>Music image placeholder</span>
+        </div>
+        <div class="about-beyond__text">
+          <p>Music is another huge part of my life. Whether I’m performing, collaborating or creating something new, it’s another way I connect with people.</p>
+          <a routerLink="/music">Explore My Music <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
