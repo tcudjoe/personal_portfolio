@@ -11,21 +11,39 @@
         {{ content.bodyText }}
       </p>
 
-      <button class="site-footer__button" type="button">
-        <svg *ngIf="content.buttonIcon === 'mail' || content.buttonIcon === 'mail-arrow'"
-             class="site-footer__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
-          <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <div class="site-footer__actions">
+        <a *ngIf="content.buttonHref; else staticFooterButton"
+           class="site-footer__button"
+           [href]="content.buttonHref">
+          <ng-container *ngTemplateOutlet="footerButtonContent"></ng-container>
+        </a>
 
-        <span>{{ content.buttonText }}</span>
+        <ng-template #staticFooterButton>
+          <button class="site-footer__button" type="button">
+            <ng-container *ngTemplateOutlet="footerButtonContent"></ng-container>
+          </button>
+        </ng-template>
 
-        <svg *ngIf="content.buttonIcon === 'arrow' || content.buttonIcon === 'mail-arrow'"
-             class="site-footer__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round"/>
-        </svg>
-      </button>
+        <ng-template #footerButtonContent>
+          <svg *ngIf="content.buttonIcon === 'mail' || content.buttonIcon === 'mail-arrow'"
+               class="site-footer__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>{{ content.buttonText }}</span>
+          <svg *ngIf="content.buttonIcon === 'arrow' || content.buttonIcon === 'mail-arrow'"
+               class="site-footer__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+          </svg>
+        </ng-template>
+
+        <a *ngIf="content.secondaryLink" class="site-footer__secondary-link"
+           [href]="content.secondaryLink.href">
+          <span>{{ content.secondaryLink.eyebrow }}</span>
+          <strong>{{ content.secondaryLink.label }} <span aria-hidden="true">→</span></strong>
+        </a>
+      </div>
     </section>
 
     <div class="site-footer__bottom">
