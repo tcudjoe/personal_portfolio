@@ -1,6 +1,6 @@
-@import "./borders.scss";
-@import "./colors.scss";
-@import "./responsive.scss";
-@import "./shadows.scss";
-@import "./spacing.scss";
-@import "./typography.scss";
+@use "./borders";
+@use "./colors";
+@use "./responsive";
+@use "./shadows";
+@use "./spacing";
+@use "./typography";

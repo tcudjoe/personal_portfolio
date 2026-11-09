@@ -5,20 +5,11 @@ import {PageNotFoundComponent} from "./shared/components/page-not-found/page-not
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: '/home'
-  },
-  {
-    path: 'tech',
-    loadChildren: () => import('./tech/tech-routing.module').then((m) => m.TechRoutingModule)
+    loadChildren: () => import('./tech/tech.module').then((m) => m.TechModule)
   },
   {
     path: 'music',
-    loadChildren: () => import('./music/music-routing.module').then((m) => m.MusicRoutingModule)
-  },
-  {
-    path: '',
-    loadChildren: () => import('./main/main-routing.module').then((m) => m.MainRoutingModule)
+    loadChildren: () => import('./music/music.module').then((m) => m.MusicModule)
   },
   {path: '404', component: PageNotFoundComponent},
   {path: '**', component: PageNotFoundComponent}

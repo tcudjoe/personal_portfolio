@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SharedRoutingModule } from './shared-routing.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
-import { LayoutComponent } from './components/layout/layout.component';
+import {NavbarComponent} from "./components/navbar/navbar.component";
+import {FooterComponent} from "./components/footer/footer.component";
 
 
 @NgModule({
@@ -13,11 +13,16 @@ import { LayoutComponent } from './components/layout/layout.component';
     PageNotFoundComponent,
     BlogsComponent,
     BlogDetailComponent,
-    LayoutComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+  ],
+  exports: [
+    PageNotFoundComponent,
+    NavbarComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

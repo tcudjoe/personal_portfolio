@@ -1,58 +1,157 @@
-// Main
-$primary: rgb(3, 37, 78); // Primary color company
-$primary-light: adjust-color($primary, $lightness: 10%);
-$primary-dark: adjust-color($primary, $lightness: -10%);
-$secondary: rgb(0, 94, 245); // Secondary color company
-$secondary-light: adjust-color($secondary, $lightness: 10%);
-$secondary-dark: adjust-color($secondary, $lightness: -10%);
-$tertiary: rgb(184, 0, 181); // Tertiary color company
-$tertiary-light: adjust-color($tertiary, $lightness: 10%);
-$tertiary-dark: adjust-color($tertiary, $lightness: -10%);
 
+@use 'sass:color';
 
-// Whites
-$white: #fff;
-$white-20: #fafafa;
-$white-40: #f7f7f7; // Body background
-$white-60: #eaeaea; // Borders color
-$white-80: #dadada;
+// ========================================
+// 1. BRAND COLORS — ENGINEERING
+// ========================================
 
+$primary: #06254A;
+$primary-light: color.adjust($primary, $lightness: 10%);
+$primary-dark: color.adjust($primary, $lightness: -5%);
 
-// Greys
-$grey: #adb5bd; // Text muted
-$grey-20: #999;
-$grey-40: #808080;
-$grey-60: #666;
-$grey-80: #444;
-$grey-100: #3f3f3f;
+$secondary: #0B3765;
+$accent: #478CFF;
+$soft-blue: #93BCE7;
 
+// ========================================
+// 2. BRAND COLORS — MUSIC
+// ========================================
 
-// Blacks
-$black-20: #333;
-$black-40: #2b2b2b; // Standard text & headings
-$black-60: #1b1b1b;
-$black-80: #111;
-$black: #000;
+$music-primary: #650F24;
+$music-primary-light: #8D2539;
+$music-primary-dark: #440A18;
 
+$music-accent: #A52D40;
+$music-rose: #D5A7A0;
+$music-cream: #F5EDE7;
+$music-text: #38252B;
 
-// System
-$red: #d51a14; // Error messages
-$red-bg: adjust-color($red, $lightness: 90%);
-$red-light: adjust-color($red, $lightness: 10%);
-$red-dark: adjust-color($red, $lightness: -10%);
-$orange: #e88800; // Alert messages
-$orange-bg: adjust-color($orange, $lightness: 90%);
-$orange-light: adjust-color($orange, $lightness: 10%);
-$orange-dark: adjust-color($orange, $lightness: -10%);
-$yellow: #ffd700; // Pending messages
-$yellow-bg: adjust-color($yellow, $lightness: 90%);
-$yellow-light: adjust-color($yellow, $lightness: 10%);
-$yellow-dark: adjust-color($yellow, $lightness: -10%);
-$green: #14b100; // Success messages, buttons
-$green-bg: adjust-color($green, $lightness: 90%);
-$green-light: adjust-color($green, $lightness: 10%);
-$green-dark: adjust-color($green, $lightness: -10%);
-$blue: #1c50dd; // Info messages
-$blue-bg: adjust-color($blue, $lightness: 90%);
-$blue-light: adjust-color($blue, $lightness: 10%);
-$blue-dark: adjust-color($blue, $lightness: -10%);
+// ========================================
+// 3. NEUTRAL COLORS
+// ========================================
+
+$white: #FFFFFF;
+$warm-white: #F7F6F3;
+
+$neutral-100: #F1F5F9;
+$neutral-200: #DCE3EB;
+$neutral-400: #94A3B8;
+$neutral-500: #64748B;
+$neutral-700: #334155;
+$neutral-900: #0F172A;
+
+$black: #000000;
+
+// ========================================
+// 4. SYSTEM COLORS
+// ========================================
+
+$success: #15803D;
+$warning: #B45309;
+$error: #B91C1C;
+$info: #2563EB;
+
+// ========================================
+// 5. CSS CUSTOM PROPERTIES
+// ========================================
+
+:root {
+  // Engineering brand
+  --color-primary: #{$primary};
+  --color-primary-light: #{$primary-light};
+  --color-primary-dark: #{$primary-dark};
+
+  --color-secondary: #{$secondary};
+  --color-accent: #{$accent};
+  --color-soft-blue: #{$soft-blue};
+
+  // Music brand
+  --color-music: #{$music-primary};
+  --color-music-primary: #{$music-primary};
+  --color-music-primary-light: #{$music-primary-light};
+  --color-music-primary-dark: #{$music-primary-dark};
+  --color-music-accent: #{$music-accent};
+  --color-music-rose: #{$music-rose};
+  --color-music-cream: #{$music-cream};
+  --color-music-text: #{$music-text};
+
+  // Neutrals
+  --color-white: #{$white};
+  --color-warm-white: #{$warm-white};
+
+  --color-neutral-100: #{$neutral-100};
+  --color-neutral-200: #{$neutral-200};
+  --color-neutral-400: #{$neutral-400};
+  --color-neutral-500: #{$neutral-500};
+  --color-neutral-700: #{$neutral-700};
+  --color-neutral-900: #{$neutral-900};
+
+  // Semantic backgrounds
+  --color-bg-primary: var(--color-warm-white);
+  --color-bg-secondary: var(--color-white);
+  --color-bg-dark: var(--color-primary);
+
+  // Semantic text
+  --color-text-primary: var(--color-primary);
+  --color-text-secondary: var(--color-neutral-700);
+  --color-text-muted: var(--color-neutral-500);
+  --color-text-inverse: var(--color-white);
+
+  // Borders
+  --color-border-default: var(--color-neutral-200);
+
+  // Interactive
+  --color-action-primary: var(--color-primary);
+  --color-action-hover: var(--color-primary-light);
+  --color-focus: var(--color-accent);
+
+  // System
+  --color-success: #{$success};
+  --color-warning: #{$warning};
+  --color-error: #{$error};
+  --color-info: #{$info};
+}
+
+// ========================================
+// 6. SECTION THEMES
+// ========================================
+
+.theme-light {
+  --surface-bg: var(--color-bg-primary);
+  --surface-text: var(--color-text-primary);
+  --surface-text-muted: var(--color-text-secondary);
+  --surface-border: var(--color-border-default);
+}
+
+.theme-dark {
+  --surface-bg: var(--color-bg-dark);
+  --surface-text: var(--color-text-inverse);
+  --surface-text-muted: #CBD5E1;
+  --surface-border: #38516D;
+}
+
+// ========================================
+// 7. MUSIC THEMES
+// ========================================
+
+.theme-music {
+  --surface-bg: var(--color-music-primary);
+  --surface-text: var(--color-music-cream);
+  --surface-text-muted: #F0D7D2;
+  --surface-border: var(--color-music-primary-light);
+
+  --color-action-primary: var(--color-music-accent);
+  --color-action-hover: var(--color-music-primary-light);
+  --color-focus: var(--color-music-rose);
+}
+
+.theme-music-light {
+  --surface-bg: var(--color-music-cream);
+  --surface-text: var(--color-music-text);
+  --surface-text-muted: #795853;
+  --surface-border: var(--color-music-rose);
+
+  --color-action-primary: var(--color-music-primary);
+  --color-action-hover: var(--color-music-accent);
+  --color-focus: var(--color-music-accent);
+}
