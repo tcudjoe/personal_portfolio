@@ -23,4 +23,39 @@
       </div>
     </div>
   </section>
+
+  <section class="home-projects" aria-labelledby="projects-heading">
+    <div class="home-projects__inner">
+      <header class="home-projects__header">
+        <div>
+          <h2 id="projects-heading" class="home-projects__heading">Things I’ve Built</h2>
+          <p class="home-projects__intro">A selection of products, experiments, and systems.</p>
+        </div>
+        <a class="home-projects__all-link" routerLink="/work">All Projects <span aria-hidden="true">→</span></a>
+      </header>
+
+      <a class="project-card project-card--featured" [routerLink]="['/work-detail', featuredProject.slug]">
+        <div class="project-card__image project-card__image--wide" role="img" aria-label="Project image placeholder">
+          <span>Project image placeholder</span>
+        </div>
+        <div class="project-card__content">
+          <p class="project-card__category">{{ featuredProject.category }}</p>
+          <h3 class="project-card__title">{{ featuredProject.title }}</h3>
+          <p class="project-card__description">{{ featuredProject.description }}</p>
+        </div>
+      </a>
+
+      <div class="home-projects__grid">
+        <a class="project-card" *ngFor="let project of projects" [routerLink]="['/work-detail', project.slug]">
+          <div class="project-card__image" role="img" aria-label="Project image placeholder">
+            <span>Project image placeholder</span>
+          </div>
+          <div class="project-card__content">
+            <p class="project-card__category">{{ project.category }}</p>
+            <h3 class="project-card__title">{{ project.title }}</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 </main>

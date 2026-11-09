@@ -10,6 +10,7 @@
 
     <div id="primary-navigation" class="collapse navbar-collapse" [class.show]="isMenuOpen">
       <ul class="navbar-nav ms-auto site-nav__links">
+        <li class="nav-item"><a class="nav-link site-nav__link" routerLink="/" routerLinkActive="site-nav__link--active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a></li>
         <li class="nav-item"><a class="nav-link site-nav__link" routerLink="/work" routerLinkActive="site-nav__link--active" (click)="closeMenu()">Work</a></li>
         <li class="nav-item"><a class="nav-link site-nav__link" routerLink="/writing" routerLinkActive="site-nav__link--active" (click)="closeMenu()">Writing</a></li>
         <li class="nav-item"><a class="nav-link site-nav__link" routerLink="/about" routerLinkActive="site-nav__link--active" (click)="closeMenu()">About</a></li>
