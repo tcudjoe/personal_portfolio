@@ -16,6 +16,7 @@ export interface FooterLink {
 }
 
 export interface FooterConfig {
+  showCallout: boolean;
   eyebrowText: string;
   showEyebrow: boolean;
   headerText: string;
@@ -28,6 +29,7 @@ export interface FooterConfig {
 }
 
 const DEFAULT_FOOTER_CONFIG: FooterConfig = {
+  showCallout: true,
   eyebrowText: 'LET’S CONNECT',
   showEyebrow: false,
   headerText: "Have an idea? Let's make it happen.",

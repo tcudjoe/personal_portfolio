@@ -1,6 +1,6 @@
 <footer class="site-footer" [class.site-footer--with-secondary-link]="content.secondaryLink">
   <div class="site-footer__inner">
-    <section class="site-footer__callout" aria-labelledby="footer-heading">
+    <section *ngIf="content.showCallout" class="site-footer__callout" aria-labelledby="footer-heading">
       <p *ngIf="content.showEyebrow && content.eyebrowText" class="site-footer__eyebrow">
         {{ content.eyebrowText }}
       </p>
