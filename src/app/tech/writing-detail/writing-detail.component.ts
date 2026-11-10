@@ -40,7 +40,7 @@ export class WritingDetailComponent {
       category: 'Software architecture',
       title: 'Why I document architecture decisions.',
       excerpt: 'Good code explains what happens. Good documentation explains why.',
-      date: '19 August 2026',
+      date: '02 September 2026',
       readingTime: 6,
       sections: [
         {
@@ -108,10 +108,10 @@ export class WritingDetailComponent {
     {
       slug: 'lessons-from-building-a-monitoring-platform',
       category: 'Building in public',
-      title: 'Lessons from building a monitoring platform.',
-      excerpt: 'Notes on turning a monitoring idea into a maintainable system.',
-      date: 'To be announced',
-      readingTime: 7,
+      title: 'Building my own monitoring platform.',
+      excerpt: 'Designing a system that understands dependencies and service health.',
+      date: '19 August 2026',
+      readingTime: 8,
       sections: [
         {
           id: 'start-small',
@@ -127,6 +127,56 @@ export class WritingDetailComponent {
           id: 'iterate-from-use',
           title: 'Iterate from real use',
           paragraphs: ['Dashboards and alerts become more useful when they are shaped by the decisions people need to make.']
+        }
+      ]
+    },
+    {
+      slug: 'engineering-in-an-ai-assisted-world',
+      category: 'Engineering',
+      title: "Just because it works doesn't mean it works well.",
+      excerpt: 'Engineering responsibility in an AI-assisted world.',
+      date: '11 August 2026',
+      readingTime: 5,
+      sections: [
+        {
+          id: 'working-is-a-start',
+          title: 'Working is a starting point',
+          paragraphs: ['A passing result can still hide fragile assumptions, unclear behavior or code that is difficult to maintain.']
+        },
+        {
+          id: 'review-the-result',
+          title: 'Review the result',
+          paragraphs: ['AI-assisted work still needs engineering judgment: verify the behavior, understand the changes and check how they fit the system.']
+        },
+        {
+          id: 'own-the-outcome',
+          title: 'Own the outcome',
+          paragraphs: ['The person shipping the change is responsible for its quality, whether the first draft came from a person or a tool.']
+        }
+      ]
+    },
+    {
+      slug: 'designing-a-better-deployment-workflow',
+      category: 'Building in public',
+      title: 'Designing a better deployment workflow.',
+      excerpt: 'Exploring self-hosting, Docker and deployment practices.',
+      date: '23 July 2026',
+      readingTime: 7,
+      sections: [
+        {
+          id: 'deployment-friction',
+          title: 'Finding the friction',
+          paragraphs: ['A deployment workflow should make it clear what is being released, where it is going and how to recover if something goes wrong.']
+        },
+        {
+          id: 'repeatable-releases',
+          title: 'Make releases repeatable',
+          paragraphs: ['Containerizing the app and keeping configuration outside the image helps the same release move across environments.']
+        },
+        {
+          id: 'small-improvements',
+          title: 'Improve one step at a time',
+          paragraphs: ['Automating the most repetitive or error-prone steps first keeps the workflow understandable as it grows.']
         }
       ]
     }
