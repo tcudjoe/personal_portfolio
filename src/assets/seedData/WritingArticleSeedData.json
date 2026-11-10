@@ -1,0 +1,164 @@
+[
+  {
+    "slug": "documenting-architecture-decisions",
+    "category": "Software architecture",
+    "title": "Why I document architecture decisions.",
+    "excerpt": "Good code explains what happens. Good documentation explains why.",
+    "date": "02 September 2026",
+    "readingTime": 6,
+    "sections": [
+      {
+        "id": "the-problem",
+        "title": "The problem with undocumented decisions",
+        "paragraphs": [
+          "Imagine joining a software team and discovering that nobody knows why an important architectural decision was made. The code tells you how the system works, but rarely why it was designed that way.",
+          "This is why understanding and documenting technical decisions matters."
+        ],
+        "decisionRecord": {
+          "label": "Example / architecture decision record",
+          "title": "ADR-001: Database selection",
+          "flow": "Context → Decision → Alternatives → Consequences"
+        }
+      },
+      {
+        "id": "making-decisions",
+        "title": "Making decisions visible",
+        "paragraphs": [
+          "An architecture decision record captures the context around a choice, the options considered and the reason a team moved forward with one of them.",
+          "Keeping the record short and close to the code makes it easier for the next person to understand the trade-offs."
+        ]
+      },
+      {
+        "id": "trade-offs",
+        "title": "Trade-offs are part of the story",
+        "paragraphs": [
+          "Most engineering choices solve one problem while creating constraints elsewhere. Writing those constraints down helps teams revisit a decision when the context changes."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "another-perspective-on-system-design",
+    "category": "Software architecture",
+    "title": "Another Perspective on System Design",
+    "excerpt": "A practical look at the questions that make system design clearer.",
+    "date": "To be announced",
+    "readingTime": 5,
+    "sections": [
+      {
+        "id": "start-with-the-problem",
+        "title": "Start with the problem",
+        "paragraphs": [
+          "System design gets easier when the user needs, constraints and expected scale are clear before choosing technologies."
+        ]
+      },
+      {
+        "id": "make-trade-offs-explicit",
+        "title": "Make trade-offs explicit",
+        "paragraphs": [
+          "There is rarely one perfect architecture. A useful design explains what it optimizes for and what it makes harder."
+        ]
+      },
+      {
+        "id": "design-for-change",
+        "title": "Design for change",
+        "paragraphs": [
+          "Prefer clear boundaries that let the system evolve as requirements become better understood."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "lessons-from-building-a-monitoring-platform",
+    "category": "Building in public",
+    "title": "Building my own monitoring platform.",
+    "excerpt": "Designing a system that understands dependencies and service health.",
+    "date": "19 August 2026",
+    "readingTime": 8,
+    "sections": [
+      {
+        "id": "start-small",
+        "title": "Start with a small signal",
+        "paragraphs": [
+          "A useful monitoring platform starts with a focused question: what needs attention, and how quickly should someone know?"
+        ]
+      },
+      {
+        "id": "reliable-data",
+        "title": "Make the data reliable",
+        "paragraphs": [
+          "Collection, storage and alerting each need clear failure behavior so missing data does not look like a healthy system."
+        ]
+      },
+      {
+        "id": "iterate-from-use",
+        "title": "Iterate from real use",
+        "paragraphs": [
+          "Dashboards and alerts become more useful when they are shaped by the decisions people need to make."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "engineering-in-an-ai-assisted-world",
+    "category": "Engineering",
+    "title": "Just because it works doesnt mean it works well.",
+    "excerpt": "Engineering responsibility in an AI-assisted world.",
+    "date": "11 August 2026",
+    "readingTime": 5,
+    "sections": [
+      {
+        "id": "working-is-a-start",
+        "title": "Working is a starting point",
+        "paragraphs": [
+          "A passing result can still hide fragile assumptions, unclear behavior or code that is difficult to maintain."
+        ]
+      },
+      {
+        "id": "review-the-result",
+        "title": "Review the result",
+        "paragraphs": [
+          "AI-assisted work still needs engineering judgment: verify the behavior, understand the changes and check how they fit the system."
+        ]
+      },
+      {
+        "id": "own-the-outcome",
+        "title": "Own the outcome",
+        "paragraphs": [
+          "The person shipping the change is responsible for its quality, whether the first draft came from a person or a tool."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "designing-a-better-deployment-workflow",
+    "category": "Building in public",
+    "title": "Designing a better deployment workflow.",
+    "excerpt": "Exploring self-hosting, Docker and deployment practices.",
+    "date": "23 July 2026",
+    "readingTime": 7,
+    "sections": [
+      {
+        "id": "deployment-friction",
+        "title": "Finding the friction",
+        "paragraphs": [
+          "A deployment workflow should make it clear what is being released, where it is going and how to recover if something goes wrong."
+        ]
+      },
+      {
+        "id": "repeatable-releases",
+        "title": "Make releases repeatable",
+        "paragraphs": [
+          "Containerizing the app and keeping configuration outside the image helps the same release move across environments."
+        ]
+      },
+      {
+        "id": "small-improvements",
+        "title": "Improve one step at a time",
+        "paragraphs": [
+          "Automating the most repetitive or error-prone steps first keeps the workflow understandable as it grows."
+        ]
+      }
+    ]
+  }
+]
