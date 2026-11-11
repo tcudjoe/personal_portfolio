@@ -18,15 +18,15 @@
         </button>
       </div>
 
-      <a *ngIf="showFeaturedProject" class="work-card work-card--featured"
-         [routerLink]="['/work', featuredProject.slug]">
+      <a *ngIf="visibleFeaturedProject as featured" class="work-card work-card--featured"
+         [routerLink]="['/work', featured.slug]">
         <div class="work-card__image work-card__image--wide" role="img" aria-label="Featured project image placeholder">
           <span>Project image placeholder</span>
         </div>
         <div class="work-card__content">
-          <p class="work-card__category">{{ featuredProject.category }}</p>
-          <h2 class="work-card__title">{{ featuredProject.title }}</h2>
-          <p class="work-card__description">{{ featuredProject.description }}</p>
+          <p class="work-card__category">{{ featured.category }}</p>
+          <h2 class="work-card__title">{{ featured.title }}</h2>
+          <p class="work-card__description">{{ featured.excerpt }}</p>
         </div>
       </a>
 
@@ -43,7 +43,7 @@
         </a>
       </div>
 
-      <p *ngIf="!showFeaturedProject && filteredProjects.length === 0" class="work-listing__empty">
+      <p *ngIf="isLoaded && !visibleFeaturedProject && filteredProjects.length === 0" class="work-listing__empty">
         No projects in this category yet.
       </p>
     </div>

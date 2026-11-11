@@ -8,7 +8,7 @@ import {WritingArticle} from "../models/writing-article";
 })
 export class ArticleServiceService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private readonly httpClient:HttpClient) { }
 
   getArticles(): Observable<WritingArticle[]>{
     return this.httpClient.get<WritingArticle[]>('/assets/seedData/WritingArticleSeedData.json')

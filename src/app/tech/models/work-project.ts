@@ -1,9 +1,14 @@
-export type WorkFilter = 'All Work' | 'Client Work' | 'Personal';
+import {ProjectMeta} from "./project-meta";
+
+export type WorkFilter = 'All Work' | 'Client Work' | 'Personal' | 'Career';
 
 export interface WorkProject {
   slug: string;
-  category: string;
   title: string;
-  description?: string;
+  category: string;
+  year: string;
+  excerpt: string;
+  technologies: string[];
+  metadata: ProjectMeta[];
   scope: Exclude<WorkFilter, 'All Work'>;
 }

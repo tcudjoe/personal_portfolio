@@ -9,11 +9,11 @@
 
   <section class="writing-content" aria-label="Articles">
     <div class="writing-content__inner">
-      <a class="writing-featured" [routerLink]="['/writing', featuredArticle.slug]">
+      <a *ngIf="featuredArticle as featured" class="writing-featured" [routerLink]="['/writing', featured.slug]">
         <div class="writing-featured__copy">
-          <p class="writing-featured__meta">{{ featuredArticle.category }} <span aria-hidden="true">·</span> {{ featuredArticle.readTime }} min read</p>
-          <h2>{{ featuredArticle.title }}</h2>
-          <p class="writing-featured__description">{{ featuredArticle.description }}</p>
+          <p class="writing-featured__meta">{{ featured.category }} <span aria-hidden="true">·</span> {{ featured.readingTime }} min read</p>
+          <h2>{{ featured.title }}</h2>
+          <p class="writing-featured__description">{{ featured.excerpt }}</p>
           <span class="writing-featured__link">Read article <span aria-hidden="true">→</span></span>
         </div>
         <div class="writing-featured__image" role="img" aria-label="Article cover placeholder">
@@ -41,10 +41,10 @@
               <p class="writing-article-card__meta">
                 <span>{{ article.category }}</span>
                 <span aria-hidden="true">·</span>
-                <span>{{ article.readTime }} min read</span>
+                <span>{{ article.readingTime }} min read</span>
               </p>
               <h3>{{ article.title }}</h3>
-              <p class="writing-article-card__description">{{ article.description }}</p>
+              <p class="writing-article-card__description">{{ article.excerpt }}</p>
               <time>{{ article.date }}</time>
             </div>
             <span class="writing-article-card__action">

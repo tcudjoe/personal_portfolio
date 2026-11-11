@@ -34,14 +34,14 @@
         <a class="home-projects__all-link" routerLink="/work">All Projects <span aria-hidden="true">→</span></a>
       </header>
 
-      <a class="project-card project-card--featured" [routerLink]="['/work', featuredProject.slug]">
+      <a *ngIf="featuredProject as featured" class="project-card project-card--featured" [routerLink]="['/work', featured.slug]">
         <div class="project-card__image project-card__image--wide" role="img" aria-label="Project image placeholder">
           <span>Project image placeholder</span>
         </div>
         <div class="project-card__content">
-          <p class="project-card__category">{{ featuredProject.category }}</p>
-          <h3 class="project-card__title">{{ featuredProject.title }}</h3>
-          <p class="project-card__description">{{ featuredProject.description }}</p>
+          <p class="project-card__category">{{ featured.category }}</p>
+          <h3 class="project-card__title">{{ featured.title }}</h3>
+          <p class="project-card__description">{{ featured.excerpt }}</p>
         </div>
       </a>
 
@@ -53,6 +53,7 @@
           <div class="project-card__content">
             <p class="project-card__category">{{ project.category }}</p>
             <h3 class="project-card__title">{{ project.title }}</h3>
+            <p class="project-card__description">{{ project.excerpt}}</p>
           </div>
         </a>
       </div>
