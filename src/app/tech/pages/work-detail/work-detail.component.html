@@ -3,7 +3,7 @@
     <div class="work-detail-hero__inner">
       <p class="work-detail-hero__breadcrumb">Work <span>/</span> {{ currentProject.category }} <span>/</span> {{ currentProject.year }}</p>
       <h1 id="project-title">{{ currentProject.title }}</h1>
-      <p class="work-detail-hero__summary">{{ currentProject.summary }}</p>
+      <p class="work-detail-hero__summary">{{ currentProject.excerpt }}</p>
 
       <ul class="work-detail-hero__technologies" aria-label="Project technologies">
         <li *ngFor="let technology of currentProject.technologies">{{ technology }}</li>

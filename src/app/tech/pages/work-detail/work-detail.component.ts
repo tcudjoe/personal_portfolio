@@ -2,7 +2,8 @@ import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {FooterConfig} from '../../../shared/components/footer/footer.component';
-import {WorkProjectDetail} from "../../models/work-project-detail";
+import {WorkService} from "../../services/work.service";
+import {WorkProject} from "../../models/work-project";
 
 
 @Component({
@@ -23,72 +24,7 @@ export class WorkDetailComponent {
     buttonHref: '/work'
   };
 
-  readonly projects: WorkProjectDetail[] = [
-    {
-      slug: 'compliance-management-platform',
-      title: 'Compliance Management Platform',
-      category: 'Client project',
-      year: '2026',
-      summary: 'Designing and developing a platform to make compliance workflows easier to manage.',
-      technologies: ['Angular', 'Java', 'Spring', 'Docker', 'Postgres'],
-      metadata: [
-        {label: 'Project type', value: 'Client work · Hibera'},
-        {label: 'Client / organization', value: 'Normwaard b.v.'},
-        {label: 'My role', value: 'Software Engineer'},
-        {label: 'Technologies', value: 'Java · Angular · Heroku'},
-        {label: 'Project period', value: '2022 – 2026'},
-        {label: 'GitHub / Live URL', value: 'Project links to be added'}
-      ]
-    },
-    {
-      slug: 'my-homelab',
-      title: 'My Homelab',
-      category: 'Personal project',
-      year: 'Ongoing',
-      summary: 'A personal infrastructure project. The project overview and outcomes will be added here.',
-      technologies: ['Infrastructure', 'Self-hosting'],
-      metadata: [
-        {label: 'Project type', value: 'Personal · Infrastructure'},
-        {label: 'Client / organization', value: 'Personal project'},
-        {label: 'My role', value: 'Independent'},
-        {label: 'Technologies', value: 'To be confirmed'},
-        {label: 'Project period', value: 'Ongoing'},
-        {label: 'GitHub / Live URL', value: 'Project links to be added'}
-      ]
-    },
-    {
-      slug: 'monitoring-platform',
-      title: 'Monitoring Platform',
-      category: 'Personal project',
-      year: 'Ongoing',
-      summary: 'A monitoring platform project. The project overview and outcomes will be added here.',
-      technologies: ['Monitoring', 'Software architecture'],
-      metadata: [
-        {label: 'Project type', value: 'Personal · Building in public'},
-        {label: 'Client / organization', value: 'Personal project'},
-        {label: 'My role', value: 'Independent'},
-        {label: 'Technologies', value: 'To be confirmed'},
-        {label: 'Project period', value: 'Ongoing'},
-        {label: 'GitHub / Live URL', value: 'Project links to be added'}
-      ]
-    },
-    {
-      slug: 'personal-portfolio',
-      title: 'Personal Portfolio',
-      category: 'Personal project',
-      year: '2026',
-      summary: 'A redesign of my personal portfolio. Project decisions and implementation details will be added here.',
-      technologies: ['Angular', 'TypeScript', 'SCSS'],
-      metadata: [
-        {label: 'Project type', value: 'Personal · Web development'},
-        {label: 'Client / organization', value: 'Personal project'},
-        {label: 'My role', value: 'Designer and developer'},
-        {label: 'Technologies', value: 'Angular · TypeScript · SCSS'},
-        {label: 'Project period', value: '2026 – ongoing'},
-        {label: 'GitHub / Live URL', value: 'Project links to be added'}
-      ]
-    }
-  ];
+  projects: WorkProject[] = [];
 
   readonly storySections = [
     {
@@ -131,11 +67,14 @@ export class WorkDetailComponent {
     }
   ];
 
-  project: WorkProjectDetail | null = null;
-  nextProject: WorkProjectDetail | null = null;
+  project: WorkProject | null = null;
+  nextProject: WorkProject | null = null;
 
-  constructor(route: ActivatedRoute) {
-    route.paramMap.subscribe((params) => this.setProject(params.get('slug')));
+  constructor(route: ActivatedRoute, workService: WorkService) {
+    workService.getAllWork().subscribe(projects => {
+      this.projects = projects
+      this.setProject(route.snapshot.paramMap.get('slug'))
+    })
   }
 
   private setProject(slug: string | null): void {
