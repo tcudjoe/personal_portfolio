@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 
 import { RouterModule } from '@angular/router';
+import {HttpClientModule, provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
 
 
 @NgModule({
@@ -16,9 +17,11 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    SharedModule
+    SharedModule,
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi())
+  ],
   exports: [
   ],
   bootstrap: [AppComponent]

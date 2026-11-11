@@ -1,0 +1,58 @@
+<main *ngIf="project as currentProject; else projectNotFound" class="work-detail">
+  <header class="work-detail-hero" aria-labelledby="project-title">
+    <div class="work-detail-hero__inner">
+      <p class="work-detail-hero__breadcrumb">Work <span>/</span> {{ currentProject.category }} <span>/</span> {{ currentProject.year }}</p>
+      <h1 id="project-title">{{ currentProject.title }}</h1>
+      <p class="work-detail-hero__summary">{{ currentProject.excerpt }}</p>
+
+      <ul class="work-detail-hero__technologies" aria-label="Project technologies">
+        <li *ngFor="let technology of currentProject.technologies">{{ technology }}</li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="work-detail-content" aria-label="Project details">
+    <div class="work-detail-content__inner">
+      <div class="work-detail-cover" role="img" [attr.aria-label]="currentProject.title + ' image placeholder'">
+        <span>Project image placeholder</span>
+      </div>
+
+      <div class="work-detail-layout">
+        <div class="work-detail-story">
+          <article *ngFor="let section of storySections" class="work-detail-section">
+            <p class="work-detail-section__label">{{ section.number }} <span>/</span> {{ section.label }}</p>
+            <h2>{{ section.title }}</h2>
+            <p class="work-detail-section__description">{{ section.description }}</p>
+
+            <div *ngIf="section.image === 'architecture'" class="work-detail-media work-detail-media--architecture" role="img" aria-label="Architecture diagram placeholder">
+              <span>Architecture diagram placeholder</span>
+            </div>
+
+            <div *ngIf="section.image === 'screenshots'" class="work-detail-media-grid" aria-label="Project screenshot placeholders">
+              <div *ngFor="let screenshot of [1, 2, 3]" class="work-detail-media" role="img" aria-label="Product screenshot placeholder">
+                <span>Screenshot placeholder</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="project-meta" aria-label="Project information">
+          <dl>
+            <div *ngFor="let item of currentProject.metadata" class="project-meta__item">
+              <dt>{{ item.label }}</dt>
+              <dd>{{ item.value }}</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<ng-template #projectNotFound>
+  <main class="work-detail-not-found">
+    <h1>Project not found</h1>
+    <a routerLink="/work">Back to all projects <span aria-hidden="true">→</span></a>
+  </main>
+</ng-template>
