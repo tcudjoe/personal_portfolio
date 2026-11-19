@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {WorkProject} from "../../models/work-project";
-import {WritingArticle} from "../../models/writing-article";
+import {Blog} from "../../models/blog";
 import {WorkService} from "../../services/work.service";
 import {ArticleServiceService} from "../../services/article-service.service";
 
@@ -10,7 +10,7 @@ import {ArticleServiceService} from "../../services/article-service.service";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  homeArticles: WritingArticle[] = [];
+  homeArticles: Blog[] = [];
   featuredProject: WorkProject | null = null;
 
   readonly aboutImages = [

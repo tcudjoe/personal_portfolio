@@ -1,10 +1,8 @@
-export interface ArticleSection {
-  id: string;
-  title: string;
-  paragraphs: string[];
-  decisionRecord?: {
-    label: string;
-    title: string;
-    flow: string;
-  };
-}
+import {BlockImage} from "./block-image";
+import {BlockText} from "./block-text";
+import {BlockCode} from "./block-code";
+
+export type ArticleSection =
+  | { collection: 'block_image'; item: BlockImage }
+  | { collection: 'block_text'; item: BlockText }
+  | { collection: 'block_code'; item: BlockCode };

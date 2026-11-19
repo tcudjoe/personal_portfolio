@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {map, Observable} from "rxjs";
-import {WritingArticle} from "../models/writing-article";
+import {Blog} from "../models/blog";
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +10,11 @@ export class ArticleServiceService {
 
   constructor(private readonly httpClient:HttpClient) { }
 
-  getArticles(): Observable<WritingArticle[]>{
-    return this.httpClient.get<WritingArticle[]>('/assets/seedData/WritingArticleSeedData.json')
+  getArticles(): Observable<Blog[]>{
+    return this.httpClient.get<Blog[]>('/assets/seedData/WritingArticleSeedData.json')
   }
 
-  getArticleBySlug(slug: string): Observable<WritingArticle | undefined> {
+  getArticleBySlug(slug: string): Observable<Blog | undefined> {
     return this.getArticles().pipe(
       map(articles => articles.find(article => article.slug === slug))
     );

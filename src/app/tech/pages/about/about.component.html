@@ -41,7 +41,7 @@
 
       <ol class="experience-list">
         <li *ngFor="let item of experience; let index = index" class="experience-item">
-          <p class="experience-item__period">{{ item.period }}</p>
+          <p class="experience-item__period">{{ item.start_date }} - {{ item.end_date ?? 'Ongoing' }}</p>
           <div class="experience-item__details">
             <p class="experience-item__number">{{ index + 1 | number:'2.0' }}</p>
             <div>

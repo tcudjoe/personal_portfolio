@@ -1,0 +1,158 @@
+[
+  {
+    "slug": "compliance-management-platform",
+    "title": "Compliance Management Platform",
+    "category": "Client project",
+    "year": "2026",
+    "excerpt": "Designing and developing a platform to make compliance workflows easier to manage.",
+    "scope":  "Client Work",
+    "technologies": [
+      "Angular",
+      "Java",
+      "Spring",
+      "Docker",
+      "Postgres"
+    ],
+    "metadata": [
+      {
+        "label": "Project type",
+        "value": "Client work · Hibera"
+      },
+      {
+        "label": "Client / organization",
+        "value": "Normwaard b.v."
+      },
+      {
+        "label": "My role",
+        "value": "Software Engineer"
+      },
+      {
+        "label": "Technologies",
+        "value": "Java · Angular · Heroku"
+      },
+      {
+        "label": "Project period",
+        "value": "2022 – 2026"
+      },
+      {
+        "label": "GitHub / Live URL",
+        "value": "Project links to be added"
+      }
+    ]
+  },
+  {
+    "slug": "my-homelab",
+    "title": "My Homelab",
+    "category": "Personal project",
+    "year": "Ongoing",
+    "excerpt": "A personal infrastructure project. The project overview and outcomes will be added here.",
+    "scope":  "Personal",
+    "technologies": [
+      "Infrastructure",
+      "Self-hosting"
+    ],
+    "metadata": [
+      {
+        "label": "Project type",
+        "value": "Personal · Infrastructure"
+      },
+      {
+        "label": "Client / organization",
+        "value": "Personal project"
+      },
+      {
+        "label": "My role",
+        "value": "Independent"
+      },
+      {
+        "label": "Technologies",
+        "value": "To be confirmed"
+      },
+      {
+        "label": "Project period",
+        "value": "Ongoing"
+      },
+      {
+        "label": "GitHub / Live URL",
+        "value": "Project links to be added"
+      }
+    ]
+  },
+  {
+    "slug": "monitoring-platform",
+    "title": "Monitoring Platform",
+    "category": "Personal project",
+    "year": "Ongoing",
+    "excerpt": "A monitoring platform project. The project overview and outcomes will be added here.",
+    "scope":  "Personal",
+    "technologies": [
+      "Monitoring",
+      "Software architecture"
+    ],
+    "metadata": [
+      {
+        "label": "Project type",
+        "value": "Personal · Building in public"
+      },
+      {
+        "label": "Client / organization",
+        "value": "Personal project"
+      },
+      {
+        "label": "My role",
+        "value": "Independent"
+      },
+      {
+        "label": "Technologies",
+        "value": "To be confirmed"
+      },
+      {
+        "label": "Project period",
+        "value": "Ongoing"
+      },
+      {
+        "label": "GitHub / Live URL",
+        "value": "Project links to be added"
+      }
+    ]
+  },
+  {
+    "slug": "personal-portfolio",
+    "title": "Personal Portfolio",
+    "category": "Personal project",
+    "year": "2026",
+    "excerpt": "A redesign of my personal portfolio. Project decisions and implementation details will be added here.",
+    "scope":  "Personal",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "SCSS"
+    ],
+    "metadata": [
+      {
+        "label": "Project type",
+        "value": "Personal · Web development"
+      },
+      {
+        "label": "Client / organization",
+        "value": "Personal project"
+      },
+      {
+        "label": "My role",
+        "value": "Designer and developer"
+      },
+      {
+        "label": "Technologies",
+        "value": "Angular · TypeScript · SCSS"
+      },
+      {
+        "label": "Project period",
+        "value": "2026 – ongoing"
+      },
+      {
+        "label": "GitHub / Live URL",
+        "value": "Project links to be added"
+      }
+    ]
+  }
+]
