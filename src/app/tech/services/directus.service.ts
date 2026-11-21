@@ -4,6 +4,7 @@ import {Schema} from "../models/schema";
 import {environment} from "../../../environments/environment.development";
 import {from, map, Observable} from "rxjs";
 import {Blog} from "../models/blog";
+import {WorkProject} from "../models/work-project";
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +16,12 @@ export class DirectusService {
   constructor() {
   }
 
+  // Blog Content
   getAllBlogs(): Observable<Blog[]> {
     return from(
       this.directus.request(readItems('blog', {
         filter: {
-          status: { _eq: 'published' }
+          status: {_eq: 'published'}
         },
         fields: [
           'id',
@@ -42,7 +44,7 @@ export class DirectusService {
                 }
               }
             ],
-            author: ['id', 'name', 'description','image', 'date_created', 'date_updated', 'archived'],
+            author: ['id', 'name', 'description', 'image', 'date_created', 'date_updated', 'archived'],
             category: ['id', 'name', 'description', 'archived', 'date_created', 'date_updated'],
             tags: ['id', 'name', 'archived', 'date_created', 'date_updated']
           },
@@ -65,5 +67,60 @@ export class DirectusService {
 
     const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
     return Math.max(1, Math.ceil(wordCount / 200));
+  }
+
+  // Project Content
+  getAllProjects(): Observable<WorkProject[]> {
+    return from(
+      this.directus.request(readItems('projects', {
+        filter: {
+          status: {_eq: 'published'}
+        },
+        fields: [
+          'id',
+          'slug',
+          'title',
+          'start_date',
+          'end_date',
+          'excerpt',
+          'status',
+          'archived',
+          'date_created',
+          'date_updated',
+          'featured_image',
+          {
+            sections: [
+              'collection',
+              {
+                item: {
+                  block_text: ['id', 'body_text'],
+                  block_image: ['id', 'image', 'caption'],
+                  block_code: ['id', 'code_block', 'language', 'date_created', 'date_updated'],
+                  block_carousel: ['id', { media: [{ directus_files_id: ['id', 'type', 'title'] }] }, 'archived', 'date_created', 'date_updated']
+                }
+              }
+            ],
+            metadata: [
+              {
+                project_metadata_id:
+                  [
+                    'id', 'label', 'value', 'archived', 'date_created', 'date_updated'
+                  ]
+              }
+            ],
+            technology: [
+              {
+                technology_id:
+                  [
+                    'id', 'name', 'archived', 'date_created'
+
+                  ]
+              }
+            ],
+            category: ['id', 'name', 'description', 'archived', 'date_created', 'date_updated']
+          }
+        ]
+      }))
+    )
   }
 }

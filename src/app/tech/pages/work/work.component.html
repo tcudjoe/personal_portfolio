@@ -9,22 +9,22 @@
   <section class="work-listing" aria-label="Project portfolio">
     <div class="work-listing__inner">
       <div class="work-filters" role="group" aria-label="Filter projects">
-        <button *ngFor="let filter of filters" type="button"
+        <button *ngFor="let category of categories" type="button"
                 class="work-filters__button"
-                [class.work-filters__button--active]="activeFilter === filter"
-                [attr.aria-pressed]="activeFilter === filter"
-                (click)="setFilter(filter)">
-          {{ filter }}
+                [class.work-filters__button--active]="activeCategory === category"
+                [attr.aria-pressed]="activeCategory === category"
+                (click)="setFilter(category)">
+          {{ category }}
         </button>
       </div>
 
       <a *ngIf="visibleFeaturedProject as featured" class="work-card work-card--featured"
          [routerLink]="['/work', featured.slug]">
         <div class="work-card__image work-card__image--wide" role="img" aria-label="Featured project image placeholder">
-          <span>Project image placeholder</span>
+          <img [src]="getAssetUrl(featuredProject?.featured_image)" [alt]="featuredProject?.title">
         </div>
         <div class="work-card__content">
-          <p class="work-card__category">{{ featured.category }}</p>
+          <p class="work-card__category">{{ featured.category?.name }}</p>
           <h2 class="work-card__title">{{ featured.title }}</h2>
           <p class="work-card__description">{{ featured.excerpt }}</p>
         </div>
@@ -35,9 +35,10 @@
            [routerLink]="['/work', project.slug]">
           <div class="work-card__image" role="img" aria-label="Project image placeholder">
             <span>Project image placeholder</span>
+            <img [src]="getAssetUrl(project.featured_image)" [alt]="project.title">
           </div>
           <div class="work-card__content">
-            <p class="work-card__category">{{ project.category }}</p>
+            <p class="work-card__category">{{ project.category?.name }}</p>
             <h2 class="work-card__title">{{ project.title }}</h2>
           </div>
         </a>

@@ -5,7 +5,7 @@
       <h1>{{ currentArticle.title }}</h1>
       <p class="writing-detail-hero__excerpt">{{ currentArticle.excerpt }}</p>
       <div class="writing-detail-hero__meta">
-        <time>{{ currentArticle.date_created | date }}</time>
+        <time>{{ currentArticle.date_created | date:'dd MMM YYYY · HH:mm' }}</time>
         <span aria-hidden="true">·</span>
         <span>{{ currentArticle.readingTime }} min read</span>
       </div>

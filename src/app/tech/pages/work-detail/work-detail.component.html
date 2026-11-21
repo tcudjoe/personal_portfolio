@@ -1,12 +1,14 @@
 <main *ngIf="project as currentProject; else projectNotFound" class="work-detail">
   <header class="work-detail-hero" aria-labelledby="project-title">
     <div class="work-detail-hero__inner">
-      <p class="work-detail-hero__breadcrumb">Work <span>/</span> {{ currentProject.category }} <span>/</span> {{ currentProject.start_date }} - {{ currentProject.end_date  ?? 'ongoing'}}</p>
+      <p class="work-detail-hero__breadcrumb">Work <span>/</span> {{ currentProject.category?.name }}
+        <span>/</span> {{ currentProject.start_date | date:'MMM YYYY' }}
+        - {{ (currentProject.end_date | date: 'MMM YYYY') ?? 'Ongoing' }}</p>
       <h1 id="project-title">{{ currentProject.title }}</h1>
       <p class="work-detail-hero__summary">{{ currentProject.excerpt }}</p>
 
       <ul class="work-detail-hero__technologies" aria-label="Project technologies">
-        <li *ngFor="let technology of currentProject.technologies">{{ technology }}</li>
+        <li *ngFor="let technology of currentProject.technology">{{ technology.technology_id.name }}</li>
       </ul>
     </div>
   </header>
@@ -14,33 +16,97 @@
   <section class="work-detail-content" aria-label="Project details">
     <div class="work-detail-content__inner">
       <div class="work-detail-cover" role="img" [attr.aria-label]="currentProject.title + ' image placeholder'">
-        <span>Project image placeholder</span>
+        <img [src]="getAssetUrl(currentProject.featured_image)" [alt]="currentProject.title">
       </div>
 
       <div class="work-detail-layout">
         <div class="work-detail-story">
-          <article *ngFor="let section of storySections" class="work-detail-section">
-            <p class="work-detail-section__label">{{ section.number }} <span>/</span> {{ section.label }}</p>
-            <h2>{{ section.title }}</h2>
-            <p class="work-detail-section__description">{{ section.description }}</p>
-
-            <div *ngIf="section.image === 'architecture'" class="work-detail-media work-detail-media--architecture" role="img" aria-label="Architecture diagram placeholder">
-              <span>Architecture diagram placeholder</span>
-            </div>
-
-            <div *ngIf="section.image === 'screenshots'" class="work-detail-media-grid" aria-label="Project screenshot placeholders">
-              <div *ngFor="let screenshot of [1, 2, 3]" class="work-detail-media" role="img" aria-label="Product screenshot placeholder">
-                <span>Screenshot placeholder</span>
-              </div>
-            </div>
-          </article>
+          @for (section of currentProject.sections ?? []; track section.item.id) {
+            <section class="work-detail-section" [id]="'project-section-' + section.item.id">
+              @switch (section.collection) {
+                @case ('block_text') {
+                  <div class="work-detail-section__rich-text" [innerHTML]="section.item.body_text"></div>
+                }
+                @case ('block_image') {
+                  <figure class="work-detail-section__figure">
+                    @if (section.item.image) {
+                      <img [src]="getAssetUrl(section.item.image)" [alt]="section.item.caption ?? ''">
+                    }
+                    @if (section.item.caption) {
+                      <figcaption>{{ section.item.caption }}</figcaption>
+                    }
+                  </figure>
+                }
+                @case ('block_carousel') {
+                  @if (section.item.media?.length) {
+                    <h2 class="project-carousel__title">A closer look at the project</h2>
+                    <div class="project-carousel-shell">
+                      <div #slides class="project-carousel" role="region" aria-label="Project media" tabindex="0">
+                        @for (entry of section.item.media; track $index) {
+                          @if (entry.directus_files_id; as file) {
+                            <div class="project-carousel__slide">
+                              @if (file.type?.startsWith('image/')) {
+                                <button type="button" class="project-carousel__image-button"
+                                        [attr.aria-label]="'Enlarge ' + (file.title || 'project image')"
+                                        (click)="preview.showModal()">
+                                  <img [src]="getAssetUrl(file.id)" [alt]="file.title || 'Project image'"
+                                       loading="lazy">
+                                </button>
+                                <dialog #preview class="project-image-preview"
+                                        [attr.aria-label]="file.title || 'Project image'">
+                                  <button type="button" autofocus (click)="preview.close()"
+                                          aria-label="Close image preview">×
+                                  </button>
+                                  <img [src]="getAssetUrl(file.id)" [alt]="file.title || 'Project image'"
+                                       loading="lazy">
+                                </dialog>
+                              } @else if (file.type?.startsWith('video/')) {
+                                <video [src]="getAssetUrl(file.id)" [attr.aria-label]="file.title || 'Project video'"
+                                       controls playsinline preload="metadata"></video>
+                              }
+                              <span class="project-carousel__count" aria-hidden="true">{{ $index + 1 }} / {{ $count }}</span>
+                            </div>
+                          }
+                        }
+                      </div>
+                      @if ((section.item.media?.length ?? 0) > 1) {
+                        <div class="project-carousel__controls">
+                          <button type="button" (click)="slides.scrollBy({left: -slides.clientWidth})"
+                                  aria-label="Previous slide">‹
+                          </button>
+                          <button type="button" (click)="slides.scrollBy({left: slides.clientWidth})"
+                                  aria-label="Next slide">›
+                          </button>
+                        </div>
+                      }
+                    </div>
+                  }
+                }
+                @case ('block_code') {
+                  <div class="work-detail-section__code-block">
+                    <div class="work-detail-section__code-header">
+                      <span>{{ section.item.language || 'Code' }}</span>
+                    </div>
+                    <pre><code
+                      [class]="'language-' + (section.item.language || 'plaintext')">{{ section.item.code_block }}</code></pre>
+                  </div>
+                }
+              }
+            </section>
+          }
         </div>
 
         <aside class="project-meta" aria-label="Project information">
           <dl>
             <div *ngFor="let item of currentProject.metadata" class="project-meta__item">
-              <dt>{{ item.label }}</dt>
-              <dd>{{ item.value }}</dd>
+              <dt>{{ item.project_metadata_id.label }}</dt>
+              <dd>
+                @if (getMetadataUrl(item.project_metadata_id.value); as url) {
+                  <a class="project-meta__link" [href]="url" target="_blank">{{ item.project_metadata_id.value }}<span aria-hidden="true">↗</span></a>
+                } @else {
+                  {{ item.project_metadata_id.value }}
+                }
+              </dd>
             </div>
           </dl>
         </aside>

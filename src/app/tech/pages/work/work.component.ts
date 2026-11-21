@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterLink} from '@angular/router';
-import {WorkFilter, WorkProject} from "../../models/work-project";
-import {WorkService} from "../../services/work.service";
+import {WorkProject} from "../../models/work-project";
+import {DirectusService} from "../../services/directus.service";
+import {environment} from "../../../../environments/environment.development";
 
 @Component({
   selector: 'app-work',
@@ -12,28 +13,38 @@ import {WorkService} from "../../services/work.service";
   styleUrl: './work.component.scss'
 })
 export class WorkComponent {
-  readonly filters: WorkFilter[] = ['All Work', 'Client Work', 'Personal', 'Career'];
-  activeFilter: WorkFilter = 'All Work';
+  activeCategory = 'All';
   projects: WorkProject[] = [];
   featuredProject: WorkProject | null = null;
   isLoaded = false;
 
-  constructor(private readonly workService: WorkService) {
-    workService.getAllWork().subscribe(projects => {
+  constructor(private readonly directusService: DirectusService) {
+    directusService.getAllProjects().subscribe(projects => {
       this.featuredProject = projects[0] ?? null;
       this.projects = projects.slice(1);
       this.isLoaded = true;
     });
   }
 
-  setFilter(filter: WorkFilter): void {
-    this.activeFilter = filter;
+  setFilter(category: string): void {
+    this.activeCategory = category;
+  }
+
+  get categories(): string[] {
+    return ['All', ...new Set(
+      [
+        this.featuredProject?.category?.name,
+        ...this.projects.map(project => project.category?.name)
+      ].filter((category): category is string => Boolean(category) && category !== 'All')
+    )];
   }
 
   get filteredProjects(): WorkProject[] {
-    return this.activeFilter === 'All Work'
+    return this.activeCategory === 'All'
       ? this.projects
-      : this.projects.filter((project) => project.scope === this.activeFilter);
+      : this.projects.filter(
+        project => project.category?.name === this.activeCategory
+      );
   }
 
   get visibleFeaturedProject(): WorkProject | null {
@@ -41,8 +52,12 @@ export class WorkComponent {
       return null;
     }
 
-    return this.activeFilter === 'All Work' || this.featuredProject.scope === this.activeFilter
+    return this.activeCategory === 'All' || this.featuredProject.category?.name === this.activeCategory
       ? this.featuredProject
       : null;
+  }
+
+  getAssetUrl(fileId: string | undefined): string {
+    return `${environment.api_url}/assets/${fileId}`;
   }
 }
