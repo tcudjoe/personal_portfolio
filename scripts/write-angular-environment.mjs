@@ -1,7 +1,12 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 
-const apiUrl = new URL(process.env.DIRECTUS_API_URL ?? '');
-if (apiUrl.protocol !== 'https:' || apiUrl.username || apiUrl.password || apiUrl.search || apiUrl.hash) {
+const configuredUrl = process.env.DIRECTUS_API_URL?.trim();
+if (!configuredUrl) {
+  throw new Error('DIRECTUS_API_URL ontbreekt. Stel deze in bij GitHub Actions → Variables.');
+}
+
+const apiUrl = URL.parse(configuredUrl);
+if (!apiUrl || apiUrl.protocol !== 'https:' || apiUrl.username || apiUrl.password || apiUrl.search || apiUrl.hash) {
   throw new Error('DIRECTUS_API_URL moet een publiek HTTPS-adres zonder inloggegevens zijn.');
 }
 

@@ -24,7 +24,7 @@ jobs:
       - name: Configure Directus for the build
         run: node scripts/write-angular-environment.mjs
         env:
-          DIRECTUS_API_URL: ${{ secrets.DIRECTUS_URL }}
+          DIRECTUS_API_URL: https://example.invalid
 
       - run: npm run build -- --configuration production
       - run: test -f dist/taoportfolio/_redirects
