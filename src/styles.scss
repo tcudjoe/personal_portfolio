@@ -4,7 +4,8 @@ a {
 }
 
 // Directus rich text is inserted with innerHTML and needs styles outside component encapsulation.
-.writing-article__rich-text {
+.writing-article__rich-text,
+.work-detail-section__rich-text {
   :is(h1, h2, h3) {
     margin-block: 2.5rem 0.8rem;
     line-height: 1.2;

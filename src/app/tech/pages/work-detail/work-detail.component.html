@@ -4,7 +4,7 @@
       <p class="work-detail-hero__breadcrumb">Work <span>/</span> {{ currentProject.category?.name }}
         <span>/</span> {{ currentProject.start_date | date:'MMM YYYY' }}
         - {{ (currentProject.end_date | date: 'MMM YYYY') ?? 'Ongoing' }}</p>
-      <h1 id="project-title">{{ currentProject.title }}</h1>
+      <h1 id="project-title" [class.work-detail-hero__title--long]="currentProject.title.length > 65">{{ currentProject.title }}</h1>
       <p class="work-detail-hero__summary">{{ currentProject.excerpt }}</p>
 
       <ul class="work-detail-hero__technologies" aria-label="Project technologies">
@@ -29,8 +29,16 @@
                 }
                 @case ('block_image') {
                   <figure class="work-detail-section__figure">
-                    @if (section.item.image) {
-                      <img [src]="getAssetUrl(section.item.image)" [alt]="section.item.caption ?? ''">
+                    @if (section.item.image; as image) {
+                      <button type="button" class="work-detail-section__image-button"
+                              [attr.aria-label]="section.item.caption ? 'Enlarge ' + section.item.caption : 'Enlarge project image'"
+                              (click)="imagePreview.showModal()">
+                        <img [src]="getAssetUrl(image)" alt="" loading="lazy">
+                      </button>
+                      <dialog #imagePreview class="project-image-preview" aria-label="Project image preview">
+                        <button type="button" autofocus (click)="imagePreview.close()" aria-label="Close image preview">×</button>
+                        <img [src]="getAssetUrl(image)" [alt]="section.item.caption || 'Project image'" loading="lazy">
+                      </dialog>
                     }
                     @if (section.item.caption) {
                       <figcaption>{{ section.item.caption }}</figcaption>
