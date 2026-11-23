@@ -37,6 +37,13 @@
   line-height: var(--leading-tight);
   margin: 0;
   max-width: 68rem;
+  overflow-wrap: anywhere;
+}
+
+.writing-detail-hero .writing-detail-hero__title--long {
+  font-size: clamp(1.875rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
 .writing-detail-hero__excerpt {

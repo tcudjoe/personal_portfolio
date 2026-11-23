@@ -2,7 +2,7 @@
   <header class="writing-detail-hero">
     <div class="writing-detail-hero__inner">
       <p class="writing-detail-hero__category">Writing <span>/</span> {{ currentArticle.category?.name ?? 'Uncategorized' }}</p>
-      <h1>{{ currentArticle.title }}</h1>
+      <h1 [class.writing-detail-hero__title--long]="currentArticle.title.length > 65">{{ currentArticle.title }}</h1>
       <p class="writing-detail-hero__excerpt">{{ currentArticle.excerpt }}</p>
       <div class="writing-detail-hero__meta">
         <time>{{ currentArticle.date_created | date:'dd MMM YYYY · HH:mm' }}</time>
