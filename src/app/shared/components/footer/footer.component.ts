@@ -37,7 +37,7 @@ const DEFAULT_FOOTER_CONFIG: FooterConfig = {
   showBody: true,
   buttonText: 'Get in touch',
   buttonIcon: 'mail-arrow',
-  buttonHref: 'mailto:taocudjoe@gmail.com'
+  buttonHref: 'mailto:tyra@hibera-agency.com'
 };
 
 @Component({
@@ -52,7 +52,7 @@ export class FooterComponent {
     linkedin: 'https://www.linkedin.com/in/tcudjoe2401/',
     twitch: 'https://www.twitch.tv/taocudjoe',
     github: 'https://github.com/tcudjoe',
-    email: 'taocudjoe@gmail.com'
+    email: 'tyra@hibera-agency.com'
   };
 
   readonly currentYear = new Date().getFullYear();

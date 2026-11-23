@@ -11,13 +11,21 @@
     <div class="writing-content__inner">
       <a *ngIf="featuredArticle as featured" class="writing-featured" [routerLink]="['/writing', featured.slug]">
         <div class="writing-featured__copy">
-          <p class="writing-featured__meta">{{ featured.category }} <span aria-hidden="true">·</span> {{ featured.readingTime }} min read</p>
+          <p class="writing-featured__meta">{{ featured.category?.name ?? 'Uncategorized' }} <span aria-hidden="true">·</span>
+            {{ featured.readingTime }} min read
+          </p>
           <h2>{{ featured.title }}</h2>
           <p class="writing-featured__description">{{ featured.excerpt }}</p>
           <span class="writing-featured__link">Read article <span aria-hidden="true">→</span></span>
         </div>
-        <div class="writing-featured__image" role="img" aria-label="Article cover placeholder">
-          <span>Article cover placeholder</span>
+        <div class="writing-featured__image" [class.has-image]="featuredImageLoaded">
+          <span *ngIf="!featuredImageLoaded" aria-hidden="true">Article cover placeholder</span>
+          <img *ngIf="featured.featured_image"
+               [src]="getAssetUrl(featured.featured_image)"
+               [alt]="featured.title"
+               [class.is-loaded]="featuredImageLoaded"
+               (load)="featuredImageLoaded = true"
+               (error)="featuredImageLoaded = false">
         </div>
       </a>
 
@@ -39,13 +47,12 @@
              [routerLink]="['/writing', article.slug]">
             <div class="writing-article-card__content">
               <p class="writing-article-card__meta">
-                <span>{{ article.category }}</span>
-                <span aria-hidden="true">·</span>
-                <span>{{ article.readingTime }} min read</span>
+                <span>{{ article.category?.name ?? 'Uncategorized' }}</span>
+                <span aria-hidden="true">·</span><span>{{ article.readingTime }} min read</span>
               </p>
               <h3>{{ article.title }}</h3>
               <p class="writing-article-card__description">{{ article.excerpt }}</p>
-              <time>{{ article.date }}</time>
+              <time>{{ article.date_created | date: 'dd MMM YYYY'}}</time>
             </div>
             <span class="writing-article-card__action">
               <span class="writing-article-card__action-label">Read article</span>

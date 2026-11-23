@@ -1,10 +1,13 @@
 import {Component} from '@angular/core';
+import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {CommonModule} from '@angular/common';
 import {ActivatedRoute, RouterLink} from '@angular/router';
+import {combineLatest} from 'rxjs';
 import {FooterConfig} from '../../../shared/components/footer/footer.component';
-import {WorkService} from "../../services/work.service";
 import {WorkProject} from "../../models/work-project";
-
+import {DirectusService} from "../../services/directus.service";
+import {SharedService} from "../../services/shared.service";
+import {environment} from '../../../../environments/environment';
 
 @Component({
   selector: 'app-work-detail',
@@ -26,55 +29,31 @@ export class WorkDetailComponent {
 
   projects: WorkProject[] = [];
 
-  readonly storySections = [
-    {
-      number: '01',
-      label: 'The problem',
-      title: 'Understanding the challenge',
-      description: 'Add the project context, the problem to solve and the requirements that shaped the work.'
-    },
-    {
-      number: '02',
-      label: 'My contribution',
-      title: 'What I was responsible for.',
-      description: 'Describe the features, decisions and responsibilities you personally owned.'
-    },
-    {
-      number: '03',
-      label: 'Architecture & decisions',
-      title: 'Architecture',
-      description: 'Add the important architectural choices and explain why they were made.',
-      image: 'architecture'
-    },
-    {
-      number: '04',
-      label: 'Challenges',
-      title: "What didn't go according to plan?",
-      description: 'Describe an engineering challenge, a trade-off and how it was resolved.'
-    },
-    {
-      number: '05',
-      label: 'Outcome & lessons',
-      title: 'What I learned along the way.',
-      description: "Add what was delivered, what you learned and what you'd do differently next time."
-    },
-    {
-      number: '06',
-      label: 'Screenshots',
-      title: 'A closer look at the product.',
-      description: 'Add product screenshots or other supporting project images.',
-      image: 'screenshots'
-    }
-  ];
-
   project: WorkProject | null = null;
   nextProject: WorkProject | null = null;
 
-  constructor(route: ActivatedRoute, workService: WorkService) {
-    workService.getAllWork().subscribe(projects => {
-      this.projects = projects
-      this.setProject(route.snapshot.paramMap.get('slug'))
-    })
+  constructor(route: ActivatedRoute, directusService: DirectusService) {
+    combineLatest([route.paramMap, directusService.getAllProjects()])
+      .pipe(takeUntilDestroyed())
+      .subscribe(([params, projects]) => {
+        this.projects = projects;
+        this.setProject(params.get('slug'));
+      });
+  }
+
+  getMetadataUrl(value: string | null | undefined): string | null {
+    const text = value?.trim();
+    if (!text || !/^https?:\/\/\S+$/i.test(text)) return null;
+
+    try {
+      return new URL(text).href;
+    } catch {
+      return null;
+    }
+  }
+
+  getAssetUrl(fileId: string): string {
+    return `${environment.api_url}/assets/${fileId}`;
   }
 
   private setProject(slug: string | null): void {
@@ -91,4 +70,6 @@ export class WorkDetailComponent {
       }
       : undefined;
   }
+
+  protected readonly SharedService = SharedService;
 }

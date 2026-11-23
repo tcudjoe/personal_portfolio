@@ -37,6 +37,13 @@
   line-height: var(--leading-tight);
   margin: 0;
   max-width: 68rem;
+  overflow-wrap: anywhere;
+}
+
+.writing-detail-hero .writing-detail-hero__title--long {
+  font-size: clamp(1.875rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
 .writing-detail-hero__excerpt {
@@ -77,6 +84,11 @@
   min-width: 0;
 }
 
+.writing-detail-content__inner--without-toc {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "article" "author";
+}
+
 .writing-article__section {
   margin: 0 0 2rem;
   scroll-margin-top: 2rem;
@@ -94,6 +106,70 @@
   line-height: var(--leading-body);
   margin: 0 0 1rem;
   max-width: 52rem;
+}
+
+.writing-article__figure {
+  margin: 1.5rem auto 2rem;
+  max-width: 40rem;
+  width: 100%;
+}
+
+.writing-article__figure img {
+  border-radius: 0.75rem;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.writing-article__figure figcaption {
+  color: color-mix(in srgb, var(--color-primary) 60%, transparent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: var(--leading-body);
+  margin-top: 0.65rem;
+}
+
+.writing-article__code-block {
+  background: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 78%, var(--color-soft-blue));
+  border-radius: 0.8rem;
+  box-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--color-primary) 12%, transparent);
+  margin: 1.5rem 0 2rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.writing-article__code-header {
+  align-items: center;
+  background: color-mix(in srgb, var(--color-primary) 86%, var(--color-soft-blue));
+  border-bottom: 1px solid color-mix(in srgb, var(--color-soft-blue) 22%, transparent);
+  color: var(--color-soft-blue);
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  justify-content: flex-end;
+  letter-spacing: 0.06em;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+.writing-article__code {
+  color: var(--color-warm-white);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  margin: 0;
+  overflow-x: auto;
+  padding: 1.25rem 1.5rem;
+  tab-size: 2;
+}
+
+.writing-article__code code {
+  color: inherit;
+  font: inherit;
+  white-space: pre;
 }
 
 .writing-toc {
@@ -126,6 +202,14 @@
   padding: 0.12rem 0;
   text-decoration: none;
   transition: color 160ms ease;
+}
+
+.writing-toc a.writing-toc__link--level-2 {
+  padding-left: 0.9rem;
+}
+
+.writing-toc a.writing-toc__link--level-3 {
+  padding-left: 1.8rem;
 }
 
 .writing-toc a:hover {
@@ -184,6 +268,7 @@
   align-items: center;
   background: var(--color-neutral-200);
   border-radius: 50%;
+  box-sizing: border-box;
   color: var(--color-primary);
   display: flex;
   flex: 0 0 6rem;
@@ -192,6 +277,25 @@
   font-weight: 700;
   height: 6rem;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 6rem;
+}
+
+.writing-author__avatar img {
+  border-radius: 50%;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  object-position: center 0%;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 180ms ease;
+  width: 100%;
+}
+
+.writing-author__avatar img.is-loaded {
+  opacity: 1;
 }
 
 .writing-author__eyebrow {
@@ -292,6 +396,10 @@
     grid-template-areas: "toc" "article" "author";
   }
 
+  .writing-detail-content__inner--without-toc {
+    grid-template-areas: "article" "author";
+  }
+
   .writing-toc {
     position: static;
   }
@@ -326,6 +434,10 @@
 @media (prefers-reduced-motion: reduce) {
   .writing-toc a,
   .writing-related-card {
+    transition: none;
+  }
+
+  .writing-author__avatar img {
     transition: none;
   }
 

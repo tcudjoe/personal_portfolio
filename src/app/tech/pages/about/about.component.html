@@ -7,9 +7,8 @@
         <p class="about-hero__intro">Software engineer, entrepreneur and creative mind. I love understanding how things work, solving problems and turning ideas into something meaningful.</p>
       </div>
 
-      <div class="about-hero__portrait" role="img" aria-label="Portrait placeholder">
-        <div class="about-hero__silhouette" aria-hidden="true"></div>
-        <span>Portrait placeholder</span>
+      <div class="about-hero__portrait">
+        <img src="./assets/img/IMG_4079.JPG" alt="Portrait of Tyra">
       </div>
     </div>
   </section>
@@ -24,9 +23,8 @@
         <p>Today, I’m focused on understanding systems more deeply, building thoughtful software and sharing what I learn along the way.</p>
       </div>
 
-      <div class="about-story__image" role="img" aria-label="Creative portrait placeholder">
-        <div class="about-story__silhouette" aria-hidden="true"></div>
-        <span>Photo placeholder</span>
+      <div class="about-story__image">
+        <img src="./assets/img/IMG_9708.JPG" alt="" loading="lazy">
       </div>
     </div>
   </section>
@@ -41,13 +39,13 @@
 
       <ol class="experience-list">
         <li *ngFor="let item of experience; let index = index" class="experience-item">
-          <p class="experience-item__period">{{ item.period }}</p>
+          <p class="experience-item__period">{{ item.start_date | date: 'MMM YYYY' }} - {{ (item.end_date | date: 'MMM YYYY') ?? 'Ongoing' }}</p>
           <div class="experience-item__details">
             <p class="experience-item__number">{{ index + 1 | number:'2.0' }}</p>
             <div>
               <h3>{{ item.title }}</h3>
-              <p class="experience-item__organization">{{ item.organization }}</p>
-              <p class="experience-item__description">{{ item.description }}</p>
+              <p class="experience-item__organization">{{ item.organisation }}</p>
+              <div class="experience-item__description" [innerHTML]="item.description"></div>
             </div>
           </div>
         </li>
@@ -90,8 +88,8 @@
       </div>
 
       <div class="about-beyond__content">
-        <div class="about-beyond__image" role="img" aria-label="Music and creativity image placeholder">
-          <span>Music image placeholder</span>
+        <div class="about-beyond__image">
+          <img src="./assets/img/d0bd12eb-b94e-4d63-9b46-8a59393aa1d3.JPG" alt="" loading="lazy">
         </div>
         <div class="about-beyond__text">
           <p>Music is another huge part of my life. Whether I’m performing, collaborating or creating something new, it’s another way I connect with people.</p>

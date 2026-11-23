@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {RouterLink} from '@angular/router';
 import {ExperienceItem} from '../../models/experience-item';
 import {AboutService} from "../../services/about.service";
+import {DirectusService} from "../../services/directus.service";
 
 @Component({
   selector: 'app-about',
@@ -12,11 +13,10 @@ import {AboutService} from "../../services/about.service";
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  experience: ExperienceItem[] = [
-  ];
+  experience: ExperienceItem[] = [];
 
-  constructor(aboutService: AboutService) {
-    aboutService.getExperiences().subscribe(experience => {
+  constructor(aboutService: AboutService, private directusService: DirectusService) {
+    directusService.getAllExperienceItems().subscribe(experience => {
       this.experience = experience
     });
   }

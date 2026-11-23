@@ -94,9 +94,6 @@
   align-items: center;
   aspect-ratio: 16 / 9;
   background-color: var(--color-warm-white);
-  background-image:
-    linear-gradient(153deg, transparent calc(50% - 1px), color-mix(in srgb, var(--color-neutral-500) 48%, transparent) 50%, transparent calc(50% + 1px)),
-    linear-gradient(27deg, transparent calc(50% - 1px), color-mix(in srgb, var(--color-neutral-500) 48%, transparent) 50%, transparent calc(50% + 1px));
   border-radius: 0.4rem;
   color: var(--color-neutral-500);
   display: flex;

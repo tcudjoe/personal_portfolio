@@ -2,7 +2,7 @@
 
 Een persoonlijke portfolio voor Tyra Afoley Okai Cudjoe. De site brengt software-engineering, projecten en technisch schrijfwerk samen met een aparte plek voor muziek en creatief werk.
 
-De huidige implementatie is statisch. De inhoud staat voorlopig in Angular-componenten; later willen we Directus als zelfgehoste headless CMS gebruiken.
+De tech-kant is functioneel klaar voor v1. Voor lancering controleren we de eerste deploy op de productiehosting.
 
 ## Technologie
 
@@ -10,8 +10,8 @@ De huidige implementatie is statisch. De inhoud staat voorlopig in Angular-compo
 - **SCSS** voor componentstijlen en gedeelde design tokens.
 - **Bootstrap 5.3.8 CSS** via jsDelivr voor de responsive navbar en algemene utility classes. De mobiele navbar-toggle wordt door Angular aangestuurd.
 - **Google Fonts:** Montserrat voor koppen, Inter voor lopende tekst en JetBrains Mono voor technische labels.
-- **RxJS** als onderdeel van Angular; er is momenteel geen backend of CMS-koppeling.
-- **Directus** is gepland, maar nog niet geïntegreerd.
+- **RxJS** voor asynchrone data en wijzigingen in routes.
+- **Directus** als zelfgehoste headless CMS voor projecten, artikelen en werkervaring.
 
 ## Designbasis
 
@@ -29,56 +29,32 @@ De design tokens worden globaal ingeladen via `src/styles.scss`. Gebruik de best
 
 ## Huidige status
 
-### Gereed
+### Gereed voor tech v1
 
-- [x] Angular-app opgesplitst in een tech-gedeelte en een aparte, lazy-loaded music-module.
-- [x] Engineering-design tokens voor kleuren en typografie globaal aangesloten.
-- [x] Soft Blue (`#93BCE7`) toegevoegd aan de SCSS- en CSS-tokenlijst.
-- [x] Tech-home route toont een statische hero met introductie, naam, technologie-tags en een tijdelijke portretplaceholder.
-- [x] Tech-home bevat previews voor projecten, About, Writing en Music.
-- [x] About-pagina bevat de hero, het verhaal, ervaring, engineeringprincipes en muziekintro uit het ontwerp.
-- [x] Work-overzicht met featured project, responsive projectraster en lokale categorie-filters.
-- [x] Work-detailpagina met sluggebonden content, projectmetadata en responsive verhaal-layout.
-- [x] Writing-overzicht met featured artikel, lokale categorie-filters en links naar sluggebonden artikelen.
-- [x] Writing-detailpagina met sluggebonden artikelcontent, inhoudsopgave, auteursblok en gerelateerde artikelen.
-- [x] Responsive navbar voor de tech-pagina met routes naar Work, Writing, About en Music.
-- [x] Footer met standaard CTA-copy en een `config`-input voor eyebrow, header, body, buttontekst en buttonicoon.
-- [x] Footer toont vaste Twitch-, GitHub-, e-mail- en LinkedIn-iconen en gebruikt dezelfde social-URL’s op elke pagina.
-- [x] Development-build slaagt met `npm run build -- --configuration development`.
+- [x] Home met portret, fotogalerij, muziekpreview en project- en blogpreviews uit Directus.
+- [x] About met foto's en werkervaring uit Directus, gesorteerd op aanmaakdatum en met opgemaakte beschrijvingen.
+- [x] Work met gepubliceerde projecten en categorieën uit Directus, inclusief de categorie van het uitgelichte project.
+- [x] Work Detail met projectinhoud, klikbare metadata, sticky metadata op desktop, mediacarousel en navigatie naar het volgende project.
+- [x] Writing met gepubliceerde artikelen, covers en categoriefilters.
+- [x] Writing Detail met tekst-, beeld- en codeblokken, inhoudsopgave en auteursinformatie.
+- [x] Responsive navigatie en configureerbare footer met gedeelde sociale links.
+- [x] Aparte Angular-module en tijdelijke pagina voor `/music`.
 
-### Nog te doen
+### Voor lancering
 
-#### Tech-portfolio — pagina voor pagina
+- [x] CSS-budget voor de productiebuild afgestemd op de huidige componentstijlen. Angular geeft een waarschuwing boven 8 kB en blokkeert boven 12 kB per component.
+- [x] Angular gebruikt `environment.ts` voor productie en vervangt dit bestand door `environment.development.ts` voor development.
+- [x] Angular kopieert `src/_redirects` naar de root van de build voor directe links op Netlify.
+- [ ] Stel de GitHub-variabelen en het Netlify-token in en voer de eerste deploy uit.
+- [ ] Controleer de gedeployde site op mobiel en desktop. Open en ververs `/work/:slug` en `/writing/:slug` rechtstreeks en controleer Directus-content, foto's, video's, navigatie en contactlinks.
 
-- [ ] Home: tijdelijke beelden en voorbeeldinhoud vervangen door definitieve portfolio-content.
-- [ ] About-pagina: tijdelijke beelden vervangen en werkervaring/data en copy door Tyra laten bevestigen.
-- [ ] Work-overzicht: tijdelijke beelden en voorbeeldprojecten vervangen door definitieve content.
-- [ ] Work-detailpagina: tijdelijke projectverhalen, beelden, metadata en links vervangen/bevestigen.
-- [ ] Writing-overzicht: voorbeeldartikelen en coverbeeld vervangen/bevestigen.
-- [ ] Writing-detailpagina: voorbeeldartikelen en auteursfoto vervangen/bevestigen.
-- [ ] Footer CTA koppelen aan de juiste contactactie.
-- [ ] Navigatie- en pagina-layout handmatig nalopen op mobiel en desktop.
+### Na tech v1
 
-#### Music
-
-- [x] `/music` route koppelen aan de bestaande tijdelijke muziek-home.
-- [ ] Muziek-home en overige muziekpagina’s volgens het ontwerp bouwen.
-- [ ] Muziekontwerp en eventuele afwijkende navigatie uitwerken.
-- [ ] Music-favicon dynamisch activeren op `/music`; dit is bewust uitgesteld.
-
-#### UX en polish
-
-- [ ] Skeleton loading states toevoegen voor Directus-content die merkbaar vertraagd binnenkomt. Houd de skeletons passend bij de uiteindelijke inhoud; gebruik ze niet voor de huidige statische content.
-- [ ] Subtiele overgangen tussen routes toevoegen, bij voorkeur voor de pagina-inhoud terwijl navbar en footer stabiel blijven.
-- [ ] Beweging beperken of uitschakelen wanneer `prefers-reduced-motion` is ingesteld.
-
-#### Directus en lancering
-
-- [ ] Contentmodellen en TypeScript-modellen bepalen voor projecten, artikelen, werkervaring en site-instellingen.
-- [ ] Statische content achter services of repositories zetten, zodat die later door Directus-data vervangen kan worden.
-- [ ] Directus zelf hosten en de Angular-app eraan koppelen.
-- [ ] Favicon-assets netjes ordenen en de tech- en music-favicon per route instellen.
-- [ ] Productiebuild en deployment nalopen.
+- [ ] Music-ontwerp, muziekpagina's, eigen navigatie en favicon per sitegedeelte.
+- [ ] Handmatig uitgelichte projecten en artikelen kiezen in Directus.
+- [ ] Tags, gerelateerde artikelen en SEO verder uitwerken.
+- [ ] Blogweergaven bijhouden met een teller in Directus.
+- [ ] Skeletons en subtiele paginaovergangen toevoegen met ondersteuning voor minder beweging.
 
 ## Footer per pagina instellen
 
@@ -102,7 +78,29 @@ footerConfig = {
 Beschikbare buttoniconen: `mail-arrow`, `mail`, `arrow` en `none`.
 De sociale iconen en bestemmingen zijn gedeeld en worden niet per pagina ingesteld.
 
+## Deploy naar Netlify via GitHub Actions
+
+Maak een Netlify-project aan via **Deploy manually**. Stel in GitHub onder **Settings → Secrets and variables → Actions** het volgende in.
+
+| Naam | Type | Waarde |
+| --- | --- | --- |
+| `NETLIFY_AUTH_TOKEN` | Secret | Netlify Personal Access Token |
+| `NETLIFY_SITE_ID` | Variable | Project ID uit Netlify |
+| `DIRECTUS_API_URL` | Variable | Publieke HTTPS-basis-URL van Directus |
+
+De Directus-URL komt in de browserbundel. Geef de Netlify-site toegang via de CORS-instellingen van Directus als de API cross-origin requests beperkt.
+
+`ci.yml` draait een productiebuild voor pull requests naar en pushes op `develop`, met een testadres voor Directus. `deploy-netlify.yml` bouwt met de productie-URL en publiceert `dist/taoportfolio` na een push op `develop`. Je kunt de deploy ook handmatig starten vanaf die branch via **Actions**.
+
+## GitHub-releases
+
+Release Please maakt op `develop` een release-PR op basis van Conventional Commits. Gebruik bijvoorbeeld `feat:` voor een nieuwe functie en `fix:` voor een bugfix. De release-PR bevat de versiebump en changelog. Na het mergen maakt Release Please een Git-tag en GitHub-release aan. De Netlify-deploy blijft gekoppeld aan pushes op `develop`.
+
+Voor het standaardtoken moet **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests** aanstaan. Wil je CI automatisch laten draaien op de release-PR, stel dan het optionele secret `RELEASE_PLEASE_TOKEN` in met een token dat op de repository mag schrijven naar Contents, Issues en Pull requests. GitHub start de PR-workflow niet voor een PR die met het standaardtoken wordt geopend.
+
 ## Lokaal ontwikkelen
+
+Maak lokaal `src/environments/environment.ts` en `src/environments/environment.development.ts` aan. Exporteer in beide bestanden een object `environment` met `api_url` voor de betreffende omgeving. Deze bestanden staan buiten Git.
 
 Installeer dependencies en start de Angular development server:
 
