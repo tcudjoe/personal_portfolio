@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {RouterLink} from '@angular/router';
 import {WorkProject} from "../../models/work-project";
 import {DirectusService} from "../../services/directus.service";
-import {environment} from "../../../../environments/environment.development";
+import {environment} from "../../../../environments/environment";
 
 @Component({
   selector: 'app-work',

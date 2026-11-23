@@ -4,7 +4,7 @@ import {Blog} from "../../models/blog";
 import {WorkService} from "../../services/work.service";
 import {ArticleServiceService} from "../../services/article-service.service";
 import {DirectusService} from "../../services/directus.service";
-import {environment} from "../../../../environments/environment.development";
+import {environment} from "../../../../environments/environment";
 
 @Component({
   selector: 'app-home',

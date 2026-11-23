@@ -21,7 +21,7 @@
 
       <div class="work-detail-layout">
         <div class="work-detail-story">
-          @for (section of currentProject.sections ?? []; track section.item.id) {
+          @for (section of currentProject.sections; track section.item.id) {
             <section class="work-detail-section" [id]="'project-section-' + section.item.id">
               @switch (section.collection) {
                 @case ('block_text') {

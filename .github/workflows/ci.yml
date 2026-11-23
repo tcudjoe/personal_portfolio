@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+      - name: Configure Directus for the build
+        run: node scripts/write-angular-environment.mjs
+        env:
+          DIRECTUS_API_URL: ${{ secrets.DIRECTUS_URL }}
+
+      - run: npm run build -- --configuration production
+      - run: test -f dist/taoportfolio/_redirects

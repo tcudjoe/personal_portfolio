@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {createDirectus, readItems, rest} from "@directus/sdk";
 import {Schema} from "../models/schema";
-import {environment} from "../../../environments/environment.development";
+import {environment} from "../../../environments/environment";
 import {from, map, Observable} from "rxjs";
 import {Blog} from "../models/blog";
 import {WorkProject} from "../models/work-project";

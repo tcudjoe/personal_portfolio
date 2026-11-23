@@ -5,7 +5,7 @@ import {FooterConfig} from '../../../shared/components/footer/footer.component';
 import {Blog} from '../../models/blog';
 import {DirectusService} from "../../services/directus.service";
 import {combineLatest} from "rxjs";
-import {environment} from '../../../../environments/environment.development';
+import {environment} from '../../../../environments/environment';
 
 interface ArticleHeading {
   id: string;

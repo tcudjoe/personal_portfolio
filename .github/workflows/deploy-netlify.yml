@@ -1,0 +1,40 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: netlify-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+      - name: Configure production Directus
+        run: node scripts/write-angular-environment.mjs
+        env:
+          DIRECTUS_API_URL: ${{ secrets.DIRECTUS_API_URL }}
+
+      - run: npm run build -- --configuration production
+      - run: test -f dist/taoportfolio/_redirects
+
+      - name: Deploy to Netlify
+        run: npm exec --yes --package=netlify-cli@27.20.1 -- netlify deploy --no-build --prod --dir=dist/taoportfolio
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

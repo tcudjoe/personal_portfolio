@@ -2,7 +2,7 @@
 
 Een persoonlijke portfolio voor Tyra Afoley Okai Cudjoe. De site brengt software-engineering, projecten en technisch schrijfwerk samen met een aparte plek voor muziek en creatief werk.
 
-De tech-kant is functioneel klaar voor v1. De lancering wacht op een geslaagde productiebuild en een controle op de productiehosting.
+De tech-kant is functioneel klaar voor v1. Voor lancering controleren we de eerste deploy op de productiehosting.
 
 ## Technologie
 
@@ -42,10 +42,11 @@ De design tokens worden globaal ingeladen via `src/styles.scss`. Gebruik de best
 
 ### Voor lancering
 
-- [ ] Productiebuild laten slagen. De check van 23 november 2026 stopt op het CSS-budget van 4 kB per component. Home, About, Work Detail, Writing en Writing Detail overschrijden dit. Verklein de stijlen of kies een onderbouwd budget. Controleer ook de templatewaarschuwing over `sections ?? []` in Work Detail.
-- [ ] Laat de app `environment.ts` importeren en controleer het Directus-adres voor productie. De huidige imports verwijzen rechtstreeks naar `environment.development.ts`, waardoor de ingestelde file replacement niet wordt gebruikt. De environmentbestanden staan buiten Git en moeten in de buildomgeving beschikbaar zijn.
-- [ ] Configureer de SPA-fallback op de productiehosting. `src/_redirects` bevat de fallback, maar staat niet in de lijst met bestanden die Angular kopieert.
-- [ ] Controleer op de productiehosting op mobiel en desktop. Open en ververs `/work/:slug` en `/writing/:slug` rechtstreeks en controleer Directus-content, foto's, video's, navigatie en de contactlinks. Deze check kon nog niet volgen op de mislukte build.
+- [x] CSS-budget voor de productiebuild afgestemd op de huidige componentstijlen. Angular geeft een waarschuwing boven 8 kB en blokkeert boven 12 kB per component.
+- [x] Angular gebruikt `environment.ts` voor productie en vervangt dit bestand door `environment.development.ts` voor development.
+- [x] Angular kopieert `src/_redirects` naar de root van de build voor directe links op Netlify.
+- [ ] Stel de GitHub-variabelen en het Netlify-token in en voer de eerste deploy uit.
+- [ ] Controleer de gedeployde site op mobiel en desktop. Open en ververs `/work/:slug` en `/writing/:slug` rechtstreeks en controleer Directus-content, foto's, video's, navigatie en contactlinks.
 
 ### Na tech v1
 
@@ -77,7 +78,29 @@ footerConfig = {
 Beschikbare buttoniconen: `mail-arrow`, `mail`, `arrow` en `none`.
 De sociale iconen en bestemmingen zijn gedeeld en worden niet per pagina ingesteld.
 
+## Deploy naar Netlify via GitHub Actions
+
+Maak een Netlify-project aan via **Deploy manually**. Stel in GitHub onder **Settings → Secrets and variables → Actions** het volgende in.
+
+| Naam | Type | Waarde |
+| --- | --- | --- |
+| `NETLIFY_AUTH_TOKEN` | Secret | Netlify Personal Access Token |
+| `NETLIFY_SITE_ID` | Variable | Project ID uit Netlify |
+| `DIRECTUS_API_URL` | Variable | Publieke HTTPS-basis-URL van Directus |
+
+De Directus-URL komt in de browserbundel. Geef de Netlify-site toegang via de CORS-instellingen van Directus als de API cross-origin requests beperkt.
+
+`ci.yml` draait een productiebuild voor pull requests naar en pushes op `develop`, met een testadres voor Directus. `deploy-netlify.yml` bouwt met de productie-URL en publiceert `dist/taoportfolio` na een push op `develop`. Je kunt de deploy ook handmatig starten vanaf die branch via **Actions**.
+
+## GitHub-releases
+
+Release Please maakt op `develop` een release-PR op basis van Conventional Commits. Gebruik bijvoorbeeld `feat:` voor een nieuwe functie en `fix:` voor een bugfix. De release-PR bevat de versiebump en changelog. Na het mergen maakt Release Please een Git-tag en GitHub-release aan. De Netlify-deploy blijft gekoppeld aan pushes op `develop`.
+
+Voor het standaardtoken moet **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests** aanstaan. Wil je CI automatisch laten draaien op de release-PR, stel dan het optionele secret `RELEASE_PLEASE_TOKEN` in met een token dat op de repository mag schrijven naar Contents, Issues en Pull requests. GitHub start de PR-workflow niet voor een PR die met het standaardtoken wordt geopend.
+
 ## Lokaal ontwikkelen
+
+Maak lokaal `src/environments/environment.ts` en `src/environments/environment.development.ts` aan. Exporteer in beide bestanden een object `environment` met `api_url` voor de betreffende omgeving. Deze bestanden staan buiten Git.
 
 Installeer dependencies en start de Angular development server:
 
