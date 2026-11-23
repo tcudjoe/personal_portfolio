@@ -3,6 +3,8 @@ import {WorkProject} from "../../models/work-project";
 import {Blog} from "../../models/blog";
 import {WorkService} from "../../services/work.service";
 import {ArticleServiceService} from "../../services/article-service.service";
+import {DirectusService} from "../../services/directus.service";
+import {environment} from "../../../../environments/environment.development";
 
 @Component({
   selector: 'app-home',
@@ -14,22 +16,26 @@ export class HomeComponent {
   featuredProject: WorkProject | null = null;
 
   readonly aboutImages = [
-    {label: 'Music performance photo placeholder', variant: 'performance'},
-    {label: 'Guitar photo placeholder', variant: 'guitar'},
-    {label: 'Portrait photo placeholder', variant: 'portrait'},
-    {label: 'Studio portrait placeholder', variant: 'studio'}
+    'assets/img/DJI_0152.jpg',
+    'assets/img/378121626_17995220060507392_2674928163483874025_n.JPG',
+    'assets/img/IMG_2835.WEBP',
+    'assets/img/IMG_1642.jpg'
   ];
 
   projects: WorkProject[] = [];
 
-  constructor(private readonly workService: WorkService, private readonly articleService: ArticleServiceService) {
-    workService.getAllWork().subscribe(projects => {
+  constructor(private directusService: DirectusService) {
+    directusService.getAllProjects().subscribe(projects => {
       this.featuredProject = projects[0] ?? null;
       this.projects = projects.slice(1, 3);
     })
 
-    articleService.getArticles().subscribe(articles => {
-      this.homeArticles = articles;
+    directusService.getAllBlogs().subscribe(articles => {
+      this.homeArticles = articles.slice(0, 4);
     })
+  }
+
+  getAssetUrl(fileId: string | undefined): string {
+    return `${environment.api_url}/assets/${fileId}`;
   }
 }

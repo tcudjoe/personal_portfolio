@@ -17,9 +17,8 @@
         <a class="home-hero__website" href="https://taocudjoe.com">taocudjoe.com</a>
       </div>
 
-      <div class="home-hero__portrait" role="img" aria-label="Temporary portrait placeholder">
-        <div class="home-hero__silhouette" aria-hidden="true"></div>
-        <span class="home-hero__portrait-label">Portrait placeholder</span>
+      <div class="home-hero__portrait">
+        <img src="./assets/img/ty4.JPG" alt="Portrait of Tyra">
       </div>
     </div>
   </section>
@@ -36,10 +35,11 @@
 
       <a *ngIf="featuredProject as featured" class="project-card project-card--featured" [routerLink]="['/work', featured.slug]">
         <div class="project-card__image project-card__image--wide" role="img" aria-label="Project image placeholder">
-          <span>Project image placeholder</span>
+          <img [src]="getAssetUrl(featured.featured_image)" alt="">
+
         </div>
         <div class="project-card__content">
-          <p class="project-card__category">{{ featured.category }}</p>
+          <p class="project-card__category">{{ featured.category?.name }}</p>
           <h3 class="project-card__title">{{ featured.title }}</h3>
           <p class="project-card__description">{{ featured.excerpt }}</p>
         </div>
@@ -49,9 +49,10 @@
         <a class="project-card" *ngFor="let project of projects" [routerLink]="['/work', project.slug]">
           <div class="project-card__image" role="img" aria-label="Project image placeholder">
             <span>Project image placeholder</span>
+            <img [src]="getAssetUrl(project.featured_image)" alt="">
           </div>
           <div class="project-card__content">
-            <p class="project-card__category">{{ project.category }}</p>
+            <p class="project-card__category">{{ project.category?.name }}</p>
             <h3 class="project-card__title">{{ project.title }}</h3>
             <p class="project-card__description">{{ project.excerpt}}</p>
           </div>
@@ -63,11 +64,8 @@
   <section class="home-about-preview" aria-labelledby="about-preview-heading">
     <div class="home-about-preview__inner">
       <div class="home-about-preview__gallery" aria-label="A little about me">
-        <div *ngFor="let image of aboutImages"
-             class="home-about-preview__image"
-             [ngClass]="'home-about-preview__image--' + image.variant"
-             role="img" [attr.aria-label]="image.label">
-          <span>Image placeholder</span>
+        <div *ngFor="let image of aboutImages" class="home-about-preview__image">
+          <img [src]="image" alt="" loading="lazy">
         </div>
       </div>
 
@@ -95,7 +93,7 @@
            class="home-writing__item" [routerLink]="['/writing', article.slug]">
           <p class="home-writing__meta">
             <span class="home-writing__number">{{ index + 1 | number:'2.0' }}</span>
-            <span>{{ article.category }}</span>
+            <span>{{ article.category?.name }}</span>
             <span aria-hidden="true">·</span>
             <span>{{ article.readingTime }} min read</span>
           </p>
@@ -110,8 +108,8 @@
     <div class="home-music-preview__inner">
       <h2 id="home-music-heading" class="home-music-preview__heading">Different Craft. Same Passion.</h2>
 
-      <div class="home-music-preview__image" role="img" aria-label="Music and creativity image placeholder">
-        <span>Music image placeholder</span>
+      <div class="home-music-preview__image">
+        <img src="./assets/img/IMG_3349.jpg" alt="" loading="lazy">
       </div>
 
       <div class="home-music-preview__copy">

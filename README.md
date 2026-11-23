@@ -2,7 +2,7 @@
 
 Een persoonlijke portfolio voor Tyra Afoley Okai Cudjoe. De site brengt software-engineering, projecten en technisch schrijfwerk samen met een aparte plek voor muziek en creatief werk.
 
-De huidige implementatie is statisch. De inhoud staat voorlopig in Angular-componenten; later willen we Directus als zelfgehoste headless CMS gebruiken.
+De tech-kant is functioneel klaar voor v1. De lancering wacht op een geslaagde productiebuild en een controle op de productiehosting.
 
 ## Technologie
 
@@ -10,8 +10,8 @@ De huidige implementatie is statisch. De inhoud staat voorlopig in Angular-compo
 - **SCSS** voor componentstijlen en gedeelde design tokens.
 - **Bootstrap 5.3.8 CSS** via jsDelivr voor de responsive navbar en algemene utility classes. De mobiele navbar-toggle wordt door Angular aangestuurd.
 - **Google Fonts:** Montserrat voor koppen, Inter voor lopende tekst en JetBrains Mono voor technische labels.
-- **RxJS** als onderdeel van Angular; er is momenteel geen backend of CMS-koppeling.
-- **Directus** is gepland, maar nog niet geïntegreerd.
+- **RxJS** voor asynchrone data en wijzigingen in routes.
+- **Directus** als zelfgehoste headless CMS voor projecten, artikelen en werkervaring.
 
 ## Designbasis
 
@@ -29,56 +29,31 @@ De design tokens worden globaal ingeladen via `src/styles.scss`. Gebruik de best
 
 ## Huidige status
 
-### Gereed
+### Gereed voor tech v1
 
-- [x] Angular-app opgesplitst in een tech-gedeelte en een aparte, lazy-loaded music-module.
-- [x] Engineering-design tokens voor kleuren en typografie globaal aangesloten.
-- [x] Soft Blue (`#93BCE7`) toegevoegd aan de SCSS- en CSS-tokenlijst.
-- [x] Tech-home route toont een statische hero met introductie, naam, technologie-tags en een tijdelijke portretplaceholder.
-- [x] Tech-home bevat previews voor projecten, About, Writing en Music.
-- [x] About-pagina bevat de hero, het verhaal, ervaring, engineeringprincipes en muziekintro uit het ontwerp.
-- [x] Work-overzicht met featured project, responsive projectraster en lokale categorie-filters.
-- [x] Work-detailpagina met sluggebonden content, projectmetadata en responsive verhaal-layout.
-- [x] Writing-overzicht met featured artikel, lokale categorie-filters en links naar sluggebonden artikelen.
-- [x] Writing-detailpagina met sluggebonden artikelcontent, inhoudsopgave, auteursblok en gerelateerde artikelen.
-- [x] Responsive navbar voor de tech-pagina met routes naar Work, Writing, About en Music.
-- [x] Footer met standaard CTA-copy en een `config`-input voor eyebrow, header, body, buttontekst en buttonicoon.
-- [x] Footer toont vaste Twitch-, GitHub-, e-mail- en LinkedIn-iconen en gebruikt dezelfde social-URL’s op elke pagina.
-- [x] Development-build slaagt met `npm run build -- --configuration development`.
+- [x] Home met portret, fotogalerij, muziekpreview en project- en blogpreviews uit Directus.
+- [x] About met foto's en werkervaring uit Directus, gesorteerd op aanmaakdatum en met opgemaakte beschrijvingen.
+- [x] Work met gepubliceerde projecten en categorieën uit Directus, inclusief de categorie van het uitgelichte project.
+- [x] Work Detail met projectinhoud, klikbare metadata, sticky metadata op desktop, mediacarousel en navigatie naar het volgende project.
+- [x] Writing met gepubliceerde artikelen, covers en categoriefilters.
+- [x] Writing Detail met tekst-, beeld- en codeblokken, inhoudsopgave en auteursinformatie.
+- [x] Responsive navigatie en configureerbare footer met gedeelde sociale links.
+- [x] Aparte Angular-module en tijdelijke pagina voor `/music`.
 
-### Nog te doen
+### Voor lancering
 
-#### Tech-portfolio — pagina voor pagina
+- [ ] Productiebuild laten slagen. De check van 23 november 2026 stopt op het CSS-budget van 4 kB per component. Home, About, Work Detail, Writing en Writing Detail overschrijden dit. Verklein de stijlen of kies een onderbouwd budget. Controleer ook de templatewaarschuwing over `sections ?? []` in Work Detail.
+- [ ] Laat de app `environment.ts` importeren en controleer het Directus-adres voor productie. De huidige imports verwijzen rechtstreeks naar `environment.development.ts`, waardoor de ingestelde file replacement niet wordt gebruikt. De environmentbestanden staan buiten Git en moeten in de buildomgeving beschikbaar zijn.
+- [ ] Configureer de SPA-fallback op de productiehosting. `src/_redirects` bevat de fallback, maar staat niet in de lijst met bestanden die Angular kopieert.
+- [ ] Controleer op de productiehosting op mobiel en desktop. Open en ververs `/work/:slug` en `/writing/:slug` rechtstreeks en controleer Directus-content, foto's, video's, navigatie en de contactlinks. Deze check kon nog niet volgen op de mislukte build.
 
-- [ ] Home: tijdelijke beelden en voorbeeldinhoud vervangen door definitieve portfolio-content.
-- [ ] About-pagina: tijdelijke beelden vervangen en werkervaring/data en copy door Tyra laten bevestigen.
-- [ ] Work-overzicht: tijdelijke beelden en voorbeeldprojecten vervangen door definitieve content.
-- [ ] Work-detailpagina: tijdelijke projectverhalen, beelden, metadata en links vervangen/bevestigen.
-- [ ] Writing-overzicht: voorbeeldartikelen en coverbeeld vervangen/bevestigen.
-- [ ] Writing-detailpagina: voorbeeldartikelen en auteursfoto vervangen/bevestigen.
-- [ ] Footer CTA koppelen aan de juiste contactactie.
-- [ ] Navigatie- en pagina-layout handmatig nalopen op mobiel en desktop.
+### Na tech v1
 
-#### Music
-
-- [x] `/music` route koppelen aan de bestaande tijdelijke muziek-home.
-- [ ] Muziek-home en overige muziekpagina’s volgens het ontwerp bouwen.
-- [ ] Muziekontwerp en eventuele afwijkende navigatie uitwerken.
-- [ ] Music-favicon dynamisch activeren op `/music`; dit is bewust uitgesteld.
-
-#### UX en polish
-
-- [ ] Skeleton loading states toevoegen voor Directus-content die merkbaar vertraagd binnenkomt. Houd de skeletons passend bij de uiteindelijke inhoud; gebruik ze niet voor de huidige statische content.
-- [ ] Subtiele overgangen tussen routes toevoegen, bij voorkeur voor de pagina-inhoud terwijl navbar en footer stabiel blijven.
-- [ ] Beweging beperken of uitschakelen wanneer `prefers-reduced-motion` is ingesteld.
-
-#### Directus en lancering
-
-- [ ] Contentmodellen en TypeScript-modellen bepalen voor projecten, artikelen, werkervaring en site-instellingen.
-- [ ] Statische content achter services of repositories zetten, zodat die later door Directus-data vervangen kan worden.
-- [ ] Directus zelf hosten en de Angular-app eraan koppelen.
-- [ ] Favicon-assets netjes ordenen en de tech- en music-favicon per route instellen.
-- [ ] Productiebuild en deployment nalopen.
+- [ ] Music-ontwerp, muziekpagina's, eigen navigatie en favicon per sitegedeelte.
+- [ ] Handmatig uitgelichte projecten en artikelen kiezen in Directus.
+- [ ] Tags, gerelateerde artikelen en SEO verder uitwerken.
+- [ ] Blogweergaven bijhouden met een teller in Directus.
+- [ ] Skeletons en subtiele paginaovergangen toevoegen met ondersteuning voor minder beweging.
 
 ## Footer per pagina instellen
 
