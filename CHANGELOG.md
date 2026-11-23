@@ -1,0 +1,57 @@
+# Changelog
+
+## 1.0.0 (2026-11-23)
+
+
+### Features
+
+* add music coming soon page ([f8ad1a5](https://github.com/tcudjoe/personal_portfolio/commit/f8ad1a5ae5eced325c51f2c0c25138833779fa08))
+* add music preview to tech homepage ([3cf2098](https://github.com/tcudjoe/personal_portfolio/commit/3cf20981863667af1a7dca6c9ca65d9ffab3f78d))
+* add project showcase to tech homepage ([725b52c](https://github.com/tcudjoe/personal_portfolio/commit/725b52ce6a78dca8f172459b71f74a612143f28e))
+* add responsive about preview to tech home ([814f28d](https://github.com/tcudjoe/personal_portfolio/commit/814f28d300c69afbc68fec36a98e04467f511973))
+* add writing preview to tech homepage ([db9a2b9](https://github.com/tcudjoe/personal_portfolio/commit/db9a2b99c4bf77bb2ccea0793e8cafa2e5c7285d))
+* Added animation to articles ([dcabd3f](https://github.com/tcudjoe/personal_portfolio/commit/dcabd3f871f844724d05924ea9595b3282b11017))
+* Added dropdown menu for logging out and dashboard ([2223807](https://github.com/tcudjoe/personal_portfolio/commit/2223807928669557ba51497e6d6ddf2ee5812de4))
+* added fade in animation for about-section ([1aa2f84](https://github.com/tcudjoe/personal_portfolio/commit/1aa2f84b58421dbdd694defa91002988ee1c5285))
+* Added hover to icons in footer ([95c1706](https://github.com/tcudjoe/personal_portfolio/commit/95c1706e04ed169e939e8b9aff2513b61219e67b))
+* Added timestamps to contact messages ([e95576b](https://github.com/tcudjoe/personal_portfolio/commit/e95576b3d44823ab34da2894bc7cd0eb40f87290))
+* Added ui for login page ([db6b8c6](https://github.com/tcudjoe/personal_portfolio/commit/db6b8c6297810c1e85f2fa0800e9dac0160fc71c))
+* Animation on projects page works ([873d8fb](https://github.com/tcudjoe/personal_portfolio/commit/873d8fbd14fec30b741690cfe57d9579b1493a4d))
+* build responsive about page ([56d3f61](https://github.com/tcudjoe/personal_portfolio/commit/56d3f61bc80904a52eee395d121c8c59d15b49b5))
+* build responsive about page ([413e207](https://github.com/tcudjoe/personal_portfolio/commit/413e207fa231b72b0fed6ebf86ba3e709d7e0ed2))
+* build responsive tech landing and shared footer ([6421be0](https://github.com/tcudjoe/personal_portfolio/commit/6421be0417887b57a4f7facbf8d0bba66da7e2e8))
+* build responsive work overview with filters ([3134bab](https://github.com/tcudjoe/personal_portfolio/commit/3134bab33d265369d68691b9909a700488b0e0f3))
+* build responsive work overview with filters ([645b2ce](https://github.com/tcudjoe/personal_portfolio/commit/645b2ce2189f028615184500e94c4cd1e38d442a))
+* Can create experiences ([3e8c9d4](https://github.com/tcudjoe/personal_portfolio/commit/3e8c9d442dfdb1524f7609b75a830e9951583eeb))
+* centralize footer socials and tidy routes ([ea94810](https://github.com/tcudjoe/personal_portfolio/commit/ea948104f4e30c94d313f2acab09c32e0e742e00))
+* connect Directus blog content to portfolio ([eb7dd09](https://github.com/tcudjoe/personal_portfolio/commit/eb7dd0978356612271d64406b1ca8a6799d63a9b))
+* Contact messages can be read ([db19391](https://github.com/tcudjoe/personal_portfolio/commit/db193916b031ce8bf61a75feb19e7e946dd8ce47))
+* Contact messages can be viewed ([0f3303d](https://github.com/tcudjoe/personal_portfolio/commit/0f3303dd8b981281fc5d3b0f6acbc5eb41b20cb2))
+* Created README.md ([27a8aec](https://github.com/tcudjoe/personal_portfolio/commit/27a8aecb5b234f2aedaed3c8b41cea390b5e888d))
+* Delete records has a bug ([5159979](https://github.com/tcudjoe/personal_portfolio/commit/51599791083e42498f507139f528fa22cc0f5b26))
+* Displaying xp in dashboard and on client ([e4640ab](https://github.com/tcudjoe/personal_portfolio/commit/e4640ab7dad89c48253198b550bf3252cc635699))
+* Dropdown menu for logout and dashboard ([c317bf0](https://github.com/tcudjoe/personal_portfolio/commit/c317bf0f66e66aed637566271796b63bdc073e34))
+* Experiences can be deleted ([3a5f930](https://github.com/tcudjoe/personal_portfolio/commit/3a5f930744845b9a6c55618e558ce4444cea06cd))
+* finalize tech v1 imagery and document launch checks ([d5231a7](https://github.com/tcudjoe/personal_portfolio/commit/d5231a7bd9b94dba99e46e1752578962d917cb32))
+* load experience items from Directus ([12a50db](https://github.com/tcudjoe/personal_portfolio/commit/12a50db7b3188fdee17cccf4c071efcf4e0cfacc))
+* load work projects and project details from Directus ([c781c42](https://github.com/tcudjoe/personal_portfolio/commit/c781c427504f0784088b98ccde48a90f8c88c363))
+* new skills can be created ([81e5c8f](https://github.com/tcudjoe/personal_portfolio/commit/81e5c8f1dcdcbd825462d4cc4e8407b20eac9979))
+* Projects can be deleted ([edde399](https://github.com/tcudjoe/personal_portfolio/commit/edde399a742dcd23bc9fdca559dfb3fd106763b2))
+* scaffold tech portfolio and restore home routing ([2df07a2](https://github.com/tcudjoe/personal_portfolio/commit/2df07a2e572bd0dac0729703f605d3b27688a869))
+* scaffold tech portfolio and restore home routing ([81f4ac5](https://github.com/tcudjoe/personal_portfolio/commit/81f4ac57e3ecd4cb9771508c61fa87fd83562448))
+* Skill can be edited ([d4a3b72](https://github.com/tcudjoe/personal_portfolio/commit/d4a3b72d181b7145d4e5c8714c9bc33ed992302d))
+* Skills are dynamic trough database ([1ea8a32](https://github.com/tcudjoe/personal_portfolio/commit/1ea8a32c3969eb62c3b8908808290e452ab8db78))
+* Skills can be deleted ([a3548be](https://github.com/tcudjoe/personal_portfolio/commit/a3548be15e1fbc7f70f0ae8e9ff621d174eac83e))
+* Uploading img with creating new project ([bf6f75e](https://github.com/tcudjoe/personal_portfolio/commit/bf6f75e5531cb03b6c143d231bd2bd93ac4260f6))
+* User can logout ([7f9db76](https://github.com/tcudjoe/personal_portfolio/commit/7f9db76cfa2a9ffb139a703abfbd357f97c3a33e))
+* User can now login ([96cbd1f](https://github.com/tcudjoe/personal_portfolio/commit/96cbd1f3cba74b6efdd427bbf0429df2dda58f40))
+
+
+### Bug Fixes
+
+* configure Directus URL in GitHub Actions ([b517f1d](https://github.com/tcudjoe/personal_portfolio/commit/b517f1d4431520aff64a1325a32b867da4085ca1))
+* corrected missed merge conflicts ([c617bd3](https://github.com/tcudjoe/personal_portfolio/commit/c617bd307ebd454048fd13a67845db5ce321ea9c))
+* fixed hamburger toggler, alignment of navlinks, change home page img and minor css fixes ([2ec4561](https://github.com/tcudjoe/personal_portfolio/commit/2ec456180254def261eda2478ef8b960de16a820))
+* Fixed message for updating skill ([939738d](https://github.com/tcudjoe/personal_portfolio/commit/939738d4c5e0abf825b1b151252a881cc87341e1))
+* improve article title and heading spacing ([6fc47a8](https://github.com/tcudjoe/personal_portfolio/commit/6fc47a8c2081827bcfc854caeea24cf3bb6c4e8a))
+* refine project detail typography and images ([d5f4e6c](https://github.com/tcudjoe/personal_portfolio/commit/d5f4e6cab94c57604ddec4886aba2b70650cbdcc))
