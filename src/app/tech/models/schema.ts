@@ -16,7 +16,7 @@ export interface Schema {
   article_section: Sections[],
   metadata: ProjectMeta[],
   projects: WorkProject[],
-  experience: ExperienceItem[],
+  experience_item: ExperienceItem[],
   block_image: BlockImage[];
   block_text: BlockText[];
   block_code: BlockCode[];

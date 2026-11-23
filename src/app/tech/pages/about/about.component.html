@@ -41,13 +41,13 @@
 
       <ol class="experience-list">
         <li *ngFor="let item of experience; let index = index" class="experience-item">
-          <p class="experience-item__period">{{ item.start_date }} - {{ item.end_date ?? 'Ongoing' }}</p>
+          <p class="experience-item__period">{{ item.start_date | date: 'MMM YYYY' }} - {{ (item.end_date | date: 'MMM YYYY') ?? 'Ongoing' }}</p>
           <div class="experience-item__details">
             <p class="experience-item__number">{{ index + 1 | number:'2.0' }}</p>
             <div>
               <h3>{{ item.title }}</h3>
-              <p class="experience-item__organization">{{ item.organization }}</p>
-              <p class="experience-item__description">{{ item.description }}</p>
+              <p class="experience-item__organization">{{ item.organisation }}</p>
+              <div class="experience-item__description" [innerHTML]="item.description"></div>
             </div>
           </div>
         </li>

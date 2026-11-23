@@ -5,6 +5,7 @@ import {environment} from "../../../environments/environment.development";
 import {from, map, Observable} from "rxjs";
 import {Blog} from "../models/blog";
 import {WorkProject} from "../models/work-project";
+import {ExperienceItem} from "../models/experience-item";
 
 @Injectable({
   providedIn: 'root'
@@ -96,7 +97,7 @@ export class DirectusService {
                   block_text: ['id', 'body_text'],
                   block_image: ['id', 'image', 'caption'],
                   block_code: ['id', 'code_block', 'language', 'date_created', 'date_updated'],
-                  block_carousel: ['id', { media: [{ directus_files_id: ['id', 'type', 'title'] }] }, 'archived', 'date_created', 'date_updated']
+                  block_carousel: ['id', {media: [{directus_files_id: ['id', 'type', 'title']}]}, 'archived', 'date_created', 'date_updated']
                 }
               }
             ],
@@ -119,6 +120,30 @@ export class DirectusService {
             ],
             category: ['id', 'name', 'description', 'archived', 'date_created', 'date_updated']
           }
+        ]
+      }))
+    )
+  }
+
+  // Experience Content
+  getAllExperienceItems(): Observable<ExperienceItem[]> {
+    return from(
+      this.directus.request(readItems('experience_item', {
+        sort: ['-date_created'],
+        filter: {
+          status: {_eq: 'published'}
+        },
+        fields: [
+          'id',
+          'start_date',
+          'end_date',
+          'title',
+          'organisation',
+          'description',
+          'status',
+          'archived',
+          'date_created',
+          'date_updated',
         ]
       }))
     )
